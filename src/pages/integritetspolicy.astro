@@ -1,0 +1,15 @@
+---
+// Grund för integritetspolicyn. Ska läsas igenom per projekt: personuppgiftsansvarig, mottagare av förfrågningar
+// (lead-gen: namnge företaget som får uppgifterna) och lagringstid kommer från Projektfakta, aldrig gissat.
+import EnkelSida from '../components/EnkelSida.astro';
+import { SAJT } from '../data/sajt';
+const ansvarig = SAJT.bolag || SAJT.namn;
+---
+<EnkelSida titel="Integritetspolicy" beskrivning={`Så hanterar ${SAJT.namn} personuppgifter när du skickar en förfrågan eller besöker sajten, och vilka rättigheter du har enligt GDPR.`} ingress={`${ansvarig} är personuppgiftsansvarig för uppgifterna som lämnas på den här sajten.`}>
+  <h2>Uppgifter du skickar i formuläret</h2>
+  <p>När du skickar en förfrågan sparar vi namn, kontaktuppgifter och det du skriver. Vi använder uppgifterna bara för att besvara förfrågan. Rättslig grund är ditt samtycke, som du kan ta tillbaka när som helst.</p>
+  <h2>Statistik</h2>
+  <p>Med ditt samtycke mäter vi besöken med Google Analytics. Läs mer på sidan om <a href="/cookies/">cookies</a>.</p>
+  <h2>Dina rättigheter</h2>
+  <p>Du har rätt att få veta vilka uppgifter vi har om dig, få dem rättade eller raderade, och att klaga hos Integritetsskyddsmyndigheten (IMY). Kontakta oss via <a href="/kontakt/">kontaktsidan</a>.</p>
+</EnkelSida>

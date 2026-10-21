@@ -1,0 +1,12 @@
+.env
+.DS_Store
+node_modules/
+dist/
+.astro/
+
+# Underkända bilder sparas bara lokalt
+drafts/bilder/ej-godkanda/
+
+# Genereras av bygget
+public/bilder/
+src/data/bilder.json

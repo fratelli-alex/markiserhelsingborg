@@ -1,0 +1,20 @@
+---
+// Kontakt- och offertformulär. Sajten är statisk: formuläret postar till kontakttjänsten (tjanster/kontakt),
+// som mejlar via Brevo och skickar besökaren till /tack/. Fälten "webbplats" (robotfälla) och samtycket krävs
+// (npm run kontroll). Extra fält skickas med i mejlet som de är.
+import EnkelSida from '../components/EnkelSida.astro';
+import { SAJT, telLank } from '../data/sajt';
+---
+<EnkelSida titel="Kontakta oss" beskrivning={`Skicka en förfrågan till ${SAJT.namn}. Fyll i formuläret så hör vi av oss så snart vi kan, eller ring oss direkt om du hellre vill prata.`} ingress="Berätta kort vad du behöver, så hör vi av oss.">
+  {SAJT.telefon && <p>Vill du hellre prata? Ring <a href={telLank(SAJT.telefon)} data-placering="kontakt">{SAJT.telefon}</a>.</p>}
+  <form class="formular" method="post" action={SAJT.kontaktUrl || undefined} data-kontakt="kontakt">
+    <label>Namn <input name="namn" autocomplete="name" required /></label>
+    <label>Telefon <input name="telefon" type="tel" autocomplete="tel" /></label>
+    <label>E-post <input name="epost" type="email" autocomplete="email" required /></label>
+    <label>Postnummer <input name="postnummer" inputmode="numeric" autocomplete="postal-code" /></label>
+    <label>Meddelande <textarea name="meddelande" rows="5" required></textarea></label>
+    <div class="falla" aria-hidden="true"><label>Lämna tomt <input name="webbplats" tabindex="-1" autocomplete="off" /></label></div>
+    <label class="samtycke"><input type="checkbox" name="samtycke" value="ja" required /> Jag godkänner att mina uppgifter används för att besvara förfrågan, enligt <a href="/integritetspolicy/">integritetspolicyn</a>.</label>
+    <button class="knapp" type="submit">Skicka förfrågan</button>
+  </form>
+</EnkelSida>

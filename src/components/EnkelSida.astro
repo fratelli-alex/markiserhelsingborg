@@ -1,0 +1,18 @@
+---
+// Enkel textsida (om oss, kontakt, policyer, 404, tack).
+import { ihop } from '../lib/text';
+import Bas from '../layouts/Bas.astro';
+import Brodsmulor from './Brodsmulor.astro';
+import { brodsmulor as bsSchema } from '../lib/schema';
+interface Props { titel: string; seoTitel?: string; beskrivning: string; ingress?: string; noindex?: boolean; schema?: object[]; forelder?: { namn: string; url: string } }
+const { titel, seoTitel, beskrivning, ingress, noindex = false, schema = [], forelder } = Astro.props;
+const smulor = [{ namn: 'Start', url: '/' }, ...(forelder ? [forelder] : []), { namn: titel, url: Astro.url.pathname }];
+---
+<Bas titel={seoTitel ?? titel} beskrivning={beskrivning} noindex={noindex} schema={[bsSchema(smulor), ...schema]}>
+  <article class="enkel">
+    <Brodsmulor smulor={smulor} />
+    <h1>{ihop(titel)}</h1>
+    {ingress && <p class="ingress">{ihop(ingress)}</p>}
+    <div class="brod"><slot /></div>
+  </article>
+</Bas>

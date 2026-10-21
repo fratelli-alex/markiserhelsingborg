@@ -1,0 +1,73 @@
+/* Grundstil i mallen. Profilen (färger, typsnitt, former) läggs in när designriktningen är godkänd.
+   Skriv de uppmätta kontrastparen som kommentar här, till exempel: #241E33/#FFF 16,05 */
+
+:root {
+  --bg: #FFFFFF; --yta: #F6F6F7; --text: #1D1D22; --text-2: #55555F; --linje: #E5E5EA;
+  --knapp: #1D1D22; --knapp-hover: #3A3A44; --fokus: #1D4ED8;
+  --bredd: 1216px; --las: 720px;
+  --sida-x: 32px;
+  color-scheme: light;
+}
+@media (max-width: 600px) { :root { --sida-x: 16px; } }
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 400 17px/1.6 system-ui, -apple-system, 'Segoe UI', sans-serif; }
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; text-underline-offset: 3px; }
+:focus-visible { outline: 3px solid var(--fokus); outline-offset: 2px; border-radius: 6px; }
+h1, h2, h3, h4 { overflow-wrap: break-word; hyphens: auto; line-height: 1.15; text-wrap: balance; margin: 0; }
+p, li, dd, summary, figcaption, td { text-wrap: pretty; }
+p { margin: 0; }
+/* Ensamma ord och utlänkar: se lib/rehype-ensamma.mjs, lib/text.ts och lib/rehype-lankar.mjs */
+.nw { white-space: nowrap; }
+.extern-pil { font-size: .85em; }
+.sr { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.hoppa { position: absolute; left: 8px; top: -60px; z-index: 10; background: var(--knapp); color: #fff; padding: 10px 16px; border-radius: 8px; font-weight: 700; }
+.hoppa:focus { top: 8px; }
+
+.topp { border-bottom: 1px solid var(--linje); position: relative; }
+.topp-inre, .sidfot-inre, .sidfot-botten, .inre { max-width: calc(var(--bredd) + 2 * var(--sida-x)); margin: 0 auto; padding: 14px var(--sida-x); }
+.topp-inre { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.logo { font-weight: 800; text-decoration: none; }
+.huvudmeny ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 6px 22px; flex-wrap: wrap; }
+.meny-knapp { display: none; }
+@media (max-width: 800px) {
+  .huvudmeny { display: none; }
+  .huvudmeny.oppen { display: block; position: absolute; left: 0; right: 0; top: 100%; background: var(--bg); border-bottom: 1px solid var(--linje); z-index: 20; }
+  .huvudmeny.oppen ul { flex-direction: column; padding: 8px var(--sida-x) 16px; }
+  .meny-knapp { display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px; border-radius: 10px; border: 2px solid var(--text); font: inherit; font-weight: 700; background: none; color: var(--text); cursor: pointer; }
+}
+
+.brodsmulor ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; font-size: 14px; color: var(--text-2); }
+.brodsmulor li + li::before { content: '/'; margin: 0 8px; }
+.enkel { max-width: calc(var(--las) + 2 * var(--sida-x)); margin: 0 auto; padding: 24px var(--sida-x) 48px; display: grid; gap: 20px; grid-template-columns: minmax(0, 1fr); }
+.enkel h1 { font-size: clamp(31px, 5vw, 42px); }
+.ingress { font-size: 19px; color: var(--text-2); }
+.brod { display: grid; gap: 16px; }
+.brod table { border-collapse: collapse; width: 100%; }
+.brod th, .brod td { text-align: left; padding: 8px; border-bottom: 1px solid var(--linje); }
+
+.knapp { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 22px; border: 0; border-radius: 12px; background: var(--knapp); color: #fff; font: inherit; font-weight: 700; cursor: pointer; text-decoration: none; }
+.knapp:hover { background: var(--knapp-hover); }
+
+.formular { display: grid; gap: 14px; }
+.formular label { display: grid; gap: 4px; font-weight: 600; }
+.formular input, .formular textarea { font: inherit; padding: 10px 12px; border: 1px solid #8A8A94; border-radius: 8px; width: 100%; }
+.formular .samtycke { display: flex; gap: 10px; align-items: start; font-weight: 400; }
+.formular .samtycke input { width: auto; margin-top: 6px; }
+.falla { position: absolute; left: -9999px; }
+
+.sidfot { border-top: 1px solid var(--linje); margin-top: 48px; font-size: 15px; }
+.sidfot ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 20px; }
+.sidfot-botten { display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: space-between; color: var(--text-2); }
+.sidfot-botten button { font: inherit; background: none; border: 0; padding: 0; text-decoration: underline; color: inherit; cursor: pointer; }
+
+.cookie { position: fixed; left: 16px; right: 16px; bottom: 16px; max-width: 520px; margin-left: auto; background: var(--bg); border: 1px solid var(--linje); border-radius: 14px; padding: 20px; box-shadow: 0 8px 30px rgb(0 0 0 / .12); z-index: 30; display: grid; gap: 12px; }
+.cookie[hidden] { display: none; }
+.cookie h2 { font-size: 19px; }
+.cookie .val { display: flex; flex-wrap: wrap; gap: 10px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+}

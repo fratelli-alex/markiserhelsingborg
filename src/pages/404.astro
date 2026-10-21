@@ -1,0 +1,7 @@
+---
+import EnkelSida from '../components/EnkelSida.astro';
+import { MENY } from '../data/sajt';
+---
+<EnkelSida titel="Sidan finns inte" beskrivning="Sidan du letar efter finns inte." noindex ingress="Adressen kan vara felstavad, eller så har sidan flyttat. Här kan du gå vidare:">
+  <ul><li><a href="/">Startsidan</a></li>{MENY.map(m => <li><a href={m.url}>{m.namn}</a></li>)}</ul>
+</EnkelSida>

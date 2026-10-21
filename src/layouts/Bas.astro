@@ -1,0 +1,152 @@
+---
+// Grundlayout för alla sidor: head (titel, beskrivning, kanonisk adress, robots, delningsbild, JSON-LD),
+// sidhuvud, sidfot, cookieruta, samtycke och konverteringshändelser.
+// Typsnitt: självhostade woff2 (t.ex. @fontsource), aldrig Google Fonts. Lägg till import och preload här.
+import '../styles/global.css';
+import { SAJT, MENY, telLank } from '../data/sajt';
+import { graf } from '../lib/schema';
+import { ogBild, harBild } from '../lib/bilder';
+
+interface Props {
+  titel: string; // <title> utan varumärket (läggs till här)
+  beskrivning?: string;
+  noindex?: boolean;
+  bild?: string; // masterfilens namn i drafts/bilder/godkanda/
+  typ?: 'website' | 'article';
+  schema?: object[];
+}
+const { titel, beskrivning, noindex = false, bild = 'startsida-hero-v1', typ = 'website', schema = [] } = Astro.props;
+const sokvag = Astro.url.pathname;
+const kanonisk = SAJT.url + sokvag;
+const fullTitel = sokvag === '/' ? titel : `${titel} | ${SAJT.namn}`;
+const robots = SAJT.noindex || noindex ? 'noindex, nofollow' : 'index, follow, max-image-preview:large';
+const ar = new Date().getFullYear();
+---
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{fullTitel}</title>
+  {beskrivning && <meta name="description" content={beskrivning} />}
+  <meta name="robots" content={robots} />
+  <link rel="canonical" href={kanonisk} />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <meta property="og:locale" content="sv_SE" />
+  <meta property="og:site_name" content={SAJT.namn} />
+  <meta property="og:type" content={typ} />
+  <meta property="og:title" content={titel} />
+  {beskrivning && <meta property="og:description" content={beskrivning} />}
+  <meta property="og:url" content={kanonisk} />
+  {harBild(bild) && <meta property="og:image" content={SAJT.url + ogBild(bild)} />}
+  {harBild(bild) && <meta property="og:image:width" content="1200" />}
+  {harBild(bild) && <meta property="og:image:height" content="630" />}
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json" set:html={graf(...schema)} />
+  <script is:inline define:vars={{ ga4: SAJT.ga4, matning: !SAJT.noindex && !!SAJT.ga4 }}>
+    // Consent Mode v2: allt nekat tills besökaren väljer, först i dataLayer. GA4 laddas först efter ett ja.
+    // På tillfälliga adresser (NOINDEX) laddas GA4 aldrig, så att statistiken inte blandas ihop.
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    window.gtag = gtag;
+    gtag('consent', 'default', { ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied', wait_for_update: 500 });
+    window.sajtMatning = { ga4, matning };
+  </script>
+</head>
+<body>
+  <a class="hoppa" href="#innehall">Hoppa till innehållet</a>
+  <header class="topp">
+    <div class="topp-inre">
+      <a class="logo" href="/">{SAJT.namn}</a>
+      <button class="meny-knapp" type="button" aria-expanded="false" aria-controls="huvudmeny">Meny</button>
+      <nav class="huvudmeny" id="huvudmeny" aria-label="Huvudmeny">
+        <ul>
+          {MENY.map(m => <li><a href={m.url} aria-current={sokvag === m.url ? 'page' : undefined}>{m.namn}</a></li>)}
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="innehall">
+    <slot />
+  </main>
+  <footer class="sidfot">
+    <div class="sidfot-inre">
+      <nav aria-label="Om oss">
+        <ul>
+          <li><a href="/kontakt/">Kontakt</a></li>
+          <li><a href="/integritetspolicy/">Integritetspolicy</a></li>
+          <li><a href="/cookies/">Cookies</a></li>
+        </ul>
+      </nav>
+      {SAJT.telefon && <p><a href={telLank(SAJT.telefon)}>{SAJT.telefon}</a></p>}
+    </div>
+    <div class="sidfot-botten">
+      <span>© {ar} {SAJT.bolag || SAJT.namn}{SAJT.orgnr && `, org.nr ${SAJT.orgnr}`}</span>
+      <button type="button" data-cookieval>Ändra cookieval</button>
+    </div>
+  </footer>
+
+  <section class="cookie" id="cookie" aria-labelledby="cookie-rubrik" hidden>
+    <h2 id="cookie-rubrik">Får vi mäta besöket?</h2>
+    <p>Vi vill använda Google Analytics för att se vilka sidor som läses och hur många som hör av sig. Säger du nej sparas inga sådana cookies. <a href="/cookies/">Läs mer om cookies</a></p>
+    <div class="val">
+      <button class="knapp" type="button" data-samtycke="ja">Ja, det går bra</button>
+      <button class="knapp" type="button" data-samtycke="nej">Nej tack</button>
+    </div>
+  </section>
+
+  <script is:inline>
+    (function () {
+      // Mobilmenyn
+      var knapp = document.querySelector('.meny-knapp'), meny = document.getElementById('huvudmeny');
+      knapp.addEventListener('click', function () {
+        var oppen = meny.classList.toggle('oppen');
+        knapp.setAttribute('aria-expanded', String(oppen));
+      });
+
+      // Samtycke. Valet sparas i localStorage (ingen cookie) och kan ändras i sidfoten.
+      var NYCKEL = 'samtycke-v1', ruta = document.getElementById('cookie'), m = window.sajtMatning;
+      function las() { try { return localStorage.getItem(NYCKEL); } catch (e) { return null; } }
+      function spara(v) { try { localStorage.setItem(NYCKEL, v); } catch (e) {} }
+      function ladda() {
+        if (!m.matning || window.ga4Laddad) return;
+        window.ga4Laddad = true;
+        var s = document.createElement('script');
+        s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=' + m.ga4;
+        document.head.appendChild(s);
+        gtag('js', new Date());
+        gtag('config', m.ga4);
+      }
+      function verkstall(v) {
+        if (v === 'ja') { gtag('consent', 'update', { analytics_storage: 'granted' }); ladda(); }
+        else { gtag('consent', 'update', { analytics_storage: 'denied' }); }
+      }
+      var val = las();
+      if (val) verkstall(val); else ruta.hidden = false;
+      ruta.addEventListener('click', function (e) {
+        var v = e.target.closest('[data-samtycke]');
+        if (!v) return;
+        var nytt = v.getAttribute('data-samtycke');
+        var tidigare = las();
+        spara(nytt); ruta.hidden = true;
+        // Från ja till nej: ladda om så att GA4 inte ligger kvar på sidan
+        if (tidigare === 'ja' && nytt === 'nej') location.reload(); else verkstall(nytt);
+      });
+      document.querySelector('[data-cookieval]').addEventListener('click', function () { ruta.hidden = false; ruta.querySelector('button').focus(); });
+
+      // Konverteringar: en egen händelse per typ, som GA4 och Ads kan mäta
+      document.addEventListener('click', function (e) {
+        var a = e.target.closest('a[href^="tel:"], a[href^="mailto:"]');
+        if (!a) return;
+        gtag('event', a.href.indexOf('tel:') === 0 ? 'telefon_klick' : 'epost_klick', { placering: a.dataset.placering || 'text', sida: location.pathname, transport_type: 'beacon' });
+      });
+      document.addEventListener('submit', function (e) {
+        var f = e.target.closest('form[data-kontakt]');
+        if (!f) return;
+        gtag('event', 'generate_lead', { formular: f.dataset.kontakt, sida: location.pathname, transport_type: 'beacon' });
+      });
+    })();
+  </script>
+</body>
+</html>

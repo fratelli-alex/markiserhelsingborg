@@ -1,0 +1,23 @@
+---
+import EnkelSida from '../components/EnkelSida.astro';
+import { SAJT } from '../data/sajt';
+import { ihop } from '../lib/text';
+const id = SAJT.ga4.replace(/^G-/, '') || 'XXXX';
+---
+<EnkelSida titel="Cookies" beskrivning={`Vilka cookies ${SAJT.namn} använder, varför, och hur du ändrar ditt val. Statistik mäts bara om du har sagt ja i cookierutan.`} ingress="Vi använder bara cookies för statistik, och bara om du säger ja.">
+  <h2>Ditt val</h2>
+  <p>Första gången du besöker sajten frågar vi om vi får mäta besöket. Ditt svar sparas i webbläsarens lokala lagring (inte i en cookie) så att vi inte frågar igen. Du kan ändra valet när som helst med knappen <b>Ändra cookieval</b> längst ner på varje sida.</p>
+  <h2>Statistik (bara med ditt samtycke)</h2>
+  <p>Säger du ja använder vi Google Analytics 4 för att se hur många som besöker sidorna, var de kommer ifrån och hur många som skickar en förfrågan. Google Analytics sätter då de här cookies:</p>
+  <table>
+    <thead><tr><th>Namn</th><th>Syfte</th><th>Lagras</th></tr></thead>
+    <tbody>
+      <tr><td><code>_ga</code></td><td>{ihop('Skiljer besökare åt')}</td><td>2 år</td></tr>
+      <tr><td><code>_ga_{id}</code></td><td>{ihop('Håller ihop ett besök')}</td><td>2 år</td></tr>
+    </tbody>
+  </table>
+  <p>Säger du nej laddas Google Analytics inte alls och inga cookies sätts.</p>
+  <h2>Nödvändig lagring</h2>
+  <p>Ditt cookieval sparas som <code>samtycke-v1</code> i webbläsarens lokala lagring. Det behövs för att sajten ska komma ihåg vad du har svarat.</p>
+  <p>Mer om hur vi hanterar personuppgifter står i <a href="/integritetspolicy/">integritetspolicyn</a>.</p>
+</EnkelSida>

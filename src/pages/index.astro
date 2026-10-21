@@ -1,0 +1,11 @@
+---
+// Startsidan. Ersätts när designriktningen är godkänd (godkännande 3).
+import Bas from '../layouts/Bas.astro';
+import { SAJT } from '../data/sajt';
+---
+<Bas titel={SAJT.namn} beskrivning="Startsidan i mallen. Den byts ut mot den riktiga startsidan när sitemapen, texterna och designriktningen är godkända av Alex.">
+  <section class="inre">
+    <h1>{SAJT.namn}</h1>
+    <p><a href="/kontakt/">Kontakta oss</a></p>
+  </section>
+</Bas>

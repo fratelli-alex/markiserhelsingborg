@@ -1,0 +1,22 @@
+---
+// Responsiv bild från bildpipelinen. Herobilden (LCP) får prioritet = true: laddas direkt med hög prioritet.
+// Alla andra laddas lat. Bredd och höjd sätts alltid så att sidan inte hoppar.
+import { bild, srcset } from '../lib/bilder';
+interface Props { namn: string; alt: string; sizes: string; prioritet?: boolean; class?: string }
+const { namn, alt, sizes, prioritet = false, class: klass } = Astro.props;
+const m = bild(namn);
+const reserv = m.varianter.find(v => v.bredd >= 1280) ?? m.varianter.at(-1)!;
+---
+<picture class={klass}>
+  <source type="image/avif" srcset={srcset(namn, 'avif')} sizes={sizes} />
+  <source type="image/webp" srcset={srcset(namn, 'webp')} sizes={sizes} />
+  <img
+    src={`/bilder/${namn}-${reserv.bredd}.webp`}
+    width={reserv.bredd}
+    height={reserv.hojd}
+    alt={alt}
+    loading={prioritet ? 'eager' : 'lazy'}
+    fetchpriority={prioritet ? 'high' : undefined}
+    decoding={prioritet ? 'sync' : 'async'}
+  />
+</picture>

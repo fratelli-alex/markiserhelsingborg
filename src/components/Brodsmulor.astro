@@ -1,0 +1,13 @@
+---
+// Brödsmulor. Samma lista blir BreadcrumbList i JSON-LD (se lib/schema.ts).
+export interface Smula { namn: string; url?: string }
+interface Props { smulor: Smula[] }
+const { smulor } = Astro.props;
+---
+<nav class="brodsmulor" aria-label="Brödsmulor">
+  <ol>
+    {smulor.map((s, i) => (
+      <li>{s.url && i < smulor.length - 1 ? <a href={s.url}>{s.namn}</a> : <span aria-current="page">{s.namn}</span>}</li>
+    ))}
+  </ol>
+</nav>

@@ -1,0 +1,27 @@
+{
+  "name": "astro-startmall",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "bilder": "node scripts/bilder.mjs",
+    "dev": "npm run bilder && astro dev",
+    "build": "rm -rf node_modules/.astro && npm run bilder && astro build && node scripts/efterbygg.mjs",
+    "kontroll": "node scripts/kontroll.mjs",
+    "mat": "node scripts/mat.mjs",
+    "preview": "astro preview"
+  },
+  "engines": {
+    "node": ">=22.12"
+  },
+  "dependencies": {
+    "@astrojs/markdown-remark": "^7.3.2",
+    "@astrojs/sitemap": "^3.7.4",
+    "astro": "^7.3.8",
+    "rehype-raw": "^7.0.0",
+    "sharp": "^0.35.5"
+  },
+  "devDependencies": {
+    "linkedom": "^0.18.13",
+    "playwright-core": "^1.56.0"
+  }
+}
