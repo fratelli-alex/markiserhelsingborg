@@ -27,8 +27,8 @@ fällor, status och listorna inför domänbytet. Uppdateras löpande. `git pull`
 | Konkurrenter | Solflex AB, Solskyddsproffset Helsingborg AB (Helsingborg); Rullux (Lund), Markiscentrum (Båstad), Solklar (Löddeköpinge); reco.se |
 | Sökdata | Ahrefs + GSC + GA4, exporter i `data/` (2026-10-21) |
 | Mätning | Befintlig GA4-egendom "Markishelsingborg.se" behålls (mät-id G-… okänt, syns inte i sidans HTML) |
-| Hosting | Nytt Sevalla-projekt (ok från Alex 2026-10-21, ej skapat). Egen Brevo-nyckel |
-| Kontakttjänst | ej skapad |
+| Hosting | Sevalla statisk sajt "Markiser Helsingborg" (id 85d33d29-acf9-42d2-a3b6-c02e9257e6ec), tillfällig adress https://markiser-helsingborg-ac7t7.kinsta.page. Skapad via Alex Mac (Sevalla-MCP där) 2026-10-21. Bygge gav 500 tills GitHub-appen Kinsta får åtkomst till repot. Egen Brevo-nyckel |
+| Kontakttjänst | Sevalla-app https://markiser-helsingborg-kontak-o8k9n.sevalla.app (Stockholm, h1), KONTAKT_URL = …/kontakt. BREVO_API_KEY och SLACK_WEBHOOK läggs in av Alex i Sevalla |
 | Domän och DNS | Oderland (domän och DNS). E-post på domänen okänt; MX/TXT läses av före switch-dagen |
 | GitHub | fratelli-alex/markiserhelsingborg (privat) |
 | Projektmapp | |
