@@ -1,0 +1,60 @@
+---
+// Schematisk karta över Helsingborg, ritad här (inga kartbibliotek, inga cookies). Kustlinjen är förenklad;
+// orterna (Norr och Olympia ritas inte, de ligger för tätt inpå Centrum) ligger på ungefärliga koordinater (WGS84) och projiceras enkelt: x = (lon − 12,55) · cos 56° · K,
+// y = (56,17 − lat) · K. Listan med orter står också som text bredvid kartan.
+const K = 2000, C = 0.559;
+const xy = (lat: number, lon: number) => [Math.round((lon - 12.55) * C * K), Math.round((56.17 - lat) * K)];
+const KUST: [number, number][] = [[56.17, 12.565], [56.15, 12.575], [56.13, 12.59], [56.115, 12.608], [56.1, 12.628], [56.085, 12.645], [56.072, 12.662], [56.06, 12.68], [56.05, 12.688], [56.04, 12.692], [56.03, 12.699], [56.018, 12.71], [56.005, 12.72], [55.995, 12.73], [55.982, 12.745], [55.968, 12.758], [55.95, 12.77], [55.93, 12.782]];
+const land = 'M' + KUST.map(([a, o]) => xy(a, o).join(',')).join(' L') + ' L420,480 L420,0 Z';
+const ORTER: { namn: string; lat: number; lon: number; stor?: boolean; vanster?: boolean }[] = [
+  { namn: 'Centrum', lat: 56.046, lon: 12.697, stor: true, vanster: true },
+  { namn: 'Tågaborg', lat: 56.052, lon: 12.712 },
+  { namn: 'Ramlösa', lat: 56.024, lon: 12.738 },
+  { namn: 'Råå', lat: 56.003, lon: 12.733 },
+  { namn: 'Rydebäck', lat: 55.966, lon: 12.775 },
+  { namn: 'Påarp', lat: 56.032, lon: 12.83 },
+  { namn: 'Bårslöv', lat: 56.012, lon: 12.808 },
+  { namn: 'Mörarp', lat: 56.053, lon: 12.877, vanster: true },
+  { namn: 'Ödåkra', lat: 56.105, lon: 12.745 },
+  { namn: 'Allerum', lat: 56.118, lon: 12.708 },
+  { namn: 'Kattarp', lat: 56.145, lon: 12.77 },
+  { namn: 'Hittarp', lat: 56.094, lon: 12.648, vanster: true },
+  { namn: 'Laröd', lat: 56.086, lon: 12.672 },
+  { namn: 'Domsten', lat: 56.116, lon: 12.62, vanster: true },
+];
+---
+<figure class="karta">
+  <svg viewBox="0 0 420 480" role="img" aria-labelledby="karta-titel">
+    <title id="karta-titel">Karta över Helsingborg med de områden där vi gör hembesök</title>
+    <rect class="karta-hav" width="420" height="480" />
+    <path class="karta-land" d={land} />
+    <text class="karta-vatten" x="30" y="380">Öresund</text>
+    <text class="karta-dk" x="18" y="280">Helsingør</text>
+    <g class="karta-pil"><path d="M300,30 L300,8 M293,16 L300,8 L307,16" /><text x="312" y="22">Ängelholm, ca 30 km</text></g>
+    {ORTER.map(o => {
+      const [x, y] = xy(o.lat, o.lon);
+      return (
+        <g class={o.stor ? 'karta-ort stor' : 'karta-ort'}>
+          <circle cx={x} cy={y} r={o.stor ? 7 : 4.5} />
+          <text x={o.vanster ? x - 8 : x + 9} y={y + 4} text-anchor={o.vanster ? 'end' : 'start'}>{o.namn}</text>
+        </g>
+      );
+    })}
+  </svg>
+  <figcaption>Förenklad karta. Vi gör hembesök i hela Helsingborgs kommun.</figcaption>
+</figure>
+<style is:global>
+  .karta { margin: 0; display: grid; gap: 8px; }
+  .karta svg { width: 100%; height: auto; border-radius: var(--radie-stor); display: block; }
+  .karta-hav { fill: #DCE4E5; }
+  .karta-land { fill: var(--sand); stroke: #C9C5BA; stroke-width: 1.5; }
+  .karta-vatten { fill: #6B8288; font: italic 500 13px var(--brodtext); letter-spacing: .2em; text-transform: uppercase; }
+  .karta-dk { fill: #6B8288; font: 500 11px var(--brodtext); }
+  .karta-pil path { fill: none; stroke: var(--text-2); stroke-width: 1.5; }
+  .karta-pil text { fill: var(--text-2); font: 500 11px var(--brodtext); dominant-baseline: middle; }
+  .karta-ort circle { fill: var(--vit); stroke: var(--petrol); stroke-width: 2; }
+  .karta-ort.stor circle { fill: var(--petrol); }
+  .karta-ort text { fill: var(--petrol); font: 600 12px var(--rubrik); paint-order: stroke; stroke: var(--sand); stroke-width: 3px; stroke-linejoin: round; }
+  .karta-ort.stor text { font-size: 14px; }
+  .karta figcaption { font-size: 14px; color: var(--text-2); }
+</style>

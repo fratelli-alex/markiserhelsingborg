@@ -4,6 +4,7 @@ import Bas from '../layouts/Bas.astro';
 import Bild from '../components/Bild.astro';
 import Forfragan from '../components/Forfragan.astro';
 import Markisraknare from '../components/Markisraknare.astro';
+import HelsingborgKarta from '../components/HelsingborgKarta.astro';
 import { SAJT, telLank } from '../data/sajt';
 import { ihop } from '../lib/text';
 import { tjanst, faq } from '../lib/schema';
@@ -47,8 +48,8 @@ const FRAGOR = [
     <div class="inre hero-inre">
       <div class="hero-text">
         <p class="eyebrow">Markiser och solskydd i Helsingborg</p>
-        <h1>{ihop('Markiser i Helsingborg, uppmätta hemma hos dig')}</h1>
-        <p class="ingress">{ihop('Vi kommer hem till dig, mäter och visar vävprover på plats. Markiserna är svensktillverkade av Hestra Markis och vävarna kommer från Sandatex. Skicka en förfrågan, så ringer vi upp samma dag.')}</p>
+        <h1>Markiser i Helsingborg<span class="sr">,</span> <span class="h1-under">uppmätta hemma hos dig</span></h1>
+        <p class="ingress">{ihop('Vi mäter, visar vävprover på plats och monterar. Markiserna är svensktillverkade av Hestra Markis och vävarna kommer från Sandatex. Skicka en förfrågan, så ringer vi upp samma dag.')}</p>
         <ul class="bockar">
           <li>Hembesök utan kostnad</li>
           <li>Svensktillverkat av Hestra</li>
@@ -63,7 +64,7 @@ const FRAGOR = [
     </div>
   </section>
 
-  <section class="sektion sektion-vit">
+  <section class="sektion">
     <div class="inre">
       <div class="sek-huvud">
         <h2>{ihop('Det här kan vi hjälpa dig med')}</h2>
@@ -96,27 +97,26 @@ const FRAGOR = [
     </div>
   </section>
 
-  <section class="sektion sektion-sand">
-    <div class="inre">
+  <section class="sektion">
+    <div class="inre"><div class="raknare-ram">
       <div class="sek-huvud">
         <h2>{ihop('Hur stor markis behöver du?')}</h2>
         <p>{ihop('En terrassmarkis bör vara 20–30 centimeter bredare än ytan du vill ha i skugga, så att skuggan räcker även när solen står snett. Fyll i ungefärliga mått, så får du en första uppskattning.')}</p>
       </div>
-      <Markisraknare />
+      <Markisraknare /></div>
     </div>
   </section>
 
-  <section class="sektion sektion-vit">
+  <section class="sektion">
     <div class="inre delad">
       <div class="delad-text">
         <h2>{ihop('Varför det spelar roll var i Helsingborg du bor')}</h2>
         <p>Vid sundet blåser det mer än inne i landet, och en markis i västerläge får eftermiddagssolen rakt in från vattnet. I villaområdena på Tågaborg och Ramlösa sitter markisen ofta på en putsad eller tegelklädd fasad med äldre fönsterkarmar, medan nyare hus på till exempel Norr har stora glaspartier som passar bättre för vertikalmarkiser.</p>
         <p>Det är sådant vi tittar på vid hembesöket, och därför ger vi inga priser innan vi har sett huset.</p>
-      </div>
-      <div class="omraden">
-        <h3>Vi gör hembesök i hela Helsingborg</h3>
+        <h3 class="omraden-rubrik">Vi gör hembesök i hela Helsingborg</h3>
         <ul class="chips">{OMRADEN.map(o => <li>{o}</li>)}</ul>
       </div>
+      <HelsingborgKarta />
     </div>
   </section>
 
@@ -132,7 +132,7 @@ const FRAGOR = [
     </div>
   </section>
 
-  <section class="sektion sektion-vit">
+  <section class="sektion">
     <div class="inre">
       <div class="sek-huvud">
         <h2>{ihop('Guider innan du bestämmer dig')}</h2>
