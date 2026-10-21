@@ -22,7 +22,29 @@ fragor:
   - { fraga: "Vad är skillnaden mellan plissé och duette?", svar: "En vanlig plissé är en enkel veckad väv. En duette har två lager som bildar celler, ungefär som en bikaka, och finns i en mörkläggande väv." }
   - { fraga: "Kan jag öppna altandörren med plisségardinen nere?", svar: "Ja, när gardinen sitter på dörrbladet följer den med när du öppnar." }
 relaterade: [/lamellgardiner/, /rullgardiner/, /persienner/]
+tabell:
+  rubrik: Plissé och duette från Hestra
+  intro: Måtten kommer från tillverkarens produktblad. Den vanliga plissén passar flest fönster, duetten den som vill ha mörkt.
+  kolumner: [Modell, Typ, Mått upp till, Att veta]
+  rader:
+    - ["Greta", "Plissé", "2,4 m bred, 3 m hög", "Passar sneda fönster och takfönster"]
+    - ["Ingrid", "Duette, två lager", "4,4 m bred", "Finns med mörkläggande väv, Light block"]
+  not: Plissé beställs efter bågens eller dörrbladets mått, inte efter fönsteröppningen.
+checklista:
+  rubrik: Det här tittar vi på vid hembesöket
+  intro: Plissé mäts efter bågen, så vi mäter varje fönster och dörr för sig.
+  punkter:
+    - "**Bågen eller dörrbladet,** där gardinen ska sitta och följa med när du öppnar."
+    - "**Fönstrets form.** Sneda fönster, gavelfönster och takfönster mäts på sitt eget sätt."
+    - "**Handtag och beslag,** så att gardinen går fritt när den dras upp och ned."
+    - "**Rummet.** Sovrum och barnrum kan behöva mörkläggande duette."
+    - "**Väderstrecket,** och hur mycket värme som kommer in genom rutan."
+    - "**Väven,** med prover i genomsiktligt, ljusdämpande och mörkläggande."
+kallor:
+  - { namn: "Hestra Markis AB, produktblad plissé och duette", kontrollerad: 2026-10-21 }
 ---
+
+En plisségardin är en väv som veckas ihop som ett dragspel när den dras upp. Den monteras direkt på fönstret och klarar former som andra gardiner har svårt med. Gardinerna vi monterar kommer från Hestra Markis.
 
 ## Sitter tätt mot glaset
 
@@ -31,6 +53,8 @@ En plisségardin monteras på fönsterbågen eller dörrbladet och löper i små
 ## Sneda fönster och takfönster
 
 Eftersom väven hålls av sidorna går den att anpassa till fönster som inte är rektangulära, och den hänger inte ner i ett lutande takfönster. Plisségardinerna vi monterar är från Hestra Markis och finns upp till 2,4 meter breda och 3 meter höga. De passar takfönster i en inredd vind, trekantiga gavelfönster och fönster med snedtak.
+
+<aside class="cta-ruta"><div><p class="cta-ruta-rubrik">Har du fönster som är svåra att klä?</p><p>Vi mäter takfönster, sneda fönster och altandörrar vid ett kostnadsfritt hembesök.</p></div><div class="knappar"><a class="knapp" href="#forfragan">Boka hembesök</a></div></aside>
 
 ## Duette för mörkläggning
 
@@ -47,3 +71,5 @@ Plissé finns i genomsiktliga, ljusdämpande och mörkläggande vävar. Vi har m
 ## Skötsel
 
 Damma av gardinen med en mjuk borste eller dammsugarens borstmunstycke på låg effekt. Fläckar tar du bort med en lätt fuktad trasa. Låt gardinen vara nerdragen tills den har torkat.
+
+> **Tips:** Väljer du samma väv i alla fönster som syns från gatan blir huset lugnt utifrån, även om du har mörkläggande duette i sovrummet och ljusare plissé i resten av huset.

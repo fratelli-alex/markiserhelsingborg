@@ -23,7 +23,30 @@ fragor:
   - { fraga: "Kan en korgmarkis sitta över en entré?", svar: "Ja. Med ett utfall på upp till två meter ger den skydd mot sol och regn när du står vid dörren." }
   - { fraga: "Kan ni byta väv på en gammal korgmarkis?", svar: "Ofta går det. Vi tittar på stommen och fästena och säger om det lönar sig att byta väven." }
 relaterade: [/fonstermarkiser/, /markisoletter/, /solskydd-for-foretag/]
+tabell:
+  rubrik: "Korgmarkis, markisolett eller fallarm"
+  intro: "Tre fönstermarkiser med olika form. Vid hembesöket visar vi vilken som passar vilket fönster."
+  kolumner: ["Jämför", "Korgmarkis", "Markisolett", "Fallarmsmarkis"]
+  rader:
+    - ["Form", "Halv korg över fönstret", "Rakt ned och sedan ut", "Snett ut från överkanten"]
+    - ["Utsikt", "Under korgen", "Under den utfällda delen", "Under väven"]
+    - ["Passar", "Entréer, butiker och fönster", "Rum nära fönstret", "De flesta fönster"]
+    - ["Mått hos Hestra", "Ingvar: upp till 6 m bred", "Mäts efter fönstret", "Tage: upp till 5,6 m bred"]
+  not: "Mått från Hestras produktblad."
+checklista:
+  rubrik: "Det här tittar vi på vid hembesöket"
+  punkter:
+    - "**Varje fönster för sig,** eftersom äldre hus sällan har samma mått runt om."
+    - "**Fasaden.** Puts, tegel eller trä avgör vilka fästen som behövs."
+    - "**Höjden över dörren,** så att du går fritt under markisen."
+    - "**Utfallet,** som styr hur mycket skugga och regnskydd du får."
+    - "**Samma väv runt huset,** om du vill att fasaden ska hänga ihop."
+    - "**Fastighetsägare och bygglov,** om markisen ska sitta på en butik."
+kallor:
+  - { namn: "Hestra Markis AB, produktblad korg- och fönstermarkiser", kontrollerad: 2026-10-21 }
 ---
+
+Korgmarkisen är den typ av fönstermarkis som syns mest på fasaden. Den sitter över fönster, dörrar och skyltfönster och ger huset ett tydligt inslag. Markiserna vi monterar tillverkas av Hestra Markis i Sverige, och väven kommer från Sandatex.
 
 ## Vad en korgmarkis är
 
@@ -35,9 +58,11 @@ På en villa sitter korgmarkiser ofta över fönster mot söder eller väster oc
 
 I äldre villaområden som Tågaborg, Ramlösa och Råå passar korgmarkiser bra till puts, tegel och trähus med spröjsade fönster. Vi mäter varje fönster för sig, eftersom äldre hus sällan har exakt samma fönstermått runt om, och väljer infästning efter fasaden.
 
+<aside class="cta-ruta"><div><p class="cta-ruta-rubrik">Flera fönster och en entré?</p><p>Vi mäter varje fönster hemma hos dig och visar vävprover mot fasaden.</p></div><div class="knappar"><a class="knapp" href="#forfragan">Boka hembesök</a></div></aside>
+
 ## Butiker och caféer
 
-Över en butik eller ett café markerar en korgmarkis entrén och skuggar skyltfönstret, så att varorna inte bleks i solen. På en gata som Kullagatan, där entréerna ligger tätt, syns den på håll. För ett företag kan bygglov krävas när fasadens utseende ändras, och i vissa fastigheter vill fastighetsägaren godkänna markisen först. Läs mer om [solskydd för företag](/solskydd-for-foretag/).
+Över en butik eller ett café markerar en korgmarkis entrén och skuggar skyltfönstret, så att varorna inte bleks i solen. Väven kan få tryck med företagets namn eller logga. På en gata som Kullagatan, där entréerna ligger tätt, syns den på håll. För ett företag kan bygglov krävas när fasadens utseende ändras, och i vissa fastigheter vill fastighetsägaren godkänna markisen först. Läs mer om [solskydd för företag](/solskydd-for-foretag/).
 
 ## Korgmarkis, markisolett eller fallarm
 
@@ -46,6 +71,8 @@ Korgmarkisen är den som syns mest på fasaden. Vill du ha något som går att r
 ## Väv och färg
 
 Väven kommer från Sandatex. På en korgmarkis syns väven från gatan, så färgen spelar stor roll för hur huset uppfattas. Vi har med riktiga prover vid hembesöket och håller upp dem mot fasaden, så att du ser hur de ser ut i dagsljus.
+
+> **Tips:** Titta på proverna både i sol och i skugga. En korgmarkis syns från gatan hela dagen, och färgen kan se olika ut beroende på ljuset.
 
 ## Så går det till
 

@@ -8,6 +8,7 @@ seoTitel: Bandlås på markisen
 beskrivning: Så fungerar bandlåset och bandrullen på en bandmanövrerad markis, vad du gör när bandet fastnat och hur ett slitet band byts, steg för steg.
 ingress: Fönstermarkiser och markisoletter manövreras ofta med ett band som du drar i inifrån. När bandet fastnar eller slits är felet oftast enkelt att hitta. Här är hur systemet fungerar och vad du kan göra själv.
 kortText: Hur bandlås och bandrulle fungerar, vanliga fel och hur bandet byts.
+produkt: Service eller reparation
 forfattare: roy-ridderberg
 publicerad: 2026-10-21
 forelder: /guider/
@@ -17,7 +18,29 @@ fragor:
   - { fraga: "Ska jag smörja bandlåset?", svar: "Nej, inte med olja eller fett. Det gör bandet halt och drar till sig smuts. Rengör låset från damm och fibrer i stället." }
   - { fraga: "Min vevmarkis har inget band. Var sitter låset?", svar: "En vevmarkis har en växel vid valsen som håller markisen där du släpper veven. Den har inget bandlås." }
 relaterade: [/guider/reservdelar-till-markis/, /guider/markisarmar/, /guider/byta-markismotor/]
+tabell:
+  rubrik: Felsök bandet och låset
+  intro: De vanligaste felen på en bandmanövrerad markis, och vad du kan göra själv.
+  kolumner: [Det du ser, Trolig orsak, Vad du kan göra]
+  rader:
+    - [Bandet går inte att dra, Låset har gripit under belastning, Dra lite uppåt och släpp efter]
+    - [Markisen sjunker när du släpper, Spärren i låset är sliten, Byt bandupprullaren]
+    - [Bandet hänger löst, Fjädern i upprullaren har tappat kraft, Byt bandupprullaren]
+    - [Bandet skaver i väggen, Bandet går snett genom hålet, Rikta bandet och se över hålets kant]
+    - [Bandet kärvar på ett ställe, Bandet ligger snett på bandskivan, Rulla ut och in lugnt några gånger]
+    - [Bandet är fransigt eller sprött, Slitage från sol och friktion, Byt bandet innan det går av]
+checklista:
+  rubrik: Kontrollera bandet en gång om året
+  punkter:
+    - "**Kanterna.** Inga fransar eller trådar som sticker ut."
+    - "**Ytan.** Bandet ska vara mjukt, inte blankt, hårt eller sprött."
+    - "**Genomföringen.** Titta på bandet där det går genom väggen eller karmen."
+    - "**Låset.** Släpp bandet och se att markisen stannar där du vill."
+    - "**Upprullaren.** Bandet ska rullas in av sig självt utan att hänga löst."
+    - "**Rengöringen.** Ta bort damm och fibrer från låset, utan olja eller fett."
 ---
+
+Ett band som fastnar och en markis som sjunker när du släpper är två av de vanligaste felen på fönstermarkiser. Oftast sitter felet i låset, i bandets väg genom väggen eller i själva bandet. Här går vi igenom dem i den ordningen.
 
 ## Så fungerar band och bandlås
 
@@ -63,6 +86,8 @@ Går bandet av medan markisen är upprullad kan fallarmarna slå ut med kraft. E
 ## Så byts bandet
 
 Exakt hur bandet fästs skiljer sig mellan fabrikat, men gången är ungefär densamma:
+
+> **Tips:** Fotografera hur det gamla bandet sitter i upprullaren och på bandskivan innan du lossar det. Då är det lätt att sätta det nya åt rätt håll.
 
 1. Rulla upp markisen och säkra väven, till exempel med ett band runt väven och valsen, så att den inte kan rulla ut när bandet tas bort.
 2. Öppna bandupprullaren och lås fjädern enligt tillverkarens anvisning. Lossa det gamla bandet från upprullaren medan du håller emot.

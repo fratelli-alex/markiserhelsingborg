@@ -16,13 +16,40 @@ fakta:
   - { namn: Utvändigt, varde: "Terrass-, korg-, fönster- och pergolamarkiser, screen" }
   - { namn: Invändigt, varde: "Persienner, rullgardiner, lamell- och plisségardiner" }
   - { namn: Tillverkare, varde: "Hestra Markis, svensktillverkat" }
-  - { namn: Pris, varde: "Efter besök på plats, utan kostnad" }
+  - { namn: Pris, varde: "Efter hembesök, utan kostnad" }
 fragor:
   - { fraga: "Behöver vi bygglov för en markis på fasaden?", svar: "Det kan behövas, särskilt om markisen ändrar fasadens utseende eller har reklam. Kontrollera med Helsingborgs stad innan ni beställer." }
   - { fraga: "Kan vi ha vår logotyp på markisväven?", svar: "Ja, det går att få tryck med namn eller logotyp på väven. Tänk på att reklam på en markis kan kräva skyltlov." }
   - { fraga: "Hyr vi lokalen, vad gäller då?", svar: "Prata med fastighetsägaren innan ni beställer. Ofta vill de godkänna allt som sitter på fasaden." }
 relaterade: [/pergolamarkiser/, /vertikalmarkiser/, /korgmarkiser/]
+tabell:
+  rubrik: Vanliga behov och vad som brukar passa
+  intro: Varje lokal är olika, men de flesta förfrågningar från företag handlar om några återkommande problem.
+  kolumner: [Verksamhet, Det som stör, Brukar passa]
+  rader:
+    - ["Kontor", "Värme och bländade skärmar", "Vertikalmarkis eller screen ute, lamellgardin inne"]
+    - ["Mötesrum", "Bländning och insyn", "Lamellgardiner eller persienner"]
+    - ["Butik", "Varor som bleks i skyltfönstret", "Fönstermarkis eller korgmarkis"]
+    - ["Entré", "Sol och regn vid dörren", "Korgmarkis"]
+    - ["Uteservering", "Sol på gästerna mitt på dagen", "Terrassmarkis eller pergolamarkis"]
+    - ["Uteservering mot väster", "Låg kvällssol från sidan", "Screen på sidorna"]
+  not: Markisväven kan få tryck med företagets namn eller logotyp. Tryck kan kräva skyltlov.
+checklista:
+  rubrik: Det här tittar vi på vid besöket
+  intro: Vi kommer ut när det passar verksamheten och går igenom hela lokalen på en gång.
+  punkter:
+    - "**Fasaden.** Material och underlag avgör hur markiserna fästs."
+    - "**Solen över dagen,** och när lokalen eller serveringen används som mest."
+    - "**Vindläget.** Öppna platser mot sundet tar mer vind."
+    - "**Tryck på väven,** om ni vill ha namn eller logotyp synligt."
+    - "**Lov och fastighetsägare,** så att ni vet vad som behöver sökas innan beställning."
+    - "**Monteringen,** så att den stör verksamheten så lite som möjligt."
+kallor:
+  - { namn: "Hestra Markis AB, produktblad markiser och invändigt solskydd", kontrollerad: 2026-10-21 }
+  - { namn: "Helsingborgs stad, bygglov och skyltlov", url: "https://helsingborg.se", kontrollerad: 2026-10-21 }
 ---
+
+Vi monterar solskydd från Hestra Markis på kontor, i butiker och på restauranger, både på fasaden och inne i lokalen. Vi börjar med att se hur solen går över lokalen och vad som stör mest, värmen, bländningen eller solen på gästerna.
 
 ## Kontor
 
@@ -30,11 +57,15 @@ Stora glaspartier mot söder eller väster gör att det blir varmt inne långt i
 
 ## Butiker och entréer
 
-Ett skyltfönster i solen bleker varorna, och en entré utan tak blir blöt när det regnar. En [korgmarkis](/korgmarkiser/) över entrén eller en fönstermarkis över skyltfönstret ger skugga och syns på håll. Väven väljer ni bland Sandatex prover, så att den passar fasaden och er profil.
+Ett skyltfönster i solen bleker varorna, och en entré utan tak blir blöt när det regnar. En [korgmarkis](/korgmarkiser/) över entrén eller en fönstermarkis över skyltfönstret ger skugga och syns på håll. Väven väljer ni bland Sandatex prover, så att den passar fasaden och er profil. Den kan också få tryck med ert namn eller er logotyp.
+
+<aside class="cta-ruta"><div><p class="cta-ruta-rubrik">Vill ni se vad som passar lokalen?</p><p>Vi kommer ut, mäter och visar vävprover utan kostnad.</p></div><div class="knappar"><a class="knapp" href="#forfragan">Boka hembesök</a></div></aside>
 
 ## Restauranger och uteserveringar
 
 På en uteservering vill gästerna sitta kvar även när solen ligger på. En stor terrassmarkis räcker långt på en vägg. Behöver skuggan gå längre ut än en vanlig markis når passar en [pergolamarkis](/pergolamarkiser/), som står på egna stolpar ytterst och har ett tak av väv. Screen på sidorna tar den låga kvällssolen och gör det mer skyddat. Längs Kullagatan och i Norra hamnen kommer vinden ofta från väster över sundet, så vi tittar på hur utsatt platsen är innan vi föreslår modell.
+
+> **Viktigt:** Fäll in markiserna över serveringen när det blåser upp och innan ni stänger för dagen. En vindby mot en utfälld markis när ingen är på plats kan skada både armar och fästen.
 
 ## Service på det ni redan har
 
@@ -42,7 +73,7 @@ Har ni markiser som har suttit några säsonger och börjat se slitna ut behöve
 
 ## Bygglov, skyltlov och tryck på väven
 
-En markis på fasaden kan kräva bygglov, och tryck med namn eller logotyp på väven kan räknas som skylt och kräva skyltlov. Vad som gäller beror på var lokalen ligger och hur markisen ser ut. Kontrollera med [Helsingborgs stad](https://helsingborg.se) innan ni beställer. Hyr ni lokalen behöver fastighetsägaren också säga ja.
+En markis på fasaden kan kräva bygglov, och tryck med namn eller logotyp på väven kan räknas som skylt och kräva skyltlov. Trycket går att få, men ta reda på vad som gäller för er fasad först. Vad som gäller beror på var lokalen ligger och hur markisen ser ut. Kontrollera med [Helsingborgs stad](https://helsingborg.se) innan ni beställer. Hyr ni lokalen behöver fastighetsägaren också säga ja.
 
 ## Så går det till
 

@@ -21,7 +21,33 @@ fragor:
   - { fraga: "Var fästs markisen?", svar: "Det beror på balkongen. Vi tittar på fasaden, balkongtaket och räcket och går igenom med dig var infästningen ska sitta innan vi monterar." }
   - { fraga: "Hur långt ut kan en balkongmarkis gå?", svar: "Det styrs av balkongens djup. En mindre terrassmarkis från Hestra har ett utfall på 1,5–2,5 meter. Vi mäter och föreslår ett utfall som passar." }
 relaterade: [/terrassmarkiser/, /vertikalmarkiser/, /fonstermarkiser/]
+tabell:
+  rubrik: "Fyra sätt att skugga en balkong"
+  intro: "Vilken typ som passar beror på balkongens djup och varifrån solen och insynen kommer."
+  kolumner: ["Typ", "Hestra-modell", "Mått", "Passar när"]
+  rader:
+    - ["Mindre terrassmarkis", "Lasse", "Upp till 5 m bred, utfall 1,5–2,5 m", "Du vill skugga hela balkongen"]
+    - ["Fallarmsmarkis", "Tage", "Upp till 3,4 m bred, utfall 40–120 cm", "Balkongen är smal"]
+    - ["Sidomarkis", "Björn eller Rune", "Utfall upp till 4 m", "Solen eller insynen kommer från sidan"]
+    - ["Screen", "Erik", "Upp till 3 × 3 m per enhet", "Du vill skugga rakt framifrån"]
+  not: "Mått från Hestras produktblad. Lasse, Tage och Erik har vindklass 3 enligt EN 13561."
+checklista:
+  rubrik: "Innan du bestämmer dig"
+  intro: "Det här är bra att ha klart, gärna redan innan hembesöket."
+  punkter:
+    - "**Föreningens regler** för färg och typ av markis."
+    - "**Styrelsens tillstånd,** eller åtminstone besked om hur du ansöker."
+    - "**Balkongens djup och bredd,** som styr utfallet."
+    - "**Var markisen kan fästas:** fasad, balkongtak eller räcke."
+    - "**Var solen kommer in,** framifrån eller från sidan."
+    - "**Hur högt upp balkongen sitter** och hur mycket det blåser där."
+kallor:
+  - { namn: "Hestra Markis AB, produktblad terrass-, fönster- och sidomarkiser", kontrollerad: 2026-10-21 }
+  - { namn: "SS-EN 13561, markiser – prestanda och säkerhetskrav (vindklasser)", kontrollerad: 2026-10-21 }
+  - { namn: "Helsingborgs stad, bygglov", url: "https://helsingborg.se/", kontrollerad: 2026-10-21 }
 ---
+
+En balkongmarkis är oftast en mindre terrassmarkis, men en fallarmsmarkis, en sidomarkis eller en screen kan passa bättre beroende på hur balkongen ligger. I en bostadsrätt börjar det med föreningen. Markiserna vi monterar tillverkas av Hestra Markis i Sverige.
 
 ## Börja med föreningen
 
@@ -37,6 +63,8 @@ Bor du i en bostadsrätt är fasaden föreningens, inte din. Därför behövs of
 
 **Sidomarkis eller screen.** Står solen in från sidan, eller vill du slippa insyn från grannbalkongen, kan en sidomarkis eller en [vertikalmarkis](/vertikalmarkiser/) göra mer nytta än en markis ovanför.
 
+<aside class="cta-ruta"><div><p class="cta-ruta-rubrik">Behöver du underlag till styrelsen?</p><p>Efter hembesöket får du ett skriftligt förslag med typ, mått och väv.</p></div><div class="knappar"><a class="knapp" href="#forfragan">Boka hembesök</a></div></aside>
+
 ## Infästningen
 
 En balkongmarkis kan fästas i fasaden, i balkongtaket eller ibland i räcket. Vad som fungerar beror på hur balkongen är byggd och vad föreningen tillåter. Vid hembesöket tittar vi på underlaget och går igenom med dig var markisen ska fästas och hur. Det kan du sedan ta med till styrelsen. Vi monterar inte förrän både du och föreningen vet vad som ska göras.
@@ -44,6 +72,8 @@ En balkongmarkis kan fästas i fasaden, i balkongtaket eller ibland i räcket. V
 ## Balkonger i centrum
 
 I de äldre stenhusen i centrala Helsingborg sitter balkongerna ofta högt upp och öppet mot gatan. Ju högre upp, desto mer vind, och mot väster kommer den från sundet. En markis på en balkong ska därför fällas in när det blåser, och vi väljer modell och storlek efter hur utsatt balkongen är. Vi berättar vilken vindklass markisen har.
+
+> **Tips:** Fäll in balkongmarkisen när du går hemifrån. Högt upp kan en vindby komma utan förvarning.
 
 ## Så går det till
 

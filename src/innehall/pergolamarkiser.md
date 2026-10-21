@@ -23,7 +23,34 @@ fragor:
   - { fraga: "Behövs bygglov för en pergolamarkis?", svar: "Det beror på vad som byggs och var. Kontrollera med Helsingborgs stad innan du beställer om du är osäker. Vi berättar vid hembesöket vad vi brukar se." }
   - { fraga: "Passar en pergolamarkis för en uteservering?", svar: "Ja. Den täcker en stor yta och klarar mer blåst än en markis med armar. Läs mer under solskydd för företag." }
 relaterade: [/terrassmarkiser/, /solskydd-for-foretag/, /vertikalmarkiser/]
+tabell:
+  rubrik: "Pergolamarkis eller terrassmarkis"
+  intro: "Båda ger skugga över uteplatsen. Skillnaden är hur de bärs upp och hur stor yta de klarar."
+  kolumner: ["Jämför", "Terrassmarkis", "Pergolamarkis"]
+  rader:
+    - ["Bärs av", "Armar från fasaden", "Egen stomme med skenor"]
+    - ["Storlek hos Hestra", "Upp till 7 m bred, 4 m utfall", "Upp till 5 × 5 m"]
+    - ["Väven", "Fri mellan armarna", "Sträckt i skenor med zip"]
+    - ["Manövrering", "Vev eller motor", "Motor"]
+    - ["Vindklass hos Hestra", "2–3", "4"]
+    - ["Passar", "Altan nära huset", "Stor eller djup uteplats"]
+  not: "Mått och vindklass från Hestras produktblad. Vindklass enligt EN 13561, där högre klass tål mer vind."
+checklista:
+  rubrik: "Det här tittar vi på vid hembesöket"
+  punkter:
+    - "**Uteplatsens mått,** både bredd och djup."
+    - "**Var stommen kan stå** och vad den ska stå på."
+    - "**Hur uteplatsen ligger** mot sol och vind."
+    - "**El till motorn** och var den ska dras."
+    - "**Bygglov,** om du är osäker på vad som gäller."
+    - "**Vävfärgen,** med riktiga prover i dagsljus."
+kallor:
+  - { namn: "Hestra Markis AB, produktblad pergola- och terrassmarkiser", kontrollerad: 2026-10-21 }
+  - { namn: "SS-EN 13561, markiser – prestanda och säkerhetskrav (vindklasser)", kontrollerad: 2026-10-21 }
+  - { namn: "Helsingborgs stad, bygglov", url: "https://helsingborg.se/", kontrollerad: 2026-10-21 }
 ---
+
+En pergolamarkis har en egen stomme och en väv som sitter sträckt i skenor. Den täcker en större yta än en markis på armar och klarar mer vind. Hestras pergolamarkis tillverkas i Sverige, och väven kommer från Sandatex.
 
 ## Vad en pergolamarkis är
 
@@ -35,9 +62,13 @@ Hestras pergolamarkis heter Kurt. Den finns upp till 5 × 5 meter, har zip i ske
 
 En terrassmarkis når upp till fyra meter ut från fasaden. Är uteplatsen djupare än så, eller vill du ha skugga över ett matbord långt ut på altanen, räcker armarna inte. Då är en pergolamarkis ofta lösningen. Den passar också bättre när uteplatsen ligger öppen och blåsig, eftersom väven sitter fast i skenorna.
 
+<aside class="cta-ruta"><div><p class="cta-ruta-rubrik">Stor uteplats?</p><p>Vi mäter uteplatsen hemma hos dig och visar var stommen kan stå.</p></div><div class="knappar"><a class="knapp" href="#forfragan">Boka hembesök</a></div></aside>
+
 ## Uteplatser i västerläge
 
 Många uteplatser i Helsingborg vetter mot väster för att få kvällssolen. Det betyder också att de tar emot vinden från sundet. På nyare hus med stora uteplatser, till exempel på Norr eller i Påarp, är det vanligt att uteplatsen är både stor och öppen åt flera håll. Där gör en pergolamarkis med zip mest nytta. Vid hembesöket tittar vi på hur uteplatsen ligger och var stommen kan stå.
+
+> **Viktigt:** Kör in markisen vid storm, även om den är byggd för blåst. Vindklassen gäller vind upp till en viss styrka, inte vilket väder som helst.
 
 ## Bygglov
 

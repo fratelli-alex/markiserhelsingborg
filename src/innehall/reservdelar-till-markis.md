@@ -8,6 +8,7 @@ seoTitel: Reservdelar till äldre markiser
 beskrivning: Vilka delar som går att byta på en äldre markis, hur du tar reda på fabrikat och mått innan du letar reservdelar och när en reparation inte lönar sig.
 ingress: En markis består av ett tiotal delar som slits i olika takt. Många går att byta, även på äldre markiser. Det svåra är oftast att veta vad markisen är för fabrikat och vilka mått delarna ska ha.
 kortText: Vilka delar som går att byta, hur du hittar fabrikat och mått, och när det inte lönar sig.
+produkt: Service eller reparation
 forfattare: mikael-lundgren
 publicerad: 2026-10-21
 forelder: /guider/
@@ -16,7 +17,31 @@ fragor:
   - { fraga: "Var hittar jag fabrikatet på min markis?", svar: "Titta efter en etikett på frontprofilens ändar, på fästena, inne i kassetten och på motorkabeln. Ibland sitter en lapp i vävens kant." }
   - { fraga: "Kan ni byta väv på en markis som inte är Hestra?", svar: "Ja, vi byter väv på alla fabrikat. Vi kan också skicka vävprover hem till dig." }
 relaterade: [/guider/markisarmar/, /guider/byta-markismotor/, /guider/bandlas-pa-markis/]
+tabell:
+  rubrik: Vanliga reservdelar och vad du behöver veta
+  intro: Hur lätt delen brukar vara att få tag på till en äldre markis, och vilka uppgifter du behöver.
+  kolumner: [Del, Går att få tag på, Det här behöver du veta]
+  rader:
+    - [Väv och volang, Nästan alltid, Bredd och utfall]
+    - [Band och bandupprullare, Nästan alltid, Bandets bredd och tjocklek]
+    - [Vev, Nästan alltid, Längd och koppling till växeln]
+    - [Vevväxel, Ofta, Fabrikat och bild på växeln]
+    - [Rörmotor, "Ofta, i standarddiametrar", Valsens innerdiameter och vridmoment]
+    - [Armar, Ibland, "Fäste, bärrör och utfall"]
+    - [Ändlock och kåpor, Ibland, Fabrikat och modell]
+    - [Kassett och frontprofil, Sällan, Fabrikat och modell]
+checklista:
+  rubrik: Ha det här klart innan du beställer
+  punkter:
+    - "**Fabrikat.** Från en etikett, papper eller bilder på fästen och leder."
+    - "**Bredd.** Från ytterkant till ytterkant på frontprofilen."
+    - "**Utfall.** Hur långt armarna når ut från fasaden."
+    - "**Delens mått.** Valsens diameter, bärrörets mått eller bandets bredd."
+    - "**Bilder.** Delen du ska byta, gärna med ett måttband i bild."
+    - "**Skicket.** Fästen och bärrör utan rost eller sprickor."
 ---
+
+Innan du beställer en reservdel behöver du veta tre saker: vilket fabrikat markisen är, vilka mått delen ska ha och om resten av markisen är värd att laga. Den här guiden tar dem i den ordningen.
 
 ## Delar som brukar gå att byta
 
@@ -46,6 +71,8 @@ Börja här, för utan fabrikat blir det mycket gissande:
 2. **Titta i vävens kant.** Ibland sitter en lapp med tillverkare eller beställningsnummer insydd.
 3. **Leta efter papper.** Bruksanvisning, faktura eller garantibevis från när markisen sattes upp.
 4. **Fotografera.** Ta bilder på armarnas fästen, armbågsleden, vevväxeln eller motorhuvudet och frontprofilens ände. Formen på de delarna säger ofta vilket fabrikat det är, även när etiketten är borta.
+
+> **Tips:** Håll ett måttband eller en tumstock intill delen när du fotograferar. Då ser den som säljer reservdelar storleken direkt.
 
 ## Mät markisen
 

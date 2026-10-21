@@ -17,6 +17,26 @@ fragor:
   - { fraga: "Kan jag ta ner väven och tvätta den i maskin?", svar: "Det är inget vi rekommenderar. Väven sitter fast i röret och framprofilen och kan bli skev eller tappa sin behandling i maskinen." }
   - { fraga: "Hur ofta ska markisen tvättas?", svar: "En ordentlig tvätt om året räcker för de flesta, gärna på våren. Borsta av torr smuts och löv oftare." }
 relaterade: [/markisvav/, /service-och-reparation/, /terrassmarkiser/]
+tabell:
+  rubrik: Fläckar och vad du gör åt dem
+  intro: Vanlig smuts på en akrylväv, vad som brukar fungera och vad du ska undvika.
+  kolumner: [Det du ser, Gör så här, Undvik]
+  rader:
+    - [Damm och löv, Borsta av torrt, Att blöta väven först]
+    - [Fågelspillning, Låt torka och borsta bort, Att gnida in den blöt]
+    - [Kåda och fet smuts, Låt tvättvattnet verka längre, Lösningsmedel]
+    - [Svarta eller gråa prickar, Borsta torrt och tvätta, Blekmedel]
+    - [Ränder efter tvätten, Skölj noga en mulen dag, Att tvätta i stark sol]
+    - [Vattnet pärlar inte av, Impregnera med spray för utomhustextil, Högtryckstvätt]
+checklista:
+  rubrik: Titta på väven medan du tvättar
+  punkter:
+    - "**Färgen.** Jämn, eller kraftigt blekt där solen ligger på?"
+    - "**Sömmarna.** Trådar som släpper eller hål vid kanterna."
+    - "**Ytan.** Pärlar vattnet av när du spolar?"
+    - "**Mögel.** Prickar som sitter kvar efter tvätten."
+    - "**Volangen.** Fransar eller sprickor längst fram."
+    - "**Torrt.** Väven ska vara helt torr innan markisen fälls in."
 ---
 
 De flesta markisvävar är gjorda av akryl med en behandling som gör att vatten och smuts pärlar av. Det är den behandlingen du ska vara rädd om när du tvättar. Därför handlar det mest om vad du inte ska göra.
@@ -31,6 +51,8 @@ Du behöver:
 - en hink ljummet vatten
 - ett milt tvättmedel, till exempel lite diskmedel eller neutral såpa
 - en trädgårdsslang
+
+> **Tips:** Prova tvättmedlet på ett ställe som inte syns, till exempel längst in vid valsen, innan du tar hela väven.
 
 ## Steg för steg
 

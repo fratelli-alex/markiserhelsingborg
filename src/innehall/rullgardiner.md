@@ -22,15 +22,42 @@ fragor:
   - { fraga: "Kan en rullgardin sitta i ett stort fönster?", svar: "Ja. Rullgardinerna vi monterar finns upp till fyra gånger fyra meter. Är fönstret bredare kan det delas på flera gardiner." }
   - { fraga: "Går det att få en rullgardin som släpper in ljus men stänger ute insyn?", svar: "Ja, en ljusdämpande väv gör det. Det ser ljust ut inne, men det är svårt att se in under dagen." }
 relaterade: [/plissegardiner/, /persienner/, /fonstermarkiser/]
+tabell:
+  rubrik: Tre sorters väv
+  intro: Väven avgör vad rullgardinen gör. Välj efter vad rummet används till och hur mycket ljus du vill ha kvar.
+  kolumner: [Väv, Vad den gör, Passar i]
+  rader:
+    - ["Genomsiktlig", "Tar udden av solen, du ser ut", "Vardagsrum, kök och kontor"]
+    - ["Ljusdämpande", "Mjukt ljus, stänger ute insyn på dagen", "Rum mot gata eller granne"]
+    - ["Mörkläggande", "Stoppar ljuset genom väven", "Sovrum och barnrum"]
+  not: "På kvällen, när det är tänt inne, syns mer genom en ljusdämpande väv än under dagen. Rullgardinerna från Hestra finns upp till 4 × 4 meter i Large-utförandet."
+checklista:
+  rubrik: Det här tittar vi på vid hembesöket
+  intro: Vi mäter varje fönster för sig och visar vävproverna i ditt eget ljus.
+  punkter:
+    - "**Nisch eller vägg.** Var gardinen sitter avgör hur mycket ljus som läcker runt kanterna."
+    - "**Plats runt fönstret,** om gardinen ska gå utanför öppningen."
+    - "**Väderstrecket,** och om du får kvällssol rakt in."
+    - "**Fönstrets storlek och indelning,** så att stora partier delas där det ser naturligt ut."
+    - "**Fönsterbänk och element,** så att gardinen går fritt."
+    - "**Väven,** med prover mot ditt eget fönster."
+kallor:
+  - { namn: "Hestra Markis AB, produktblad rullgardiner", kontrollerad: 2026-10-21 }
 ---
+
+En rullgardin är en slät väv som rullas upp på en stång överst i fönstret. När den är uppe syns den knappt, och när den är nere bestämmer väven hur mycket ljus som kommer in. Vi monterar rullgardiner från Hestra Markis, beställda efter måtten på varje fönster.
 
 ## Välj väv efter rummet
 
 Väven avgör vad rullgardinen gör. En genomsiktlig väv tar udden av solen men låter dig se ut. En ljusdämpande väv släpper in ett mjukt ljus och stänger ute insynen under dagen. En mörkläggande väv stoppar ljuset helt och passar i sovrum och barnrum. Vid hembesöket håller du vävproverna mot ditt eget fönster, så ser du skillnaden direkt.
 
+<aside class="cta-ruta"><div><p class="cta-ruta-rubrik">Vill du se vävproverna hemma?</p><p>Vi tar med prover och mäter fönstren vid ett kostnadsfritt hembesök.</p></div><div class="knappar"><a class="knapp" href="#forfragan">Boka hembesök</a></div></aside>
+
 ## Mörkläggning i sovrummet
 
 En mörkläggande väv stoppar ljuset genom tyget, men ljuset hittar vägar runt kanterna. Monteras gardinen i fönsternischen blir det en smal ljusspalt på sidorna. Sitter den på väggen ovanför och går en bit utanför öppningen på varje sida blir det mörkare. Vilket som fungerar beror på hur fönstret och väggen ser ut, och det går vi igenom när vi mäter. I ett barnrum kan det vara värt att välja mörkläggande väv även om rummet inte ligger mot solen.
+
+> **Tips:** Vill du ha det riktigt mörkt, titta på väggen runt fönstret, inte enbart på själva öppningen. Finns det plats ovanför och vid sidorna kan gardinen gå några centimeter utanför, och då läcker mindre ljus.
 
 ## Sommarkvällar mot väster
 

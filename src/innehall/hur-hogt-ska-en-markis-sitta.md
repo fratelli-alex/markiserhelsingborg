@@ -17,6 +17,29 @@ fragor:
   - { fraga: "Vad gör jag om det inte finns plats ovanför altandörren?", svar: "Ibland går det att fästa markisen högre upp eller i takfoten. Annars kan ett kortare utfall eller en pergolamarkis vara lösningen." }
   - { fraga: "Kan vinkeln ändras efteråt?", svar: "På de flesta terrassmarkiser går vinkeln att ställa om i fästena. Hur du gör står i guiden om att justera vinkeln." }
 relaterade: [/terrassmarkiser/, /guider/justera-vinkel-pa-markis/, /guider/markis-med-ben/]
+tabell:
+  rubrik: Så mycket sjunker framprofilen
+  intro: Ungefär hur långt under fästet framprofilen hamnar, räknat som utfall gånger sinus för vinkeln.
+  kolumner: [Utfall, 10°, 15°, 20°, 25°, 30°]
+  rader:
+    - ["1,5 m", 26 cm, 39 cm, 51 cm, 63 cm, 75 cm]
+    - ["2,0 m", 35 cm, 52 cm, 68 cm, 85 cm, 100 cm]
+    - ["2,5 m", 43 cm, 65 cm, 86 cm, 106 cm, 125 cm]
+    - ["3,0 m", 52 cm, 78 cm, 103 cm, 127 cm, 150 cm]
+    - ["3,5 m", 61 cm, 91 cm, 120 cm, 148 cm, 175 cm]
+    - ["4,0 m", 69 cm, 104 cm, 137 cm, 169 cm, 200 cm]
+  not: "Volangen hänger under framprofilen och kommer till. Utfall 1,5–4,0 m är spannet för Hestras terrassmarkiser."
+checklista:
+  rubrik: Kontrollera på fasaden innan du bestämmer höjden
+  punkter:
+    - "**Fri höjd.** Mät från marken till där volangen hamnar."
+    - "**Dörren.** En dörr som öppnas utåt ska gå fri från armarna."
+    - "**Fönstren.** En infälld markis ska inte ta dagsljus från fönster och dörrar."
+    - "**Takfoten.** Det ska finnas plats för fästen och kassett ovanför markisen."
+    - "**Fasaden.** Fästena ska sitta i något som bär."
+    - "**Lutningen.** Tillräcklig för att regnvatten ska rinna av."
+kallor:
+  - { namn: "Hestra Markis AB, produktblad terrassmarkiser", kontrollerad: 2026-10-21 }
 ---
 
 Höjden, utfallet och vinkeln hänger ihop. Ändrar du en av dem påverkas de andra. Därför är det bättre att börja med vad du vill ha under markisen och räkna baklänges till var fästena ska sitta.
@@ -36,6 +59,8 @@ Du kan räkna ungefär så här: utfallet gånger sinus för vinkeln ger hur må
 - Med 2 meters utfall och 15 graders lutning sjunker den drygt 50 centimeter.
 
 Har markisen en volang, alltså en nedhängande kant längst fram, hänger den ytterligare en bit under framprofilen.
+
+> **Tips:** Ställ dig där framprofilen kommer att hamna och låt någon hålla ett måttband från marken upp till den höjd du har räknat fram. Då ser du direkt om den fria höjden räcker.
 
 ## Fri höjd under framprofilen
 

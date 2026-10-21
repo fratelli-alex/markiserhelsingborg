@@ -17,6 +17,29 @@ fragor:
   - { fraga: "Kan jag sätta stödben på min gamla markis?", svar: "Det beror på modellen. Fråga tillverkaren om det finns stödben som passar just din markis." }
   - { fraga: "Finns det ett alternativ som står på egna stolpar?", svar: "En pergolamarkis har stolpar ytterst och ett tak av väv. Den kan ge skugga längre ut än en vanlig terrassmarkis." }
 relaterade: [/pergolamarkiser/, /terrassmarkiser/, /guider/hur-hogt-ska-en-markis-sitta/]
+tabell:
+  rubrik: Markis med ben och alternativen
+  intro: Vad de olika lösningarna passar för och vad du behöver tänka på.
+  kolumner: [Lösning, Passar när, Tänk på]
+  rader:
+    - [Terrassmarkis på fasaden, Väggen bär och utfallet är lagom, Fäll in när det blåser]
+    - [Terrassmarkis med stödben, Långt utfall eller svag fasad, Benen ska lossas före infällning]
+    - [Fristående markis, Uteplatsen ligger långt från huset, Måste förankras eller tyngas ner]
+    - [Pergolamarkis, Skuggan ska nå långt ut, Stolparna behöver stabil grund]
+    - [Annan infästning, Fasaden är svag men markisen vanlig, Någon behöver titta på väggen]
+checklista:
+  rubrik: Innan du bestämmer dig för stödben
+  punkter:
+    - "**Fasaden.** Vad är väggen gjord av, och vad finns bakom putsen eller panelen?"
+    - "**Utfallet.** Hur långt ut behöver skuggan nå?"
+    - "**Underlaget.** Var ska benen stå, och går de att förankra där?"
+    - "**Modellen.** Finns det stödben som tillbehör till just din markis?"
+    - "**Vinden.** Hur utsatt är uteplatsen för västvind?"
+    - "**Vardagen.** Orkar du lossa benen varje gång markisen ska in?"
+kallor:
+  - { namn: "Hestra Markis AB, produktblad pergolamarkiser", kontrollerad: 2026-10-21 }
+  - { namn: "EN 13561, markiser, prestandakrav och vindklasser", kontrollerad: 2026-10-21 }
+  - { namn: "Helsingborgs stad, bygglov", url: "https://helsingborg.se", kontrollerad: 2026-10-21 }
 ---
 
 En vanlig terrassmarkis hänger helt i sina fästen på fasaden. Armarna bär väven och framprofilen, och hela tyngden går in i väggen. Oftast fungerar det bra. Men ibland räcker inte väggen, eller så ska skuggan hamna där det inte finns någon vägg alls. Då dyker frågan om markis med ben upp.
@@ -34,6 +57,8 @@ En vanlig terrassmarkis hänger helt i sina fästen på fasaden. Armarna bär v�
 **Svag fasad.** Alla väggar bär inte en markis. Det kan vara en tilläggsisolerad fasad med tjock isolering under putsen, en träpanel utan kraftigt virke bakom, eller ett hus med stora glaspartier där det bara finns en smal kant av vägg ovanför fönstren. I Helsingborg ser vi båda sorterna: äldre villor på Tågaborg, Ramlösa och Råå där puts och tegel kan variera mycket på samma vägg, och nyare hus på Norr eller i Påarp med glas nästan ända upp till takfoten.
 
 Ofta går en svag fasad att lösa med rätt infästning, längre förankring eller fästen i takfoten. Stödben är ett sätt bland flera.
+
+> **Tips:** Har du ritningar på huset, ta fram dem före hembesöket. De visar ofta vad som finns bakom putsen eller panelen och var det går att fästa.
 
 ## Det du ska veta om stödben
 

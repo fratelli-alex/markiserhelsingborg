@@ -52,7 +52,7 @@ const datum = (d: string | Date) => (d instanceof Date ? d : new Date(d)).toLoca
   <section class="sektion kallor">
     <div class="inre">
       <h2>Källor</h2>
-      <ul>{sida.kallor.map(k => <li>{k.url ? <a href={k.url}>{k.namn}</a> : k.namn}{k.kontrollerad && <span>, kontrollerad {datum(k.kontrollerad)}</span>}</li>)}</ul>
+      <ul>{sida.kallor.map(k => <li>{k.url ? <a href={k.url} target="_blank" rel="noopener">{k.namn.split(' ').slice(0, -1).join(' ')} <span class="nw">{k.namn.split(' ').at(-1)}&nbsp;<span class="extern-pil" aria-hidden="true">↗</span></span></a> : k.namn}{k.kontrollerad && <span>, kontrollerad {datum(k.kontrollerad)}</span>}</li>)}</ul>
     </div>
   </section>
 )}

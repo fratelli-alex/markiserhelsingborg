@@ -23,7 +23,34 @@ fragor:
   - { fraga: "Kan ni sätta motor på min vevmarkis?", svar: "Ja, vi byter och eftermonterar motorer. På många markiser går det att byta veven mot en motor, beroende på modellen och på om det finns el nära markisen." }
   - { fraga: "Kan jag få vävprover hem?", svar: "Ja. Vi kan skicka vävprover hem till dig, så att du kan se färgerna mot din fasad innan du bestämmer dig." }
 relaterade: [/markisvav/, /guider/byta-markismotor/, /guider/reservdelar-till-markis/]
+tabell:
+  rubrik: Vanliga fel och vad vi gör
+  intro: Så brukar det se ut när en markis behöver service. Vad som är fel på just din markis ser vi först på plats.
+  kolumner: [Det du ser, Trolig orsak, Vad vi gör]
+  rader:
+    - ["Väven är blekt, sliten eller trasig", "Sol, vind och ålder", "Byter till ny väv från Sandatex"]
+    - ["Väven hänger fast markisen är utfälld", "Fjädrarna i armarna har tappat kraft", "Byter armarna parvis"]
+    - ["Motorn surrar men markisen står still", "Fel i motorn eller kopplingen till valsen", "Felsöker och lagar eller byter motorn"]
+    - ["Motorn stannar på fel ställe", "Ändlägena har ändrats", "Ställer in ändlägena på nytt"]
+    - ["Veven slirar eller går tungt", "Sliten växel eller böjd vevstång", "Byter vev eller växel"]
+    - ["Bandet går inte att låsa", "Nött band eller trasigt bandlås", "Byter band eller lås"]
+    - ["Ett fäste lutar eller glappar", "Infästningen har släppt i fasaden", "Fäster om, vid behov med nya fästen"]
+  not: Vill du hellre ha motor än vev kan vi ofta eftermontera en motor på markisen du redan har.
+checklista:
+  rubrik: Det här går vi igenom vid besöket
+  intro: Vi provar markisen och tittar på hela den, även de delar du inte har märkt något fel på.
+  punkter:
+    - "**Stommen.** Är den hel går resten oftast att laga."
+    - "**Armar och leder.** Fjäderkraft, glapp och att armarna ligger rätt."
+    - "**Fästena i fasaden,** särskilt i äldre puts."
+    - "**Väven.** Slitage, mögel, revor och hur den är sträckt."
+    - "**Motor eller vev,** och om motorn stannar där den ska."
+    - "**Band och bandlås** på fönstermarkiser."
+kallor:
+  - { namn: "Hestra Markis AB, produktblad och skötselråd", kontrollerad: 2026-10-21 }
 ---
+
+De flesta markiser som slutar fungera har ett fel som går att åtgärda: en sliten väv, en arm som tappat kraft, en motor som krånglar eller ett fäste som släppt. Vi kommer hem till dig i Helsingborg, provar markisen och säger vad som behöver göras.
 
 ## Vi lagar alla fabrikat
 
@@ -33,14 +60,16 @@ Du behöver inte ha köpt markisen av oss. Vi gör service och reparationer på 
 
 - **Väven.** Blekt, sliten, möglig eller sönderblåst. Du får en ny väv från Sandatex, gjord efter måtten på din markis. Läs mer om [ny väv på markisen](/markisvav/).
 - **Armarna.** En vikarm har fjädrar och leder som slits. Hänger framprofilen eller fäller armarna inte ut ordentligt är det ofta där felet sitter. Mer om det i guiden om [markisarmar](/guider/markisarmar/).
-- **Motorn.** En motor som surrar utan att röra markisen, eller som stannar på fel ställe, kan behöva ställas om eller bytas. Vi kan också sätta motor på en markis som i dag har vev.
+- **Motorn.** En motor som surrar utan att röra markisen, eller som stannar på fel ställe, kan behöva ställas om eller bytas. Vi byter motorer och kan eftermontera motor på en markis som i dag har vev, om det finns el i närheten.
 - **Band och bandlås.** Äldre fönstermarkiser med band får ofta problem med låset eller ett nött band.
 - **Veven.** Vevstången kan böjas, och växeln i markisen kan börja slira.
 - **Fästen.** Ett fäste som har släppt eller lutar ska åtgärdas direkt, innan det drar med sig fasaden.
 
+<aside class="cta-ruta"><div><p class="cta-ruta-rubrik">Krånglar din markis?</p><p>Beskriv felet och skicka gärna en bild, så ringer vi upp samma dag.</p></div><div class="knappar"><a class="knapp" href="#forfragan">Boka hembesök</a></div></aside>
+
 ## Så går det till
 
-Du skickar en förfrågan och beskriver vad som är fel. En bild på markisen och gärna typskylten hjälper mycket. Vi ringer upp samma dag och bokar en tid. På plats provar vi markisen, tittar på armar, fästen och väv och berättar vad som behöver göras. Du får ett förslag innan något arbete börjar.
+Du skickar en förfrågan och beskriver vad som är fel. En bild på markisen och gärna typskylten hjälper mycket. Vi ringer upp samma dag och bokar en tid. På plats provar vi markisen, tittar på armar, fästen och väv och berättar vad som behöver göras. Du får ett förslag innan något arbete börjar. Du betalar för arbetet och för materialet som går åt.
 
 ## Vinden från sundet sliter
 
@@ -48,4 +77,6 @@ Markiser i Helsingborg får ofta stå emot västlig vind från sundet. En markis
 
 ## Laga själv eller låt oss titta
 
-En del går att fixa på egen hand, som att justera vinkeln eller tvätta väven. Våra [guider](/guider/) visar hur. Var försiktig med armarna, eftersom fjädrarna är spända även när markisen är infälld, och bryt strömmen innan du rör en motor. Känns det osäkert är det bättre att vi kommer ut.
+En del går att fixa på egen hand, som att justera vinkeln eller tvätta väven. Våra [guider](/guider/) visar hur. Känns det osäkert är det bättre att vi kommer ut.
+
+> **Viktigt:** Fjädrarna i armarna är spända även när markisen är infälld. Vik aldrig ihop en arm som har lossnat, och bryt strömmen innan du rör en motor.

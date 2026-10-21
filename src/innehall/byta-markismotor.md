@@ -18,7 +18,33 @@ fragor:
   - { fraga: "Varför stannar motorn efter några minuter?", svar: "Rörmotorer har ett värmeskydd som stänger av dem om de går länge i sträck. Vänta en stund, så fungerar den igen." }
   - { fraga: "Får jag koppla in motorn själv?", svar: "Den fasta elen fram till markisen ska dras av en behörig elinstallatör. Att byta själva motorn i valsen är ett mekaniskt arbete." }
 relaterade: [/guider/reservdelar-till-markis/, /guider/markisarmar/, /guider/bandlas-pa-markis/]
+tabell:
+  rubrik: Felsök markismotorn
+  intro: Vanliga fel på en rörmotor i valsen, och vad du kan prova först.
+  kolumner: [Det du ser, Trolig orsak, Vad du kan göra]
+  rader:
+    - [Inget händer när du trycker, Strömmen är bruten eller batteriet slut, Kontrollera säkring och byt batteri]
+    - [Motorn stannar efter några körningar, Värmeskyddet har löst ut, Låt motorn svalna en stund]
+    - [Motorn brummar men valsen står still, Adaptern har släppt eller motorn är trasig, Låt någon titta på den]
+    - [Markisen stannar fel ute eller inne, Ändlägena har förskjutits, Ställ om ändlägena]
+    - [Väggbrytaren fungerar men inte fjärren, Batteri eller koppling i fjärrkontrollen, Byt batteri eller koppla om fjärren]
+    - [Markisen vill inte gå ut, En sol- eller vindgivare stoppar den, Kontrollera givarens inställning]
+  not: Följ alltid manualen för ditt motorfabrikat. Den fasta elen ska dras av en behörig elinstallatör.
+checklista:
+  rubrik: Innan du byter motor
+  punkter:
+    - "**Strömmen.** Säkring, jordfelsbrytare och uttag fungerar."
+    - "**Fjärrkontrollen.** Nytt batteri, och prova väggbrytaren om du har en."
+    - "**Fabrikatet.** Läs av etiketten på motorkabeln."
+    - "**Vridmomentet.** Står i Nm på den gamla motorns etikett."
+    - "**Valsen.** Mät innerdiametern och titta på profilen inuti."
+    - "**Elen.** Ska kabeln dras om, boka en behörig elinstallatör."
+kallor:
+  - { namn: "Hestra Markis AB, produktblad terrassmarkiser (motortabell)", kontrollerad: 2026-10-21 }
+  - { namn: "Elsäkerhetsverket", url: "https://www.elsakerhetsverket.se/", kontrollerad: 2026-10-21 }
 ---
+
+Slutar markisen gå är det värt att felsöka innan du köper en ny motor. Ofta är det strömmen, fjärrkontrollen eller ändlägena. Är det motorn går den att byta, och på många vevmarkiser går det att sätta in en motor i efterhand.
 
 ## Så sitter motorn
 
@@ -27,6 +53,8 @@ I en motordriven markis sitter motorn inne i valsen, det rör som väven rullas 
 Motorn har ändlägen, alltså inställda stopp för hur långt markisen ska gå ut och in. På äldre motorer ställs de med två skruvar på motorhuvudet. På nyare, radiostyrda motorer ställs de oftast med fjärrkontrollen eller ett inställningsverktyg. Somfy och Becker är två vanliga fabrikat på marknaden, och båda har manualer som beskriver hur deras motorer programmeras.
 
 ## Säkerheten först
+
+> **Viktigt:** Bryt alltid strömmen innan du rör kabel, kopplingsdosa eller motor. Ett motorhuvud som är strömsatt kan starta när någon trycker på fjärrkontrollen.
 
 - Bryt strömmen innan du rör kabel, kopplingsdosa eller motor. Dra ur kontakten eller slå av säkringen.
 - Den fasta elen fram till markisen, med uttag, strömbrytare eller kopplingsdosa utomhus, ska installeras av en behörig elinstallatör. Vad du får göra själv står hos [Elsäkerhetsverket](https://www.elsakerhetsverket.se/).
@@ -75,4 +103,4 @@ På äldre villor på till exempel Tågaborg eller Ramlösa sitter markisen ofta
 
 Boka service om motorn är tyst fast strömmen fungerar, om den brummar utan att röra valsen, om ändlägena inte går att ställa in eller om du vill sätta motor på en vevmarkis. Detsamma gäller om du inte kommer åt valsen säkert.
 
-Vi gör [service och reparation](/service-och-reparation/) i Helsingborg, även på markiser vi inte har sålt. Vid besöket ser vi om felet sitter i motorn, i styrningen eller i markisen, och om ett motorbyte lönar sig.
+Vi gör [service och reparation](/service-och-reparation/) i Helsingborg, även på markiser vi inte har sålt. Vi byter motorer och sätter motor på vevmarkiser. Vid besöket ser vi om felet sitter i motorn, i styrningen eller i markisen, och om ett motorbyte lönar sig.

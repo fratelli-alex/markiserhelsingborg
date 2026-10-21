@@ -22,7 +22,30 @@ fragor:
   - { fraga: "Måste jag mäta fönstren själv?", svar: "Nej. Vi mäter vid hembesöket, och persiennerna beställs efter de måtten." }
   - { fraga: "Kan jag ha persienner i badrummet?", svar: "En persienn i aluminium klarar fukten i ett badrum. Trä passar bättre i rum där luften är torr." }
 relaterade: [/trapersienner/, /rullgardiner/, /fonstermarkiser/]
+tabell:
+  rubrik: Lamellbredd på persienner från Hestra
+  intro: Persiennerna vi monterar finns med tre lamellbredder. Vilken som passar beror mest på fönstrets storlek och hur mycket utsikt du vill ha när lamellerna står öppna.
+  kolumner: [Lamell, Passar i, Att veta]
+  rader:
+    - ["16 mm", "Små fönster och fönster med spröjs", "Syns minst framför glaset"]
+    - ["25 mm", "De flesta fönster i villa och lägenhet", "Ett mellanläge mellan smal och bred"]
+    - ["30 mm", "Stora fönster", "Lugnare yta och mer utsikt när den är öppen"]
+  not: "Måtten kommer från Hestras produktblad. Persiennen finns upp till 3,3 meter bred."
+checklista:
+  rubrik: Det här tittar vi på vid hembesöket
+  intro: Vi går igenom fönstren ett i taget och mäter vart och ett, även när de ser lika ut.
+  punkter:
+    - "**Hur fönstret öppnas.** Vädrar du ofta kan persiennen sitta på bågen och följa med."
+    - "**Nischen och karmen.** Äldre fönster har ofta andra djup och mått än nya."
+    - "**Rummet.** Fukt i badrum och kök avgör om det ska vara aluminium eller trä."
+    - "**Väderstrecket,** och hur lågt solen kommer in på eftermiddagen."
+    - "**Lamellbredd och kulör,** med prover i ditt eget ljus."
+    - "**Fönsterbänk och element,** så att persiennen går fritt hela vägen ned."
+kallor:
+  - { namn: "Hestra Markis AB, produktblad persienner", kontrollerad: 2026-10-21 }
 ---
+
+En persienn består av tunna lameller som du drar upp, fäller ned och vrider. Persiennerna vi monterar kommer från Hestra Markis och beställs efter måtten på varje fönster, så att de fyller ut öppningen utan glipor.
 
 ## Ljus och insyn med samma persienn
 
@@ -31,6 +54,8 @@ En persienn gör två saker. Fälld och vriden helt stänger den ute både sol o
 ## Välj lamellbredd
 
 Persiennerna vi monterar är från Hestra Markis och finns med lameller på 16, 25 eller 30 millimeter. Smala lameller syns mindre och passar i små fönster och i fönster med spröjs. Bredare lameller ger en lugnare yta i stora fönster och släpper igenom mer utsikt när de står öppna. Vid hembesöket har vi med prover, så att du ser skillnaden i ditt eget ljus.
+
+<aside class="cta-ruta"><div><p class="cta-ruta-rubrik">Vilken lamell passar dina fönster?</p><p>Vi tar med prover och mäter varje fönster vid ett kostnadsfritt hembesök.</p></div><div class="knappar"><a class="knapp" href="#forfragan">Boka hembesök</a></div></aside>
 
 ## I nischen eller på bågen
 
@@ -47,3 +72,5 @@ Aluminium tål fukt och passar i badrum och kök. Trä ger ett varmare intryck o
 ## Skötsel
 
 Damma av lamellerna med en mjuk borste eller en dammvippa när persiennen är fälld och lamellerna stängda. Fläckar tar du bort med en lätt fuktad trasa. Undvik starka rengöringsmedel, som kan skada ytan.
+
+> **Tips:** Damma först med lamellerna stängda åt ena hållet och vänd dem sedan åt andra hållet. Då får du med båda sidorna utan att ta ned persiennen.

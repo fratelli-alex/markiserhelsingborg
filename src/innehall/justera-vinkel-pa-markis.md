@@ -8,6 +8,7 @@ seoTitel: Justera vinkeln på markisen
 beskrivning: Så ändrar du lutningen på en markis med vikarmar, steg för steg. Vad du ska tänka på för säkerheten och när vinkeln inte går att ställa själv.
 ingress: På de flesta markiser med vikarmar går lutningen att ändra med en justerskruv vid armens fäste. Det tar en stund och kräver två personer. Här går vi igenom hur det går till och när du ska låta bli.
 kortText: Ändra lutningen på en markis med vikarmar, steg för steg och med säkerheten först.
+produkt: Service eller reparation
 forfattare: mikael-lundgren
 publicerad: 2026-10-21
 forelder: /guider/
@@ -17,7 +18,30 @@ fragor:
   - { fraga: "Kan jag justera vinkeln på en kassettmarkis?", svar: "Ofta, men justeringen kan sitta inne i kassetten och vara svår att nå. Är du osäker, låt någon som känner modellen göra det." }
   - { fraga: "Varför går vinkeln tillbaka efter en tid?", svar: "Låsskruven har oftast inte dragits åt ordentligt, eller så är fästet slitet. Ett slitet fäste behöver bytas." }
 relaterade: [/guider/hur-hogt-ska-en-markis-sitta/, /guider/markisarmar/, /guider/reservdelar-till-markis/]
+tabell:
+  rubrik: Vanliga skäl att ändra vinkeln
+  intro: Så hänger det du ser ihop med vinkeln på en markis med vikarmar.
+  kolumner: [Det du ser, Trolig orsak, Vad du kan göra]
+  rader:
+    - [Solen når bordet fast markisen är ute, Vinkeln är för flack för låg sol, Gör vinkeln brantare]
+    - [Vatten blir stående i väven, För liten lutning, Gör vinkeln brantare]
+    - [Frontprofilen är i vägen under markisen, För brant vinkel eller för lågt fäste, Gör vinkeln flackare]
+    - [Frontprofilen hänger snett, Armarna står olika, Ställ alla armar lika]
+    - [Vinkeln ändras efter en tid, Lös låsskruv eller slitet fäste, Dra åt låsningen eller byt fästet]
+    - [Justerskruven går inte att vrida, Skruven har rostat fast, Sluta och låt någon titta på den]
+  not: Gäller markiser med vikarmar. På fönstermarkiser med fallarm styrs vinkeln av hur långt du fäller ut.
+checklista:
+  rubrik: Kontrollera före och efter justeringen
+  punkter:
+    - "**Vädret.** Välj en dag utan vind."
+    - "**Två personer.** En håller frontprofilen, den andra skruvar."
+    - "**Stegen.** Stadig, på fast underlag och inte under frontprofilen."
+    - "**Motorn.** Se till att ingen kan köra markisen medan ni arbetar."
+    - "**Höjden.** Mät att frontprofilen hänger lika högt i båda ändar."
+    - "**Låsningen.** Dra åt låsskruvarna och provkör ut och in."
 ---
+
+Några graders ändring av lutningen kan flytta skuggan dit du sitter, få regnet att rinna av och ge mer fri höjd under frontprofilen. På de flesta markiser med vikarmar sitter justeringen vid armens fäste. Du behöver en nyckel, en stadig stege och en person till.
 
 ## Varför du vill ändra vinkeln
 
@@ -42,6 +66,8 @@ Följ armen in mot fasaden. Där den sitter fast i fästet på bärröret finns 
 Utseendet skiljer sig mellan fabrikat. Hittar du bruksanvisningen, eller fabrikatets namn på en etikett, är den alltid bättre än en allmän beskrivning.
 
 ## Steg för steg
+
+> **Tips:** Mät höjden från marken till frontprofilen i båda ändar innan du börjar och skriv ner måtten. Då vet du hur mycket du har ändrat och kan gå tillbaka om det blev fel.
 
 1. Fäll ut markisen helt, så att armarna är raka och väven sträckt.
 2. Låt den ena personen lyfta frontprofilen lite vid den arm ni ska justera, så att tyngden inte ligger på justerskruven. Ett stöd under profilen fungerar också, om det står stadigt.

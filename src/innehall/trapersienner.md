@@ -20,7 +20,31 @@ fragor:
   - { fraga: "Är träpersienner tyngre än aluminium?", svar: "Ja, trä väger mer. Det märks mest i breda fönster, och det tar vi hänsyn till när vi föreslår storlek och manövrering." }
   - { fraga: "Hur rengör jag en träpersienn?", svar: "Damma av med mjuk borste eller torr trasa. Blöt inte ner träet, och använd inga starka rengöringsmedel." }
 relaterade: [/persienner/, /rullgardiner/, /plissegardiner/]
+tabell:
+  rubrik: Trä eller aluminium
+  intro: Båda styr ljus och insyn på samma sätt. Skillnaden ligger i materialet och var i huset persiennen ska sitta.
+  kolumner: [Egenskap, Träpersienn, Persienn i aluminium]
+  rader:
+    - ["Yta", "Matt och varm", "Slät och tunn"]
+    - ["Lameller", "Oftast bredare och tjockare", "16, 25 eller 30 mm"]
+    - ["Vikt", "Tyngre, märks i breda fönster", "Lätt"]
+    - ["Fukt", "Rum med torr luft", "Tål badrum och kök"]
+    - ["Skötsel", "Torr borste eller trasa", "Tål en lätt fuktad trasa"]
+  not: Lamellbredderna för aluminium gäller persiennerna från Hestra Markis.
+checklista:
+  rubrik: Tänk på det här innan du väljer trä
+  punkter:
+    - "**Luftfuktigheten.** Trä passar bäst där luften är jämn och torr."
+    - "**Imma på rutan.** Bildas det ofta kondens är aluminium säkrare i just det fönstret."
+    - "**Fönstrets bredd.** En bred träpersienn är tung att dra upp."
+    - "**Hur ofta du drar upp den.** I ett fönster du vädrar varje dag märks vikten mer."
+    - "**Golv, lister och karmar,** så att kulören passar med det trä som redan finns."
+    - "**Ljuset i rummet.** Håll provet mot fönstret både på dagen och på kvällen."
+kallor:
+  - { namn: "Hestra Markis AB, produktblad persienner (aluminium)", kontrollerad: 2026-10-21 }
 ---
+
+En träpersienn har lameller av trä i stället för aluminium. Den styr ljus och insyn på samma sätt, men ger rummet en annan känsla. Den passar inte i alla rum, och därför börjar vi med att titta på var den ska sitta.
 
 ## Skillnaden mot aluminium
 
@@ -28,11 +52,15 @@ En träpersienn fungerar som en vanlig persienn. Du drar upp och ned den och vri
 
 Aluminium är tunnare, lättare och tål fukt. Läs mer om [persienner i aluminium](/persienner/).
 
+<aside class="cta-ruta"><div><p class="cta-ruta-rubrik">Passar trä i ditt rum?</p><p>Vi tittar på rummet och fönstren och har med kulörprover vid hembesöket.</p></div><div class="knappar"><a class="knapp" href="#forfragan">Boka hembesök</a></div></aside>
+
 ## Trä och fukt
 
 Trä tar upp fukt ur luften och släpper den igen. Där luftfuktigheten växlar mycket kan lamellerna slå sig med tiden. Därför avråder vi från trä i badrum med dusch och precis vid spis och diskho. I ett badrum med fönster långt från duschen, eller i ett kök där fönstret sitter en bit från spisen, kan det fungera. Det bedömer vi när vi ser rummet.
 
 Tänk också på kondens. Om det ofta bildas imma på insidan av fönstret, och persiennen ligger an mot glaset, blir träet fuktigt. Då är aluminium ett säkrare val i just det fönstret.
+
+> **Tips:** Dra upp träpersiennen en stund på morgonen i rum där det blir imma på rutan. Då torkar både glaset och lamellerna innan persiennen fälls ned igen.
 
 ## Äldre hus och nya
 
