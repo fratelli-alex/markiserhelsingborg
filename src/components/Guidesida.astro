@@ -1,0 +1,38 @@
+---
+// Guide: artikel med författare och datum, uppmaning till service i Helsingborg, frågor, fler guider.
+import Bas from '../layouts/Bas.astro';
+import Bild from './Bild.astro';
+import Brodsmulor from './Brodsmulor.astro';
+import Fragor from './Fragor.astro';
+import Relaterade from './Relaterade.astro';
+import Avslut from './Avslut.astro';
+import { ihop } from '../lib/text';
+import { brodsmulor, artikel, faq } from '../lib/schema';
+import { FORFATTARE, forfattarUrl } from '../data/forfattare';
+import type { Sida } from '../lib/innehall';
+interface Props { sida: Sida }
+const { sida } = Astro.props;
+const smulor = [{ namn: 'Start', url: '/' }, { namn: 'Guider', url: '/guider/' }, { namn: sida.menynamn ?? sida.titel, url: sida.url }];
+const f = sida.forfattare ? FORFATTARE[sida.forfattare] : undefined;
+const pub = new Date(sida.publicerad ?? '2026-10-21'), upp = new Date(sida.uppdaterad ?? sida.publicerad ?? '2026-10-21');
+const datum = (d: Date) => d.toLocaleDateString('sv-SE', { day: 'numeric', month: 'long', year: 'numeric' });
+const schema = [brodsmulor(smulor), artikel({ url: sida.url, titel: sida.titel, beskrivning: sida.beskrivning, publicerad: pub, uppdaterad: upp, forfattare: sida.forfattare }), ...(sida.fragor?.length ? [faq(sida.fragor)] : [])];
+---
+<Bas titel={sida.seoTitel ?? sida.titel} beskrivning={sida.beskrivning} bild={sida.bild} typ="article" schema={schema}>
+  <article class="guide">
+    <header class="inre guide-huvud">
+      <Brodsmulor smulor={smulor} />
+      <h1>{ihop(sida.titel)}</h1>
+      <p class="ingress">{ihop(sida.ingress)}</p>
+      <p class="byline">
+        {f ? <>Av <a href={forfattarUrl(sida.forfattare!)}>{f.namn}</a>, {f.roll.toLowerCase()} · </> : null}
+        Uppdaterad <time datetime={upp.toISOString().slice(0, 10)}>{datum(upp)}</time>
+      </p>
+    </header>
+    {sida.bild && <div class="inre guide-bild"><Bild namn={sida.bild} alt={sida.bildAlt ?? ''} sizes="(max-width: 820px) 100vw, 900px" prioritet /></div>}
+    <div class="inre"><div class="brod prosa"><slot /></div></div>
+  </article>
+  <Fragor fragor={sida.fragor ?? []} />
+  <Relaterade urler={sida.relaterade ?? []} rubrik="Fler guider" />
+  <Avslut produkt={sida.produkt ?? 'Service eller reparation'} rubrik="Behöver markisen ses över?" text="Vi gör service och reparationer på alla fabrikat i Helsingborg. Skicka en förfrågan, så ringer vi upp samma dag." />
+</Bas>

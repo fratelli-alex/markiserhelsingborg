@@ -8,13 +8,14 @@
 //   AVSANDARE      verifierad avsändare i Brevo, t.ex. formular@<domän>. Domänen måste vara autentiserad i Brevo
 //   SAJTNAMN       visas i ämnesraden, t.ex. "Markiser Helsingborg"
 //   SAJT           tillåtna ursprung, kommaseparerade. Första används i felsidornas länk (riktig domän först)
+//   SLACK_WEBHOOK  valfri: Slacks inkommande webhook. Förfrågan postas även i kanalen
 //   PORT           sätts av Sevalla
 //
 // Fällor (Barnkollen 2026-10-15): Brevo svarar 201 även när avsändaren är ogiltig och avvisar mejlet efteråt,
 // så kontrollera leveransen i Brevos händelselogg. Brevo spärrar okända IP: godkänn tjänstens egress-IP i Brevo.
 import { createServer } from 'node:http';
 
-const { BREVO_API_KEY, MOTTAGARE, AVSANDARE, SAJTNAMN, SAJT, PORT = 8080 } = process.env;
+const { BREVO_API_KEY, MOTTAGARE, AVSANDARE, SAJTNAMN, SAJT, SLACK_WEBHOOK, PORT = 8080 } = process.env;
 for (const [namn, varde] of Object.entries({ BREVO_API_KEY, MOTTAGARE, AVSANDARE, SAJTNAMN, SAJT })) {
   if (!varde) { console.error(`${namn} saknas`); process.exit(1); }
 }
@@ -22,7 +23,7 @@ for (const [namn, varde] of Object.entries({ BREVO_API_KEY, MOTTAGARE, AVSANDARE
 const TILLATNA = new Set(SAJT.split(',').map(s => s.trim().replace(/\/$/, '')));
 const HEM = [...TILLATNA][0];
 // Fält som har en egen plats i mejlet. Övriga fält (t.ex. typ av markis, mått) listas som de är.
-const KANDA = new Set(['namn', 'epost', 'telefon', 'meddelande', 'webbplats', 'samtycke', 'formular']);
+const KANDA = new Set(['namn', 'epost', 'telefon', 'meddelande', 'webbplats', 'samtycke', 'formular', 'sida']);
 
 // Högst 5 meddelanden per IP och timme. Minnet töms när tjänsten startar om, det räcker mot enkel spam.
 const TIMME = 3600_000, GRANS = 5;
@@ -67,12 +68,16 @@ createServer(async (req, res) => {
   const epost = falt('epost').slice(0, 200);
   const telefon = falt('telefon').slice(0, 50);
   const meddelande = falt('meddelande').slice(0, 10_000);
-  if (!namn || !meddelande || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(epost) || f.get('samtycke') !== 'ja') {
-    return sida(res, 400, 'Något saknas', 'Fyll i namn, en giltig e-postadress och ett meddelande, och godkänn villkoren.', origin);
+  // Meddelandet är valfritt i stegformuläret (produkt, postnummer och telefon räcker för att ringa upp)
+  if (!namn || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(epost) || f.get('samtycke') !== 'ja') {
+    return sida(res, 400, 'Något saknas', 'Fyll i namn och en giltig e-postadress, och godkänn villkoren.', origin);
   }
   const ovriga = [...f.entries()].filter(([k, v]) => !KANDA.has(k) && v.trim()).map(([k, v]) => `${k}: ${v.trim().slice(0, 500)}`);
 
-  const svar = await fetch('https://api.brevo.com/v3/smtp/email', {
+  const kalla = `${origin}${falt('sida') || `/${falt('formular') || 'kontakt'}/`}`;
+  const rader = [meddelande, '', ...ovriga, '', '--', `${namn} <${epost}>${telefon ? `, ${telefon}` : ''}`, `Skickat via ${kalla}`].filter((r, i) => i > 0 || r);
+
+  const epostSvar = fetch('https://api.brevo.com/v3/smtp/email', {
     method: 'POST',
     headers: { 'api-key': BREVO_API_KEY, 'content-type': 'application/json', accept: 'application/json' },
     body: JSON.stringify({
@@ -80,12 +85,23 @@ createServer(async (req, res) => {
       to: MOTTAGARE.split(',').map(e => ({ email: e.trim() })),
       replyTo: { email: epost, name: namn },
       subject: `${SAJTNAMN}: förfrågan från ${namn}`,
-      textContent: [meddelande, '', ...ovriga, '', '--', `${namn} <${epost}>${telefon ? `, ${telefon}` : ''}`, `Skickat via ${origin}/${falt('formular') || 'kontakt'}/`].join('\n'),
+      textContent: rader.join('\n').trim(),
     }),
   }).catch(e => ({ ok: false, status: 0, text: async () => e.message }));
 
-  if (!svar.ok) {
-    console.error(`Brevo svarade ${svar.status}: ${(await svar.text()).slice(0, 300)}`);
+  // Slack: samma innehåll i kanalen. Användartext escapas så att den inte kan pinga eller länka om.
+  const esc = t => t.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  const slackSvar = SLACK_WEBHOOK ? fetch(SLACK_WEBHOOK, {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify({ text: `*Ny förfrågan från ${esc(SAJTNAMN)}*\n${esc(rader.join('\n').trim())}` }),
+  }).catch(e => ({ ok: false, status: 0, text: async () => e.message })) : null;
+
+  const [ep, sl] = await Promise.all([epostSvar, slackSvar]);
+  if (!ep.ok) console.error(`Brevo svarade ${ep.status}: ${(await ep.text()).slice(0, 300)}`);
+  if (sl && !sl.ok) console.error(`Slack svarade ${sl.status}: ${(await sl.text()).slice(0, 300)}`);
+  // Förfrågan räknas som mottagen om minst en kanal tog emot den
+  if (!ep.ok && !(sl && sl.ok)) {
     return sida(res, 502, 'Förfrågan skickades inte', 'Något gick fel hos oss. Försök igen om en stund.', origin);
   }
   res.writeHead(303, { location: `${origin}/tack/` });

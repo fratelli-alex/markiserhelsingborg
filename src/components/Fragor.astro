@@ -1,0 +1,16 @@
+---
+import { ihop } from '../lib/text';
+import type { Fraga } from '../lib/innehall';
+interface Props { fragor: Fraga[] }
+const { fragor } = Astro.props;
+---
+{fragor.length > 0 && (
+  <section class="sektion">
+    <div class="inre">
+      <div class="sek-huvud"><h2>Vanliga frågor</h2></div>
+      <div class="fragor">
+        {fragor.map(f => <details><summary>{f.fraga}</summary><div><p>{ihop(f.svar)}</p></div></details>)}
+      </div>
+    </div>
+  </section>
+)}

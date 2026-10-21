@@ -1,0 +1,18 @@
+---
+// Sidslut med formuläret, förvalt på sidans produkt.
+import Forfragan from './Forfragan.astro';
+import { SAJT, telLank } from '../data/sajt';
+import { ihop } from '../lib/text';
+interface Props { produkt?: string; rubrik?: string; text?: string }
+const { produkt, rubrik = 'Boka ett kostnadsfritt hembesök', text = 'Skicka en förfrågan, så ringer vi upp samma dag och bokar en tid som passar dig.' } = Astro.props;
+---
+<section class="sektion sektion-petrol avslut-form">
+  <div class="inre delad">
+    <div class="delad-text">
+      <h2>{ihop(rubrik)}</h2>
+      <p>{ihop(text)}</p>
+      <p>Hellre prata direkt? Ring <a href={telLank(SAJT.telefon)} data-placering="avslut">{SAJT.telefon}</a></p>
+    </div>
+    <Forfragan id="forfragan-slut" produkt={produkt} rubrik="Din förfrågan" />
+  </div>
+</section>

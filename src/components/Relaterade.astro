@@ -1,0 +1,28 @@
+---
+// Kort till relaterade sidor. Bild om sidan har en, annars bara text.
+import Bild from './Bild.astro';
+import { sida, namn } from '../lib/innehall';
+import { ihop } from '../lib/text';
+interface Props { urler: string[]; rubrik?: string }
+const { urler, rubrik = 'Läs också' } = Astro.props;
+const sidor = urler.map(u => sida(u)).filter(Boolean) as NonNullable<ReturnType<typeof sida>>[];
+---
+{sidor.length > 0 && (
+  <section class="sektion">
+    <div class="inre">
+      <div class="sek-huvud"><h2>{rubrik}</h2></div>
+      <div class="kortnat">
+        {sidor.map(s => (
+          <a class="kort" href={s.url}>
+            {s.bild && <Bild namn={s.bild} alt="" sizes="(max-width: 700px) 100vw, 380px" />}
+            <span class="kort-text">
+              <span class="kort-rubrik">{namn(s)}</span>
+              {s.kortText && <span class="kort-brod">{ihop(s.kortText)}</span>}
+              <span class="kort-lank">Läs mer</span>
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+)}

@@ -1,0 +1,34 @@
+---
+// Alla sidor från src/innehall/*.md. Mallen väljs av frontmatter "typ".
+import Tjanstesida from '../components/Tjanstesida.astro';
+import Guidesida from '../components/Guidesida.astro';
+import EnkelSida from '../components/EnkelSida.astro';
+import Relaterade from '../components/Relaterade.astro';
+import { SIDOR, type Sida } from '../lib/innehall';
+import { forfattare } from '../lib/schema';
+
+export function getStaticPaths() {
+  return SIDOR.map(m => ({ params: { sida: m.frontmatter.url.replace(/^\/|\/$/g, '') }, props: { url: m.frontmatter.url } }));
+}
+const { url } = Astro.props;
+const m = SIDOR.find(s => s.frontmatter.url === url)!;
+const sida: Sida = m.frontmatter;
+const { Content } = m;
+const personNyckel = sida.typ === 'person' ? sida.url.split('/').filter(Boolean).at(-1) : undefined;
+const personGuider = personNyckel ? SIDOR.map(s => s.frontmatter).filter(s => s.forfattare === personNyckel) : [];
+const guider = SIDOR.filter(s => s.frontmatter.typ === 'guide').map(s => s.frontmatter.url);
+---
+{sida.typ === 'tjanst' && <Tjanstesida sida={sida}><Content /></Tjanstesida>}
+{sida.typ === 'guide' && <Guidesida sida={sida}><Content /></Guidesida>}
+{sida.typ === 'hubb' && (
+  <Tjanstesida sida={sida}>
+    <Content />
+    <Relaterade slot="efter" urler={sida.url === '/guider/' ? guider : (sida.relaterade ?? [])} rubrik={sida.url === '/guider/' ? 'Alla guider' : 'Välj solskydd'} />
+  </Tjanstesida>
+)}
+{(sida.typ === 'om' || sida.typ === 'person') && (
+  <EnkelSida titel={sida.titel} seoTitel={sida.seoTitel} beskrivning={sida.beskrivning} ingress={sida.ingress} forelder={sida.forelder ? { namn: 'Om oss', url: sida.forelder } : undefined} schema={personNyckel ? [forfattare(personNyckel)] : []}>
+    <Content />
+    {personGuider.length > 0 && <><h2>Guider av {sida.titel}</h2><ul>{personGuider.map(g => <li><a href={g.url}>{g.titel}</a></li>)}</ul></>}
+  </EnkelSida>
+)}

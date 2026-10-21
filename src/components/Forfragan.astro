@@ -37,6 +37,8 @@ const PRODUKTER = ['Terrassmarkis', 'Fönstermarkis', 'Vertikalmarkis eller scre
     <label>Namn <input name="namn" autocomplete="name" required /></label>
     <label>Telefon <input name="telefon" type="tel" autocomplete="tel" required /></label>
     <label>E-post <input name="epost" type="email" autocomplete="email" required /></label>
+    <input type="hidden" name="formular" value={id} />
+    <input type="hidden" name="sida" value={Astro.url.pathname} />
     <div class="falla" aria-hidden="true"><label>Lämna tomt <input name="webbplats" tabindex="-1" autocomplete="off" /></label></div>
     <label class="samtycke"><input type="checkbox" name="samtycke" value="ja" required /> <span>Markisbyrån Sverige AB får använda uppgifterna för att kontakta mig om förfrågan, enligt <a href="/integritetspolicy/">integritetspolicyn</a>.</span></label>
   </fieldset>
