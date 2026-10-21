@@ -39,11 +39,14 @@ Projektets fakta- och frågedokument: https://claude.ai/artifact/87ryUwbFR4274gt
 
 ## Röstguide
 
-Godkända meningar (förebilder):
--
+Godkända meningar (förebilder, startsidan 2026-10-21):
+- "Vi mäter, visar vävprover på plats och monterar."
+- "Det är samma personer som svarar i telefon, mäter hos dig och monterar."
+- "Vid sundet blåser det mer än inne i landet, och en markis i västerläge får eftermiddagssolen rakt in från vattnet."
+- "Det är sådant vi tittar på vid hembesöket, och därför ger vi inga priser innan vi har sett huset."
 
 Underkända meningar (och varför):
--
+- H1 på fyra rader på dator (Alex 2026-10-21): rubriker ska rymmas på högst två rader på dator.
 
 ## Beslut
 - 2026-10-21: Både markishelsingborg.se och markisbyran.se siktar på "markiser helsingborg". Helt egna texter och
@@ -63,12 +66,18 @@ Underkända meningar (och varför):
   manuella åtgärder i GSC; lägg inte till fler.
 
 ## Status
-- 2026-10-21: Designriktning A/B/C i `drafts/design/2026-10-21-riktning/` (artifact https://claude.ai/artifact/S9Gp4RAgA74UyNVVd6VvWg), väntar på Alex val. Bildkarta i `drafts/bilder/bildkarta.md`, Hestra-fakta i `research/hestra-fakta-2026-10-21.md`.
+- 2026-10-21: Godkännande 3 klart: Alex valde riktning B och godkände startsidan ("Kanon, nästa steg"). Ändringar
+  efter hans kommentarer: H1 på två rader, egen SVG-karta över Helsingborg, en bakgrundston (sand bara för
+  räknaren), Boka hembesök i mobilmenyn. Inspiration: redovisningsföretag.se (formulär i hero, CTA i sidhuvudet,
+  verktyg). Sidinnehåll i `src/innehall/*.md` (frontmatter = mall), skrivinstruktion i
+  `research/skrivinstruktion-2026-10-21.md`. Kontakttjänsten postar även till Slack (SLACK_WEBHOOK).
+- 2026-10-21: Designriktning A/B/C i `drafts/design/2026-10-21-riktning/` (artifact https://claude.ai/artifact/S9Gp4RAgA74UyNVVd6VvWg). Bildkarta i `drafts/bilder/bildkarta.md`, Hestra-fakta i `research/hestra-fakta-2026-10-21.md`.
 - 2026-10-21: Repo skapat från astro-startmall. Steg 1–2 klara, godkännande 1 pågår (se dokumentet ovan).
   Utkast till 301-karta i `research/redirectkarta-utkast-2026-10-21.csv`.
 
 ## Öppna luckor
 - Motorfabrikat/styrning, sol- och vindautomatik, garanti och leveranstider: Alex återkommer.
+- Lagringstid för förfrågningar (integritetspolicyn säger ingen tid än).
 - GA4-mät-id, Slack-webhook, Google-profilens länk, Drive-mapp med foton, ägarnas foton och LinkedIn,
   e-post på domänen (MX).
 
