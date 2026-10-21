@@ -34,7 +34,7 @@ Persiennerna vi monterar är från Hestra Markis och finns med lameller på 16, 
 
 ## I nischen eller på bågen
 
-En persienn kan sitta i fönsternischen eller direkt på fönsterbågen. På bågen följer den med när du öppnar fönstret, och du behöver inte dra upp den för att vädra. I nischen täcker den hela öppningen och syns mindre från utsidan. Vi tittar på fönstren och karmarna innan vi föreslår något, eftersom äldre fönster ofta har andra mått och djup än nya.
+En persienn kan sitta i fönsternischen eller direkt på fönsterbågen. På bågen följer den med när du öppnar fönstret, och du behöver inte dra upp den för att vädra. I nischen täcker den hela öppningen och syns mindre från utsidan. Vi tittar på fönstren och karmarna innan vi föreslår något, eftersom äldre fönster ofta har andra mått och djup än nya. Vi mäter varje fönster för sig, även när de ser lika ut.
 
 ## Eftermiddagssol från väster
 

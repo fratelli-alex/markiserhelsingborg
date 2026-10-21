@@ -25,7 +25,7 @@ const schema = [brodsmulor(smulor), artikel({ url: sida.url, titel: sida.titel, 
       <h1>{ihop(sida.titel)}</h1>
       <p class="ingress">{ihop(sida.ingress)}</p>
       <p class="byline">
-        {f ? <>Av <a href={forfattarUrl(sida.forfattare!)}>{f.namn}</a>, {f.roll.toLowerCase()} · </> : null}
+        {f ? <>Av <a href={forfattarUrl(sida.forfattare!)}>{f.namn}</a>, {f.roll.charAt(0).toLowerCase() + f.roll.slice(1)} · </> : null}
         Uppdaterad <time datetime={upp.toISOString().slice(0, 10)}>{datum(upp)}</time>
       </p>
     </header>

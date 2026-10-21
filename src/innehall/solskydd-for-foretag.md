@@ -19,7 +19,7 @@ fakta:
   - { namn: Pris, varde: "Efter besök på plats, utan kostnad" }
 fragor:
   - { fraga: "Behöver vi bygglov för en markis på fasaden?", svar: "Det kan behövas, särskilt om markisen ändrar fasadens utseende eller har reklam. Kontrollera med Helsingborgs stad innan ni beställer." }
-  - { fraga: "Kan vi ha vår logotyp på markisväven?", svar: "Det går att få tryck på väven, men reklam på en markis kan kräva skyltlov. Vi tar upp det vid besöket." }
+  - { fraga: "Kan vi ha vår logotyp på markisväven?", svar: "Fråga oss vid besöket, så tar vi reda på vad som går med den väv ni väljer. Tänk på att reklam på en markis kan kräva skyltlov." }
   - { fraga: "Hyr vi lokalen, vad gäller då?", svar: "Prata med fastighetsägaren innan ni beställer. Ofta vill de godkänna allt som sitter på fasaden." }
 relaterade: [/pergolamarkiser/, /vertikalmarkiser/, /korgmarkiser/]
 ---
@@ -35,6 +35,10 @@ Ett skyltfönster i solen bleker varorna, och en entré utan tak blir blöt när
 ## Restauranger och uteserveringar
 
 På en uteservering vill gästerna sitta kvar även när solen ligger på. En stor terrassmarkis räcker långt på en vägg. Behöver skuggan gå längre ut än en vanlig markis når passar en [pergolamarkis](/pergolamarkiser/), som står på egna stolpar ytterst och har ett tak av väv. Screen på sidorna tar den låga kvällssolen och gör det mer skyddat. Längs Kullagatan och i Norra hamnen kommer vinden ofta från väster över sundet, så vi tittar på hur utsatt platsen är innan vi föreslår modell.
+
+## Service på det ni redan har
+
+Har ni markiser som har suttit några säsonger och börjat se slitna ut behöver de inte alltid bytas. Vi byter väv på alla fabrikat och lagar armar, motorer och fästen, även på markiser vi inte har sålt. En ny väv på en befintlig stomme kan ge fasaden ett nytt utseende utan att allt behöver monteras om. Läs mer om [service och reparation](/service-och-reparation/).
 
 ## Bygglov, skyltlov och tryck på väven
 

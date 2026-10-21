@@ -18,7 +18,7 @@ const schema = [brodsmulor(smulor), tjanst({ url: sida.url, namn: sida.titel, be
 ---
 <Bas titel={sida.seoTitel ?? sida.titel} beskrivning={sida.beskrivning} bild={sida.bild} schema={schema}>
   <section class="hero sidhero">
-    <div class="inre hero-inre">
+    <div class={`inre hero-inre${sida.bild ? '' : ' utan-bild'}`}>
       <div class="hero-text">
         <Brodsmulor smulor={smulor} />
         <h1>{ihop(sida.titel)}</h1>

@@ -36,7 +36,11 @@ På villor med puts eller tegel, som på Tågaborg och i Ramlösa, sitter fönst
 
 ## Välja väv
 
-Väven påverkar både hur mycket ljus som kommer in och hur huset ser ut från gatan. En ljus väv släpper in mer ljus, en mörk ger bättre utsikt genom väven. Vi har med prover från Sandatex, så att du kan hålla dem mot fasaden. Har du redan markisoletter med sliten väv går det ofta att byta bara väven. Läs mer om [ny väv på markisen](/markisvav/).
+Väven påverkar både hur mycket ljus som kommer in och hur huset ser ut från gatan. En ljus väv släpper in mer ljus, en mörk skuggar mer och syns mindre mot en mörk fasad. Vi har med prover från Sandatex, så att du kan hålla dem mot fasaden. Har du redan markisoletter med sliten väv går det ofta att byta bara väven. Läs mer om [ny väv på markisen](/markisvav/).
+
+## Band, vev eller motor
+
+En markisolett kan skötas på olika sätt. Med band eller vev drar du ner den inifrån, utan att öppna fönstret. Med motor räcker en knapp eller en fjärrkontroll, vilket är praktiskt när det är många fönster eller när de sitter högt. Motor kräver el vid fönstret, och det tittar vi på vid hembesöket.
 
 ## Fler typer av fönstermarkiser
 

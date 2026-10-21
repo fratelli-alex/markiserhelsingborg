@@ -31,7 +31,7 @@ Du behöver inte ha köpt markisen av oss. Vi gör service och reparationer på 
 
 ## Det här brukar behöva lagas
 
-- **Väven.** Blekt, sliten, möglig eller sönderblåst. Vi syr upp en ny väv från Sandatex efter måtten på din markis. Läs mer om [ny väv på markisen](/markisvav/).
+- **Väven.** Blekt, sliten, möglig eller sönderblåst. Du får en ny väv från Sandatex, gjord efter måtten på din markis. Läs mer om [ny väv på markisen](/markisvav/).
 - **Armarna.** En vikarm har fjädrar och leder som slits. Hänger framprofilen eller fäller armarna inte ut ordentligt är det ofta där felet sitter. Mer om det i guiden om [markisarmar](/guider/markisarmar/).
 - **Motorn.** En motor som surrar utan att röra markisen, eller som stannar på fel ställe, kan behöva ställas om eller bytas. Vi kan också sätta motor på en markis som i dag har vev.
 - **Band och bandlås.** Äldre fönstermarkiser med band får ofta problem med låset eller ett nött band.
@@ -44,7 +44,7 @@ Du skickar en förfrågan och beskriver vad som är fel. En bild på markisen oc
 
 ## Vinden från sundet sliter
 
-Markiser i Helsingborg får ofta stå emot västlig vind från sundet. En markis som har varit utfälld i hård vind några gånger kan få armar som inte längre ligger rätt, eller fästen som har börjat glappa i en äldre putsfasad. Sådant syns inte alltid från altanen. Därför går vi igenom hela markisen, inte bara den del som du har märkt är trasig.
+Markiser i Helsingborg får ofta stå emot västlig vind från sundet. En markis som har varit utfälld i hård vind några gånger kan få armar som inte längre ligger rätt, eller fästen som har börjat glappa i en äldre putsfasad. Sådant syns inte alltid från altanen. Därför går vi igenom hela markisen, även de delar du inte har märkt något fel på.
 
 ## Laga själv eller låt oss titta
 

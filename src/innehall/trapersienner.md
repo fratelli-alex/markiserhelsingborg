@@ -36,7 +36,7 @@ Tänk också på kondens. Om det ofta bildas imma på insidan av fönstret, och 
 
 ## Äldre hus och nya
 
-I äldre villor med puts eller tegel, som på Tågaborg och i Ramlösa, väljer många trä för att det passar med golv, lister och fönsterkarmar i trä. I nyare hus med stora fönsterpartier blir en bred träpersienn tung att hantera. Där kan en [rullgardin](/rullgardiner/) eller en [plisségardin](/plissegardiner/) vara lättare att leva med. Vi föreslår det som passar fönstret, inte bara materialet du tycker om.
+I äldre villor med puts eller tegel, som på Tågaborg och i Ramlösa, väljer många trä för att det passar med golv, lister och fönsterkarmar i trä. I nyare hus med stora fönsterpartier blir en bred träpersienn tung att hantera. Där kan en [rullgardin](/rullgardiner/) eller en [plisségardin](/plissegardiner/) vara lättare att leva med. Vi utgår från fönstret och rummet när vi föreslår material.
 
 ## Kulör och yta
 
