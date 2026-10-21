@@ -12,7 +12,7 @@ fällor, status och listorna inför domänbytet. Uppdateras löpande. `git pull`
 | Projekttyp | C lead-gen, med gammal WordPress-sajt att städa (301-karta som i A) |
 | Varumärke | Markiser Helsingborg |
 | Juridiskt bolag och org.nr | Markisbyrån Sverige AB, 559470-6668 (bekräfta; gamla sajten skriver "Markisbyrån i Sverige AB") |
-| Domän | markishelsingborg.se (registrar okänt) |
+| Domän | markishelsingborg.se, registrar Oderland |
 | Vad som säljs | Terrass-, fönster-, sido- och vertikalmarkiser, vävbyte, persienner, rullgardiner, lamell- och plisségardiner (ordning okänd) |
 | Ort och marknad | Bara Helsingborg (Höganäs/Landskrona okänt) |
 | Målgrupp | Privat och företag |
@@ -29,7 +29,7 @@ fällor, status och listorna inför domänbytet. Uppdateras löpande. `git pull`
 | Mätning | okänt GA4-id på gamla sajten (behålls) |
 | Hosting | Nytt Sevalla-projekt (förslag, ej skapat) |
 | Kontakttjänst | ej skapad |
-| Domän och DNS | okänt |
+| Domän och DNS | Oderland (domän och DNS). E-post på domänen okänt; MX/TXT läses av före switch-dagen |
 | GitHub | fratelli-alex/markiserhelsingborg (privat) |
 | Projektmapp | |
 | Behåll ordagrant (A) | Inget (förslag) |
@@ -66,7 +66,7 @@ Underkända meningar (och varför):
 
 ## Öppna luckor
 - Bolagsnamn, org.nr, adress, utbud i ordning, fakta (tillverkare, garanti, leveranstid, prisbild), telefon,
-  service/reparation, bilder, Google-profil, logotyp, författare, GA4-id, DNS.
+  service/reparation, bilder, Google-profil, logotyp, författare, GA4-id, e-post på domänen.
 
 ## Före domänbytet
 -
