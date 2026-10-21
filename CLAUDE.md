@@ -19,7 +19,7 @@ fällor, status och listorna inför domänbytet. Uppdateras löpande. `git pull`
 | Huvudmål och konvertering | Formulär (kostnadsfritt hembesök/offert) och telefon |
 | Avsändare och mottagare av leads (C) | Markisbyrån Sverige AB, markisbyran.se. Leads till info@markisbyran.se och till Markisbyråns Slack-kanal (webhook okänd) |
 | Kontaktuppgifter | 0431-199 77 (även på denna sajt), info@markisbyran.se. Ingen adress i Helsingborg. Bolagsadress Fibulavägen 12, 262 74 Ängelholm enligt markisbyran.se (gamla sajten: Östra Pilkvägen 29 – antar markisbyran.se:s). Markisbyrån ringer alltid upp samma dag (Alex 2026-10-21) |
-| Varumärke/profil | Eget ordmärke "Markiser Helsingborg" enligt Markisbyråns grafiska profil (profilen okänd: läs av färger från markisbyran.se:s logotyp) |
+| Varumärke/profil | Eget ordmärke "markiser helsingborg." (gemen Poppins 700 med punkt, tagg "drivs av markisbyrån") enligt Markisbyråns profil. Profil avläst från markisbyran.se Elementor-kit 2026-10-21: petrol #182D35, #304750, sand #E3E1DB, svart text, Poppins 600/400. Markisbyråns vita logga i `public/varumarke/markisbyran-vit.png` (från Alex) |
 | Bildmaterial | Markisbyrån lägger foton i Drive (mapp okänd). AI-bilder fyller luckor |
 | Google-företagsprofil | Markisbyråns profil får användas för omdömen om det inte skadar markisbyran.se (länk okänd) |
 | Sociala kanaler | okänt |
@@ -63,13 +63,14 @@ Underkända meningar (och varför):
   manuella åtgärder i GSC; lägg inte till fler.
 
 ## Status
+- 2026-10-21: Designriktning A/B/C i `drafts/design/2026-10-21-riktning/` (artifact https://claude.ai/artifact/S9Gp4RAgA74UyNVVd6VvWg), väntar på Alex val. Bildkarta i `drafts/bilder/bildkarta.md`, Hestra-fakta i `research/hestra-fakta-2026-10-21.md`.
 - 2026-10-21: Repo skapat från astro-startmall. Steg 1–2 klara, godkännande 1 pågår (se dokumentet ovan).
   Utkast till 301-karta i `research/redirectkarta-utkast-2026-10-21.csv`.
 
 ## Öppna luckor
 - Motorfabrikat/styrning, sol- och vindautomatik, garanti och leveranstider: Alex återkommer.
 - GA4-mät-id, Slack-webhook, Google-profilens länk, Drive-mapp med foton, ägarnas foton och LinkedIn,
-  Markisbyråns logotyp och färger (markisbyran.se går inte att läsa härifrån), e-post på domänen (MX).
+  e-post på domänen (MX).
 
 ## Före domänbytet
 -
