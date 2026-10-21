@@ -68,3 +68,24 @@ rätt; hellre allmänt än fel. Guiderna har författare: `mikael-lundgren` elle
 ## Lämna tillbaka
 Skriv filerna. Svara sedan kort med en lista: fil, ordantal, och varje sakuppgift du var osäker på (så att
 huvudsessionen kan stryka eller bekräfta). Bygg inte, committa inte, ändra inga andra filer.
+
+## Tillägg 2026-10-21: rikare sidor (Alex: "måste hända mer")
+Förebilder: `src/innehall/terrassmarkiser.md` (tjänstesida) och `src/innehall/markisarmar.md` (guide). Läs båda.
+Varje sida ska nu ha, utöver befintlig text:
+- **Inledande stycke utan rubrik** överst i brödtexten (2–3 meningar) om sidan saknar det.
+- **`tabell`** i frontmatter (rubrik, intro, kolumner, rader, not). Tjänstesidor: Hestra-modeller med mått från
+  hestra-fakta där sådana finns, annars en jämförelse (t.ex. typer mot varandra: passar för, manövrering, fördelar).
+  Guider: felsökning (det du ser / trolig orsak / vad du kan göra) eller en annan uppslagstabell som passar.
+  Inga påhittade siffror. Alla celler är korta.
+- **`checklista`** (rubrik, valfri intro, 5–6 punkter, gärna med fetstilad början `**Ord.**`). Tjänstesidor: vad vi
+  tittar på vid hembesöket eller vad du ska tänka på innan du väljer. Guider: kontrollera själv-lista.
+- **En tipsruta** i brödtexten: en rad som börjar med `> **Tips:**` eller `> **Viktigt:**` (säkerhet).
+- **Tjänstesidor: en mitt-CTA** i brödtexten efter första eller andra avsnittet, exakt detta format på en rad
+  (byt bara rubrik och mening):
+  `<aside class="cta-ruta"><div><p class="cta-ruta-rubrik">Rubrik?</p><p>En mening.</p></div><div class="knappar"><a class="knapp" href="#forfragan">Boka hembesök</a></div></aside>`
+- **`kallor`**: lista med `{ namn: "...", kontrollerad: 2026-10-21 }` (och `url` för myndigheter). Ange bara källor
+  du faktiskt har använt (Hestra-produktblad, EN 13561/13659, Elsäkerhetsverket, Helsingborgs stad).
+- Faktaraden "Pris" på tjänstesidor ska heta "Pris" med värdet "Efter hembesök, utan kostnad" (inte service).
+Nya fakta från Alex: Markisbyrån byter och eftermonterar motorer. Tryck med namn/logga på markisväv går. Service
+kostar arbetskostnad och material. Fabrikat för träpersienner nämns inte.
+Ändra inte `url`, `bild`, `ordning`. Bygg inte, committa inte.
