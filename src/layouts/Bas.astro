@@ -68,6 +68,8 @@ const ar = new Date().getFullYear();
       <nav class="huvudmeny" id="huvudmeny" aria-label="Huvudmeny">
         <ul>
           {MENY.map(m => <li><a href={m.url} aria-current={sokvag === m.url ? 'page' : undefined}>{m.namn}</a></li>)}
+          <li class="meny-boka"><a class="knapp" href="/kontakt/">Boka hembesök</a></li>
+          {SAJT.telefon && <li class="meny-boka"><a class="knapp-2" href={telLank(SAJT.telefon)} data-placering="meny">Ring {SAJT.telefon}</a></li>}
         </ul>
       </nav>
       {SAJT.telefon && <a class="topp-tel" href={telLank(SAJT.telefon)} data-placering="sidhuvud">{SAJT.telefon}</a>}
