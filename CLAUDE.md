@@ -23,7 +23,7 @@ fällor, status och listorna inför domänbytet. Uppdateras löpande. `git pull`
 | Bildmaterial | Markisbyrån lägger foton i Drive (mapp okänd). AI-bilder fyller luckor |
 | Google-företagsprofil | Markisbyråns profil får användas för omdömen om det inte skadar markisbyran.se (länk okänd) |
 | Sociala kanaler | okänt |
-| Författare | Mikael Lundgren och Roy Ridderberg, Markisbyrån (roller, foton, LinkedIn okända) |
+| Författare | Mikael Lundgren och Roy Ridderberg, båda ägare av Markisbyrån. Foton och LinkedIn finns (ej mottagna) |
 | Konkurrenter | Solflex AB, Solskyddsproffset Helsingborg AB (Helsingborg); Rullux (Lund), Markiscentrum (Båstad), Solklar (Löddeköpinge); reco.se |
 | Sökdata | Ahrefs + GSC + GA4, exporter i `data/` (2026-10-21) |
 | Mätning | Befintlig GA4-egendom "Markishelsingborg.se" behålls (mät-id G-… okänt, syns inte i sidans HTML) |
@@ -51,7 +51,8 @@ Underkända meningar (och varför):
   eller gamla sajten.
 - 2026-10-21: Fem reparationsguider skrivs om med egna texter och behålls (de gamla tio guideadresserna gav
   3 117 av 3 362 GSC-klick på 16 månader). De slutar med service/reparation i Helsingborg som uppmaning.
-  Kräver att Markisbyrån bekräftar att de gör service och reparation.
+- 2026-10-21: Markisbyrån gör service och reparation även på markiser de inte sålt, vävbyte på alla fabrikat och
+  skickar vävprov till kunder från sajten (Alex). Guiderna uppmanar till service i Helsingborg.
 - 2026-10-21: Inga priser på sajten (Alex), trots att markisbyran.se visar en prisbild.
 - 2026-10-21: Organisationen blir `Organization` + `Service` med `areaServed` Helsingborg, inte `LocalBusiness`,
   så länge det inte finns en riktig adress i Helsingborg.
@@ -66,9 +67,9 @@ Underkända meningar (och varför):
   Utkast till 301-karta i `research/redirectkarta-utkast-2026-10-21.csv`.
 
 ## Öppna luckor
-- Gör Markisbyrån service och reparation (motorbyte, armar, reservdelar) på markiser de inte sålt? Styr guidernas uppmaning.
-- GA4-mät-id, Slack-webhook, Google-profilens länk, Drive-mapp med foton, författarnas roller/foton/LinkedIn,
-  e-post på domänen (MX), garanti och leveranstider (inga hittade på markisbyran.se).
+- Motorfabrikat/styrning, sol- och vindautomatik, garanti och leveranstider: Alex återkommer.
+- GA4-mät-id, Slack-webhook, Google-profilens länk, Drive-mapp med foton, ägarnas foton och LinkedIn,
+  Markisbyråns logotyp och färger (markisbyran.se går inte att läsa härifrån), e-post på domänen (MX).
 
 ## Före domänbytet
 -
