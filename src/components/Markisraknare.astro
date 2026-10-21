@@ -1,0 +1,51 @@
+---
+// Liten räknare: ytans bredd och djup ger ett förslag på markisens bredd och utfall. Gränserna kommer från
+// Hestras produktblad 2023 (terrassmarkiser: bredd upp till 7 m, utfall 1,5–4,0 m), se research/hestra-fakta.
+// Tumregeln 20–30 cm bredare än ytan står i texterna. Förslaget är en uppskattning, inte en offert.
+---
+<div class="raknare">
+  <div class="raknare-falt">
+    <label for="r-bredd">Hur bred är ytan som ska få skugga? <span class="ff-hjalp">meter</span>
+      <input id="r-bredd" type="number" inputmode="decimal" min="1" max="15" step="0.1" value="4" />
+    </label>
+    <label for="r-djup">Hur långt ut från fasaden? <span class="ff-hjalp">meter</span>
+      <input id="r-djup" type="number" inputmode="decimal" min="0.5" max="8" step="0.1" value="3" />
+    </label>
+  </div>
+  <output class="raknare-svar" for="r-bredd r-djup" aria-live="polite">
+    <span class="raknare-tal"><span data-r-bredd>4,2–4,3 m</span><small>markisens bredd</small></span>
+    <span class="raknare-tal"><span data-r-utfall>3,0 m</span><small>utfall</small></span>
+    <span class="raknare-not" data-r-not>Det ryms i en terrassmarkis i en sektion.</span>
+  </output>
+</div>
+<script>
+  const b = document.getElementById('r-bredd') as HTMLInputElement | null;
+  const d = document.getElementById('r-djup') as HTMLInputElement | null;
+  if (b && d) {
+    const f = (n: number) => n.toLocaleString('sv-SE', { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+    const rakna = () => {
+      const bredd = parseFloat(b.value.replace(',', '.')), djup = parseFloat(d.value.replace(',', '.'));
+      if (!(bredd > 0) || !(djup > 0)) return;
+      const utfall = Math.min(4, Math.max(1.5, Math.round(djup * 2) / 2));
+      document.querySelector('[data-r-bredd]')!.textContent = `${f(bredd + 0.2)}–${f(bredd + 0.3)} m`;
+      document.querySelector('[data-r-utfall]')!.textContent = `${f(utfall)} m`;
+      let not = 'Det ryms i en terrassmarkis i en sektion.';
+      if (bredd + 0.2 > 7) not = 'Bredare än sju meter blir det två markiser bredvid varandra, eller en pergolamarkis.';
+      else if (djup > 4) not = 'Längre ut än fyra meter når en vanlig terrassmarkis inte. Då passar en pergolamarkis bättre.';
+      else if (bredd + 0.3 > 6 && utfall > 3.5) not = 'Så stora mått klarar bara några modeller. Det tittar vi på vid hembesöket.';
+      document.querySelector('[data-r-not]')!.textContent = not;
+    };
+    b.addEventListener('input', rakna); d.addEventListener('input', rakna); rakna();
+  }
+</script>
+<style is:global>
+  .raknare { display: grid; gap: 24px; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); background: var(--vit); border-radius: var(--radie-stor); padding: clamp(20px, 4vw, 36px); }
+  @media (max-width: 760px) { .raknare { grid-template-columns: minmax(0, 1fr); } }
+  .raknare-falt { display: grid; gap: 16px; }
+  .raknare label { display: grid; gap: 6px; font-weight: 600; }
+  .raknare input { font: inherit; font-size: 20px; padding: 10px 12px; min-height: 52px; border: 1px solid var(--text-2); border-radius: 10px; width: 100%; max-width: 220px; color: var(--text); background: var(--vit); }
+  .raknare-svar { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-content: center; background: var(--sand); border-radius: var(--radie); padding: 20px; }
+  .raknare-tal { display: grid; gap: 4px; font-family: var(--rubrik); font-weight: 600; font-size: clamp(26px, 3.4vw, 34px); line-height: 1.1; font-variant-numeric: tabular-nums; }
+  .raknare-tal small { font-family: var(--brodtext); font-weight: 400; font-size: 15px; color: var(--text-2); }
+  .raknare-not { grid-column: 1 / -1; color: var(--text); }
+</style>

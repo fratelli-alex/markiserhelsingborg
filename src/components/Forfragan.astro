@@ -1,0 +1,94 @@
+---
+// Förfrågan i tre steg (hero och sidslut). Utan JavaScript visas alla fält på en gång och formuläret fungerar
+// ändå. Postar till kontakttjänsten (tjanster/kontakt) som mejlar och skickar till Slack. Extra fält
+// (produkt, bredd, manovrering) följer med i mejlet som de är.
+import { SAJT } from '../data/sajt';
+interface Props { id?: string; produkt?: string; rubrik?: string }
+const { id = 'forfragan', produkt = '', rubrik = 'Boka kostnadsfritt hembesök' } = Astro.props;
+const PRODUKTER = ['Terrassmarkis', 'Fönstermarkis', 'Vertikalmarkis eller screen', 'Pergolamarkis', 'Balkongmarkis', 'Korgmarkis eller markisolett', 'Ny väv på befintlig markis', 'Service eller reparation', 'Persienner', 'Rullgardiner', 'Plissé- eller lamellgardiner', 'Solskydd för företag', 'Vet inte än'];
+---
+<form class="forfragan formular" id={id} method="post" action={SAJT.kontaktUrl || undefined} data-kontakt={id} data-steg="1">
+  <div class="ff-huvud">
+    <p class="ff-rubrik">{rubrik}</p>
+    <p class="ff-rakna" aria-live="polite"><span data-steg-nr>Steg 1 av 3</span></p>
+  </div>
+  <fieldset data-del="1">
+    <legend class="sr">Vad gäller det?</legend>
+    <label>Vad är du intresserad av?
+      <select name="produkt" required>
+        <option value="">Välj</option>
+        {PRODUKTER.map(p => <option selected={p === produkt}>{p}</option>)}
+      </select>
+    </label>
+    <label>Postnummer <input name="postnummer" inputmode="numeric" autocomplete="postal-code" maxlength="6" placeholder="252 21" /></label>
+  </fieldset>
+  <fieldset data-del="2">
+    <legend class="sr">Mer om önskemålet</legend>
+    <label>Ungefärlig bredd <span class="ff-hjalp">Vet du inte, hoppa över</span>
+      <input name="bredd" inputmode="decimal" placeholder="t.ex. 4 meter" />
+    </label>
+    <label>Manövrering
+      <select name="manovrering"><option value="">Vet inte än</option><option>Vev</option><option>Motor med fjärrkontroll</option></select>
+    </label>
+    <label>Något mer vi bör veta? <textarea name="meddelande" rows="3" placeholder="Till exempel vilket väderstreck eller om det är en putsad fasad"></textarea></label>
+  </fieldset>
+  <fieldset data-del="3">
+    <legend class="sr">Dina kontaktuppgifter</legend>
+    <label>Namn <input name="namn" autocomplete="name" required /></label>
+    <label>Telefon <input name="telefon" type="tel" autocomplete="tel" required /></label>
+    <label>E-post <input name="epost" type="email" autocomplete="email" required /></label>
+    <div class="falla" aria-hidden="true"><label>Lämna tomt <input name="webbplats" tabindex="-1" autocomplete="off" /></label></div>
+    <label class="samtycke"><input type="checkbox" name="samtycke" value="ja" required /> <span>Markisbyrån Sverige AB får använda uppgifterna för att kontakta mig om förfrågan, enligt <a href="/integritetspolicy/">integritetspolicyn</a>.</span></label>
+  </fieldset>
+  <div class="ff-knappar">
+    <button class="knapp-2 ff-tillbaka" type="button" data-tillbaka hidden>Tillbaka</button>
+    <button class="knapp ff-vidare" type="button" data-vidare hidden>Fortsätt</button>
+    <button class="knapp ff-skicka" type="submit">Skicka förfrågan</button>
+  </div>
+  <p class="ff-lugn">Kostnadsfritt och utan förpliktelser. Vi ringer upp samma dag.</p>
+</form>
+<script>
+  // Stegvis visning. Varje steg kontrolleras innan nästa visas; allt skickas i ett och samma formulär.
+  for (const f of document.querySelectorAll<HTMLFormElement>('form.forfragan')) {
+    const delar = [...f.querySelectorAll<HTMLFieldSetElement>('[data-del]')];
+    const vidare = f.querySelector<HTMLButtonElement>('[data-vidare]')!;
+    const tillbaka = f.querySelector<HTMLButtonElement>('[data-tillbaka]')!;
+    const skicka = f.querySelector<HTMLButtonElement>('.ff-skicka')!;
+    const nr = f.querySelector('[data-steg-nr]')!;
+    let steg = 0;
+    const visa = (i: number) => {
+      steg = i;
+      delar.forEach((d, j) => (d.hidden = j !== i));
+      tillbaka.hidden = i === 0;
+      vidare.hidden = i === delar.length - 1;
+      skicka.hidden = i !== delar.length - 1;
+      nr.textContent = `Steg ${i + 1} av ${delar.length}`;
+      f.dataset.steg = String(i + 1);
+    };
+    f.classList.add('stegvis');
+    visa(0);
+    vidare.addEventListener('click', () => {
+      const falt = [...delar[steg].querySelectorAll<HTMLInputElement>('input, select, textarea')];
+      const fel = falt.find(e => !e.checkValidity());
+      if (fel) { fel.reportValidity(); return; }
+      visa(steg + 1);
+      delar[steg].querySelector<HTMLElement>('input, select, textarea')?.focus();
+    });
+    tillbaka.addEventListener('click', () => visa(steg - 1));
+  }
+</script>
+<style is:global>
+  .forfragan { background: var(--vit); border-radius: var(--radie-stor); padding: 24px; box-shadow: 0 18px 50px rgb(24 45 53 / .16); gap: 16px; }
+  .forfragan fieldset { border: 0; margin: 0; padding: 0; display: grid; gap: 14px; min-width: 0; }
+  .forfragan:not(.stegvis) fieldset + fieldset { border-top: 1px solid var(--linje); padding-top: 14px; }
+  .ff-huvud { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+  .ff-rubrik { font-family: var(--rubrik); font-weight: 600; font-size: 20px; }
+  .ff-rakna { font-size: 14px; color: var(--text-2); }
+  .forfragan:not(.stegvis) .ff-rakna { display: none; }
+  .ff-hjalp { font-weight: 400; font-size: 14px; color: var(--text-2); }
+  .forfragan input, .forfragan select, .forfragan textarea { border-color: var(--text-2); min-height: 48px; background: var(--vit); color: var(--text); }
+  .ff-knappar { display: flex; gap: 10px; flex-wrap: wrap; }
+  .ff-knappar .knapp { flex: 1; }
+  .ff-lugn { font-size: 14px; color: var(--text-2); }
+  .forfragan fieldset[hidden], .forfragan button[hidden] { display: none; }
+</style>
