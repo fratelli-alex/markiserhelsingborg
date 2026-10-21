@@ -17,6 +17,27 @@ fragor:
   - { fraga: "Varför hänger väven fast markisen är helt utfälld?", svar: "Det vanligaste skälet är att fjädrarna i armarna har tappat kraft. Det kan också vara väven som har töjt sig efter vattensäckar." }
   - { fraga: "Hur ofta ska armarna smörjas?", svar: "Det räcker ofta med en gång om året, när du ändå gör rent markisen. Använd det medel som tillverkaren anger." }
 relaterade: [/guider/justera-vinkel-pa-markis/, /guider/reservdelar-till-markis/, /guider/tvatta-markis/]
+tabell:
+  rubrik: Vanliga fel på markisarmar
+  intro: Så hänger symptom, trolig orsak och åtgärd ihop på en vanlig markis med vikarmar.
+  kolumner: [Det du ser, Trolig orsak, Vad du kan göra]
+  rader:
+    - [Väven hänger fast markisen är utfälld, Fjädrarna i armarna har tappat kraft, Byt armarna parvis]
+    - [Frontprofilen hänger snett, Vinkeln skiljer mellan armarna eller ett fäste har gett med sig, Justera vinkeln eller kontrollera fästet]
+    - [Glapp i armbågsleden, Sliten led eller bussning, Låt någon titta på den innan nästa säsong]
+    - [Gnissel när markisen fälls ut, Smuts och torra leder, Gör rent och smörj med tillverkarens medel]
+    - [Kedja eller wire syns i leden, Kedjan eller wiren har gått av, Fäll inte in markisen själv]
+checklista:
+  rubrik: Kontrollera armarna en gång om året
+  punkter:
+    - "Fäll ut markisen helt och se att väven är jämnt sträckt."
+    - "Titta på armarna från sidan: de ska vara raka och lika höga."
+    - "Ta tag i varje arm vid leden och känn efter glapp."
+    - "Se efter sprickor och rost vid fästena på väggen."
+    - "Lyssna efter knarr när markisen fälls in och ut."
+    - "Gör rent lederna och smörj dem med det medel tillverkaren anger."
+kallor:
+  - { namn: "Hestra Markis AB, produktblad terrassmarkiser och skötselråd", kontrollerad: 2026-10-21 }
 ---
 
 ## Två vanliga armtyper
@@ -28,6 +49,8 @@ relaterade: [/guider/justera-vinkel-pa-markis/, /guider/reservdelar-till-markis/
 ## Säkerheten först
 
 Fjädrarna i en vikarm är spända hela tiden, och mest när markisen är infälld och armarna är hopvikta. Kraften räcker för att skada händer och ansikte om en arm slår upp.
+
+> **Viktigt:** En arm som har lossnat från fästet ska aldrig vikas ihop för hand. Låt markisen vara utfälld och stötta frontprofilen tills någon har tittat på den.
 
 - Ta aldrig isär en arm eller armbågsleden själv. Den kan inte öppnas säkert utan rätt verktyg och kunskap om just det fabrikatet.
 - Lossa aldrig skruvarna mellan arm och fäste medan markisen är infälld.

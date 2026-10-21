@@ -60,6 +60,14 @@ Underkända meningar (och varför):
 - 2026-10-21: Organisationen blir `Organization` + `Service` med `areaServed` Helsingborg, inte `LocalBusiness`,
   så länge det inte finns en riktig adress i Helsingborg.
 
+- 2026-10-21 (Alex): Träpersienner: fabrikat okänt, nämns inte. Tryck/logga på markisväv för företag: ja.
+  Markisbyrån byter och eftermonterar motorer: ja. Servicebesök kostar arbetskostnad och material. Förfrågningar
+  sparas i 30 dagar. Alex ger åtkomst till Sevalla (kräver nätverksåtkomst till api.sevalla.com i molnmiljön).
+- 2026-10-21 (Alex): Tjänstesidorna och guiderna var för tunna ("måste hända mer"). Förebilder:
+  redovisningsföretag.se/redovisningskonsult/ (formulär i hero, checklista, steg, CTA mitt i, källor, länklistor,
+  formulär igen sist) och barnkollen.se/kungliga-namn/ (byline med författarruta, innehållsförteckning, tabeller,
+  tipsruta, relaterade kort med bild).
+
 ## Fällor
 - Gamla sajten har 76 massproducerade AI-inlägg, många om andra orter och andras varumärken. Inget återanvänds.
 - Fratelli-nätverket har lagt länkar med exakt ankartext "markiser Helsingborg" från orelaterade sajter. Kolla
@@ -77,7 +85,6 @@ Underkända meningar (och varför):
 
 ## Öppna luckor
 - Motorfabrikat/styrning, sol- och vindautomatik, garanti och leveranstider: Alex återkommer.
-- Lagringstid för förfrågningar (integritetspolicyn säger ingen tid än).
 - GA4-mät-id, Slack-webhook, Google-profilens länk, Drive-mapp med foton, ägarnas foton och LinkedIn,
   e-post på domänen (MX).
 

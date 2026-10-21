@@ -19,7 +19,7 @@ fakta:
   - { namn: Pris, varde: "Efter besök på plats, utan kostnad" }
 fragor:
   - { fraga: "Behöver vi bygglov för en markis på fasaden?", svar: "Det kan behövas, särskilt om markisen ändrar fasadens utseende eller har reklam. Kontrollera med Helsingborgs stad innan ni beställer." }
-  - { fraga: "Kan vi ha vår logotyp på markisväven?", svar: "Fråga oss vid besöket, så tar vi reda på vad som går med den väv ni väljer. Tänk på att reklam på en markis kan kräva skyltlov." }
+  - { fraga: "Kan vi ha vår logotyp på markisväven?", svar: "Ja, det går att få tryck med namn eller logotyp på väven. Tänk på att reklam på en markis kan kräva skyltlov." }
   - { fraga: "Hyr vi lokalen, vad gäller då?", svar: "Prata med fastighetsägaren innan ni beställer. Ofta vill de godkänna allt som sitter på fasaden." }
 relaterade: [/pergolamarkiser/, /vertikalmarkiser/, /korgmarkiser/]
 ---

@@ -1,0 +1,72 @@
+---
+// Återkommande innehållsblock på tjänstesidor och guider: checklista, tabell, steg, källor, länklistor.
+import { ihop } from '../lib/text';
+import { STEG, OMRADEN, SIDFOT } from '../data/sajt';
+import type { Sida } from '../lib/innehall';
+interface Props { sida: Sida; visa: 'checklista' | 'tabell' | 'steg' | 'kallor' | 'lankar' }
+const { sida, visa } = Astro.props;
+const kolumn = SIDFOT.find(k => k.lankar.some(l => l.url === sida.url)) ?? SIDFOT[0];
+const fler = kolumn.lankar.filter(l => l.url !== sida.url);
+// YAML läser 2026-10-21 som ett datum
+const datum = (d: string | Date) => (d instanceof Date ? d : new Date(d)).toLocaleDateString('sv-SE', { day: 'numeric', month: 'long', year: 'numeric' });
+---
+{visa === 'checklista' && sida.checklista && (
+  <section class="sektion">
+    <div class="inre">
+      <div class="checklista">
+        <div class="sek-huvud">
+          <h2>{ihop(sida.checklista.rubrik)}</h2>
+          {sida.checklista.intro && <p>{ihop(sida.checklista.intro)}</p>}
+        </div>
+        <ul class="bocklista">{sida.checklista.punkter.map(p => <li><span set:html={p.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')} /></li>)}</ul>
+      </div>
+    </div>
+  </section>
+)}
+{visa === 'tabell' && sida.tabell && (
+  <section class="sektion">
+    <div class="inre">
+      <div class="sek-huvud">
+        <h2>{ihop(sida.tabell.rubrik)}</h2>
+        {sida.tabell.intro && <p>{ihop(sida.tabell.intro)}</p>}
+      </div>
+      <div class="tabellram">
+        <table class="datatabell">
+          <thead><tr>{sida.tabell.kolumner.map(k => <th scope="col">{k}</th>)}</tr></thead>
+          <tbody>{sida.tabell.rader.map(r => <tr>{r.map((c, i) => i === 0 ? <th scope="row">{c}</th> : <td>{c}</td>)}</tr>)}</tbody>
+        </table>
+      </div>
+      {sida.tabell.not && <p class="tabellnot">{sida.tabell.not}</p>}
+    </div>
+  </section>
+)}
+{visa === 'steg' && (
+  <section class="sektion">
+    <div class="inre">
+      <div class="sek-huvud"><h2>Så går det till</h2><p>{ihop('Från första kontakt till färdig montering.')}</p></div>
+      <ol class="steglista">{STEG.map(([r, t], i) => <li><span class="steg-nr" aria-hidden="true">{i + 1}</span><h3>{r}</h3><p>{ihop(t)}</p></li>)}</ol>
+    </div>
+  </section>
+)}
+{visa === 'kallor' && sida.kallor?.length && (
+  <section class="sektion kallor">
+    <div class="inre">
+      <h2>Källor</h2>
+      <ul>{sida.kallor.map(k => <li>{k.url ? <a href={k.url}>{k.namn}</a> : k.namn}{k.kontrollerad && <span>, kontrollerad {datum(k.kontrollerad)}</span>}</li>)}</ul>
+    </div>
+  </section>
+)}
+{visa === 'lankar' && (
+  <section class="sektion">
+    <div class="inre lankkolumner">
+      <div>
+        <h2>{kolumn.rubrik === 'Inomhus' ? 'Mer solskydd inomhus' : kolumn.rubrik === 'Mer' ? 'Mer från oss' : 'Fler markiser'}</h2>
+        <ul class="lanklista">{fler.map(l => <li><a href={l.url}>{l.namn}</a></li>)}</ul>
+      </div>
+      <div>
+        <h2>Vi kommer till dig i hela Helsingborg</h2>
+        <ul class="chips">{OMRADEN.map(o => <li>{o}</li>)}</ul>
+      </div>
+    </div>
+  </section>
+)}

@@ -61,3 +61,14 @@ export const telLank = (t: string) => 'tel:' + t.replace(/[^\d+]/g, '').replace(
 export const LOKAL: import('../lib/schema').Lokal | undefined = undefined;
 // Organisationens profiler (Google-företagsprofil, sociala kanaler, moderbolagets sajt)
 export const SAME_AS: string[] = [];
+
+// Arbetsgången, samma på alla sidor (startsidan och tjänstesidorna)
+export const STEG: [string, string][] = [
+  ['Du skickar en förfrågan', 'Berätta vad du är intresserad av. Mått behövs inte.'],
+  ['Vi ringer upp samma dag', 'och bokar en tid för hembesök som passar dig.'],
+  ['Hembesöket', 'Vi mäter, tittar på fasaden och hur solen ligger. Du väljer väv från riktiga prover.'],
+  ['Offert', 'Du får ett skriftligt förslag. Inget är bindande innan du har sagt ja.'],
+  ['Montering', 'Vi monterar på den tid vi har kommit överens om.'],
+];
+export const BOCKAR = ['Hembesök utan kostnad', 'Svensktillverkat av Hestra', 'Väv från Sandatex'];
+export const OMRADEN = ['Centrum', 'Norr', 'Tågaborg', 'Olympia', 'Ramlösa', 'Råå', 'Påarp', 'Rydebäck', 'Hittarp', 'Laröd', 'Domsten', 'Ödåkra', 'Mörarp', 'Allerum', 'Kattarp', 'Bårslöv'];

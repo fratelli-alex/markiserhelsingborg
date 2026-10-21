@@ -1,19 +1,25 @@
 ---
-// Guide: artikel med författare och datum, uppmaning till service i Helsingborg, frågor, fler guider.
+// Guide (förebild: barnkollen.se/kungliga-namn/): etikett, rubrik, byline med författarruta, bild,
+// ingress, innehållsförteckning, brödtext med tipsrutor och tabeller, uppmaning, frågor, källor, fler guider.
 import Bas from '../layouts/Bas.astro';
 import Bild from './Bild.astro';
 import Brodsmulor from './Brodsmulor.astro';
+import Innehallsforteckning from './Innehallsforteckning.astro';
+import Block from './Block.astro';
 import Fragor from './Fragor.astro';
 import Relaterade from './Relaterade.astro';
 import Avslut from './Avslut.astro';
+import { SAJT, telLank } from '../data/sajt';
 import { ihop } from '../lib/text';
 import { brodsmulor, artikel, faq } from '../lib/schema';
 import { FORFATTARE, forfattarUrl } from '../data/forfattare';
-import type { Sida } from '../lib/innehall';
-interface Props { sida: Sida }
-const { sida } = Astro.props;
+import type { Sida, Rubrik } from '../lib/innehall';
+interface Props { sida: Sida; rubriker?: Rubrik[] }
+const { sida, rubriker = [] } = Astro.props;
 const smulor = [{ namn: 'Start', url: '/' }, { namn: 'Guider', url: '/guider/' }, { namn: sida.menynamn ?? sida.titel, url: sida.url }];
 const f = sida.forfattare ? FORFATTARE[sida.forfattare] : undefined;
+const initialer = f ? f.namn.split(' ').map(d => d[0]).join('') : '';
+const fornamn = f ? f.namn.split(' ')[0] : '';
 const pub = new Date(sida.publicerad ?? '2026-10-21'), upp = new Date(sida.uppdaterad ?? sida.publicerad ?? '2026-10-21');
 const datum = (d: Date) => d.toLocaleDateString('sv-SE', { day: 'numeric', month: 'long', year: 'numeric' });
 const schema = [brodsmulor(smulor), artikel({ url: sida.url, titel: sida.titel, beskrivning: sida.beskrivning, publicerad: pub, uppdaterad: upp, forfattare: sida.forfattare }), ...(sida.fragor?.length ? [faq(sida.fragor)] : [])];
@@ -22,17 +28,37 @@ const schema = [brodsmulor(smulor), artikel({ url: sida.url, titel: sida.titel, 
   <article class="guide">
     <header class="inre guide-huvud">
       <Brodsmulor smulor={smulor} />
+      <p class="eyebrow">Guide</p>
       <h1>{ihop(sida.titel)}</h1>
-      <p class="ingress">{ihop(sida.ingress)}</p>
-      <p class="byline">
-        {f ? <>Av <a href={forfattarUrl(sida.forfattare!)}>{f.namn}</a>, {f.roll.charAt(0).toLowerCase() + f.roll.slice(1)} · </> : null}
-        Uppdaterad <time datetime={upp.toISOString().slice(0, 10)}>{datum(upp)}</time>
-      </p>
+      {f && (
+        <div class="forfattarrad">
+          <span class="avatar" aria-hidden="true">{initialer}</span>
+          <div>
+            <p class="byline"><a href={forfattarUrl(sida.forfattare!)}>{f.namn}</a>, {f.roll.charAt(0).toLowerCase() + f.roll.slice(1)}</p>
+            <p class="byline-datum">Uppdaterad <time datetime={upp.toISOString().slice(0, 10)}>{datum(upp)}</time></p>
+          </div>
+        </div>
+      )}
+      {f && <p class="forfattarruta">{fornamn} är en av ägarna till Markisbyrån och mäter, monterar och lagar markiser i Helsingborg. <a href={forfattarUrl(sida.forfattare!)}>Mer om {fornamn}</a></p>}
     </header>
     {sida.bild && <div class="inre guide-bild"><Bild namn={sida.bild} alt={sida.bildAlt ?? ''} sizes="(max-width: 820px) 100vw, 900px" prioritet /></div>}
-    <div class="inre"><div class="brod prosa"><slot /></div></div>
+    <div class="inre guide-kropp">
+      <p class="ingress guide-ingress">{ihop(sida.ingress)}</p>
+      <Innehallsforteckning rubriker={rubriker} />
+      <div class="brod prosa"><slot /></div>
+      <Block sida={sida} visa="tabell" />
+      <Block sida={sida} visa="checklista" />
+      <aside class="cta-ruta">
+        <div>
+          <p class="cta-ruta-rubrik">{ihop('Vill du att vi tittar på markisen?')}</p>
+          <p>{ihop('Vi gör service på alla fabrikat i Helsingborg. Skicka en förfrågan, så ringer vi upp samma dag.')}</p>
+        </div>
+        <div class="knappar"><a class="knapp" href="#forfragan-slut">Boka service</a><a class="knapp-2" href={telLank(SAJT.telefon)} data-placering="guide">Ring {SAJT.telefon}</a></div>
+      </aside>
+    </div>
   </article>
   <Fragor fragor={sida.fragor ?? []} />
   <Relaterade urler={sida.relaterade ?? []} rubrik="Fler guider" />
+  <Block sida={sida} visa="kallor" />
   <Avslut produkt={sida.produkt ?? 'Service eller reparation'} rubrik="Behöver markisen ses över?" text="Vi gör service och reparationer på alla fabrikat i Helsingborg. Skicka en förfrågan, så ringer vi upp samma dag." />
 </Bas>

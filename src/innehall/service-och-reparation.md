@@ -16,11 +16,11 @@ fakta:
   - { namn: Vävbyte, varde: "På alla fabrikat, med väv från Sandatex" }
   - { namn: Vävprover, varde: "Visas vid hembesöket eller skickas hem" }
   - { namn: Vanliga jobb, varde: "Väv, armar, motor, band, vev och fästen" }
-  - { namn: Pris, varde: "Efter att vi har sett markisen" }
+  - { namn: Kostnad, varde: "Arbetskostnad och material. Inget pris innan vi sett markisen" }
 fragor:
   - { fraga: "Lagar ni markiser som någon annan har sålt?", svar: "Ja. Vi gör service och reparationer på alla fabrikat. Berätta gärna vilket märke det är och skicka en bild, så vet vi mer innan vi kommer." }
   - { fraga: "Lönar det sig att laga en gammal markis?", svar: "Ofta, om stommen och armarna är hela. Är flera delar slitna samtidigt kan en ny markis bli bättre. Det säger vi när vi har sett den." }
-  - { fraga: "Kan ni sätta motor på min vevmarkis?", svar: "På många markiser går det att byta veven mot en motor. Det beror på modellen och på om det finns el nära markisen." }
+  - { fraga: "Kan ni sätta motor på min vevmarkis?", svar: "Ja, vi byter och eftermonterar motorer. På många markiser går det att byta veven mot en motor, beroende på modellen och på om det finns el nära markisen." }
   - { fraga: "Kan jag få vävprover hem?", svar: "Ja. Vi kan skicka vävprover hem till dig, så att du kan se färgerna mot din fasad innan du bestämmer dig." }
 relaterade: [/markisvav/, /guider/byta-markismotor/, /guider/reservdelar-till-markis/]
 ---

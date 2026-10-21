@@ -14,14 +14,15 @@ const { url } = Astro.props;
 const m = SIDOR.find(s => s.frontmatter.url === url)!;
 const sida: Sida = m.frontmatter;
 const { Content } = m;
+const rubriker = m.getHeadings();
 const personNyckel = sida.typ === 'person' ? sida.url.split('/').filter(Boolean).at(-1) : undefined;
 const personGuider = personNyckel ? SIDOR.map(s => s.frontmatter).filter(s => s.forfattare === personNyckel) : [];
 const guider = SIDOR.filter(s => s.frontmatter.typ === 'guide').map(s => s.frontmatter.url);
 ---
-{sida.typ === 'tjanst' && <Tjanstesida sida={sida}><Content /></Tjanstesida>}
-{sida.typ === 'guide' && <Guidesida sida={sida}><Content /></Guidesida>}
+{sida.typ === 'tjanst' && <Tjanstesida sida={sida} rubriker={rubriker}><Content /></Tjanstesida>}
+{sida.typ === 'guide' && <Guidesida sida={sida} rubriker={rubriker}><Content /></Guidesida>}
 {sida.typ === 'hubb' && (
-  <Tjanstesida sida={sida}>
+  <Tjanstesida sida={sida} rubriker={rubriker}>
     <Content />
     <Relaterade slot="efter" urler={sida.url === '/guider/' ? guider : (sida.relaterade ?? [])} rubrik={sida.url === '/guider/' ? 'Alla guider' : 'Välj solskydd'} />
   </Tjanstesida>

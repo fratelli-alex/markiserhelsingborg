@@ -24,8 +24,14 @@ export interface Sida {
   uppdaterad?: string;
   forelder?: string; // url, för brödsmulor (guider: /guider/)
   ordning?: number;
+  bockar?: string[]; // tre korta löften i heron
+  checklista?: { rubrik: string; intro?: string; punkter: string[] };
+  tabell?: { rubrik: string; intro?: string; kolumner: string[]; rader: string[][]; not?: string };
+  kallor?: { namn: string; url?: string; kontrollerad?: string | Date }[];
+  raknare?: boolean; // markisräknaren efter brödtexten
 }
-interface Modul { frontmatter: Sida; Content: AstroComponentFactory }
+export interface Rubrik { depth: number; slug: string; text: string }
+interface Modul { frontmatter: Sida; Content: AstroComponentFactory; getHeadings: () => Rubrik[] }
 
 const moduler = import.meta.glob<Modul>('../innehall/*.md', { eager: true });
 export const SIDOR: Modul[] = Object.values(moduler).sort((a, b) => (a.frontmatter.ordning ?? 99) - (b.frontmatter.ordning ?? 99));

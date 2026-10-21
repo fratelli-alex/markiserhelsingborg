@@ -1,0 +1,13 @@
+---
+// Innehållsförteckning från sidans H2:or (Markdown ger id automatiskt).
+import type { Rubrik } from '../lib/innehall';
+interface Props { rubriker: Rubrik[]; variant?: 'ruta' | 'sida' }
+const { rubriker, variant = 'ruta' } = Astro.props;
+const h2 = rubriker.filter(r => r.depth === 2);
+---
+{h2.length > 2 && (
+  <nav class={`toc toc-${variant}`} aria-labelledby={`toc-${variant}`}>
+    <p class="toc-rubrik" id={`toc-${variant}`}>{variant === 'ruta' ? <>Innehåll <span>{h2.length} avsnitt</span></> : 'På sidan'}</p>
+    <ol>{h2.map(r => <li><a href={`#${r.slug}`}>{r.text}</a></li>)}</ol>
+  </nav>
+)}
