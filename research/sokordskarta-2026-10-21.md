@@ -38,6 +38,26 @@ medvetet.
 Medvetet utelämnat vid lansering: balkongmarkis helsingborg (594 visningar, tas in på `/terrassmarkiser/`),
 stadsdelssidor (för lite volym, risk för mallkopior), prisguider (inga priser), separata ortssidor utanför Helsingborg.
 
+## Tillägg 2026-10-21 (Alex: fler sidor) – totalt 31 sidor
+
+| # | URL | Huvudord (+ varianter) | Ahrefs vol/mån | GSC-visningar 16 mån | Intention | Konvertering | Fakta som krävs | Bildbehov |
+|---|---|---|---|---|---|---|---|---|
+| 21 | `/service-och-reparation/` | markis reparation, laga markiser, montera markis helsingborg | 80 (laga markiser) | cirka 2 400 | Tjänst | Formulär (service) | Service på alla fabrikat (bekräftat), vad som repareras | Montör vid markisarm |
+| 22 | `/balkongmarkiser/` | balkongmarkis helsingborg | | 1 197 | Köp | Formulär | Montering i brf (styrelsens tillstånd) | Balkongmarkis på flerbostadshus |
+| 23 | `/pergolamarkiser/` | pergolamarkiser helsingborg, pergola helsingborg | | 1 150 | Köp | Formulär | Hestra-modell för pergola | Pergolamarkis över uteplats |
+| 24 | `/korgmarkiser/` | korgmarkiser helsingborg, korgmarkis restaurang | | 811 | Köp | Formulär | Typer, fönster/entré | Korgmarkis över entré |
+| 25 | `/markisoletter/` | markisoletter helsingborg, måttbeställda markisoletter | | 538 | Köp | Formulär | Hur markisolett skiljer sig från fallarm | Markisolett på fönster |
+| 26 | `/plissegardiner/` | plisségardiner helsingborg | | 1 489 | Köp | Formulär | Typer, takfönster | Plissé |
+| 27 | `/lamellgardiner/` | lamellgardiner helsingborg | | 1 499 | Köp | Formulär | Typer | Lamell i stort fönster |
+| 28 | `/trapersienner/` | träpersienner helsingborg | | 663 | Köp | Formulär | Träslag, fukt | Träpersienn |
+| 29 | `/solskydd-for-foretag/` | solskydd kontor/restaurang/uteservering helsingborg | | 605 | Köp B2B | Formulär | Bygglov/reklam på markis för företag (mot källa) | Uteservering med markis (utan skyltar) |
+| 30 | `/guider/hur-hogt-ska-en-markis-sitta/` | hur högt ska en markis sitta | | 922 | Info | Hembesök | Höjd vs utfall och vinkel | Markis i profil |
+| 31 | `/guider/markis-med-ben/` | markis med ben, fristående markis | | 858 | Info | Formulär | Om Markisbyrån säljer fristående/ben (bekräfta) | Fristående markis |
+| 32 | `/guider/tvatta-markis/` | tvätta markis, tvätta markiser | 200 | | Info | Service | Skötsel enligt vävtillverkare | Borste på väv |
+
+`/plisse-och-lamellgardiner/` ersätts av 26 och 27. Ändringar: 31 sidor totalt (exkl. tack, policyer, 404).
+Ny faktalucka: säljer Markisbyrån markis med ben/fristående?
+
 ## Öppna faktaluckor
 
 1. Gör Markisbyrån service och reparation på markiser de inte sålt (motorbyte, armar, reservdelar)? Avgör om
