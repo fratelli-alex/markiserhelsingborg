@@ -226,7 +226,8 @@ p { margin: 0; }
 .guide-huvud { display: grid; gap: 18px; padding-block: clamp(32px, 5vw, 56px) 24px; max-width: calc(var(--las) + 2 * var(--sida-x)); }
 .guide-huvud h1 { font-size: clamp(31px, 3.9vw, 46px); }
 .byline { font-size: 15px; color: var(--text-2); }
-.guide-bild img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: var(--radie-stor); }
+.guide-bild { max-width: calc(var(--las) + 2 * var(--sida-x)); margin-inline: auto; }
+.guide-bild img { width: 100%; aspect-ratio: 2 / 1; max-height: 340px; object-fit: cover; border-radius: var(--radie-stor); }
 .guide .prosa { padding-block: 32px 0; margin-inline: auto; }
 .guide-huvud { margin-inline: auto; }
 
