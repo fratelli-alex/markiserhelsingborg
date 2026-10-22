@@ -111,7 +111,7 @@ p { margin: 0; }
 
 /* Sektioner och återkommande mönster (riktning B) */
 .sektion { padding-block: clamp(40px, 6vw, 80px); }
-.hero + .sektion { padding-top: clamp(48px, 8vw, 96px); }
+.hero + .sektion { padding-top: clamp(32px, 5vw, 56px); }
 .sektion-vit { background: var(--vit); }
 .sektion-sand { background: var(--sand); }
 .sektion-petrol { background: var(--petrol); color: var(--vit); }
