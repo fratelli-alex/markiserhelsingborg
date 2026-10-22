@@ -175,14 +175,19 @@ p { margin: 0; }
 .hero-tel { color: var(--text-2); }
 .hero-tel a { color: var(--text); font-weight: 600; white-space: nowrap; }
 .hero-hoger { display: grid; }
-/* Fotot är ett lågt band ovanför formuläret, så att toppblocket inte blir högre än formuläret kräver */
-.hero-foto img { width: 100%; height: 170px; object-fit: cover; border-radius: var(--radie-stor); }
-.hero-hoger .forfragan { margin: -48px 20px 0; position: relative; }
-@media (max-width: 820px) {
-  .hero-foto img { height: 150px; }
-  .hero-hoger .forfragan { margin: -56px 12px 0; }
-}
-@media (max-width: 420px) { .hero-hoger .forfragan { margin: -40px 0 0; padding: 20px 16px; } }
+/* Hero med foto: bilden är heltäckande bakgrund under ett mörkt petrolfilter, text och formulär ligger ovanpå.
+   Filtret är mörkast bakom texten (vit text mot rgb(17 35 42 / .86) ≥ 4,5:1 oavsett foto). */
+.hero.med-foto { position: relative; isolation: isolate; background: var(--mork); color: var(--vit); padding-block: clamp(40px, 6vw, 88px); }
+.hero-bakgrund { position: absolute; inset: 0; z-index: -1; }
+.hero-bakgrund img { width: 100%; height: 100%; object-fit: cover; object-position: center 40%; }
+.hero-bakgrund::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgb(17 35 42 / .88) 0%, rgb(17 35 42 / .80) 50%, rgb(17 35 42 / .45) 100%); }
+@media (max-width: 820px) { .hero-bakgrund::after { background: rgb(17 35 42 / .82); } }
+.med-foto h1, .med-foto .hero-tel a, .med-foto .bockar { color: var(--vit); }
+.med-foto .eyebrow, .med-foto .ingress, .med-foto .h1-under, .med-foto .hero-tel, .med-foto .brodsmulor ol { color: var(--ljus-text-2); }
+.med-foto .brodsmulor a { color: var(--vit); }
+.med-foto .bockar li::before { background: var(--sand) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8.5l2.5 2.5L12 5.5' fill='none' stroke='%23182D35' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 14px no-repeat; }
+.med-foto .forfragan { color: var(--text); box-shadow: 0 20px 50px rgb(0 0 0 / .35); }
+@media (max-width: 420px) { .hero-hoger .forfragan { padding: 20px 16px; } }
 
 .delad { display: grid; gap: 40px; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; }
 @media (max-width: 820px) { .delad { grid-template-columns: minmax(0, 1fr); } }
@@ -309,5 +314,4 @@ p { margin: 0; }
 .guide-kropp .sek-huvud { margin-bottom: 20px; }
 .guide-kropp .sektion h2 { font-size: clamp(24px, 3vw, 32px); }
 .bocklista li > span { min-width: 0; }
-.hero-foto img { object-position: center 30%; }
 .guide-kropp > *, .guide-kropp .inre, .guide-kropp .sektion { min-width: 0; }

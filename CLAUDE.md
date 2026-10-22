@@ -74,6 +74,9 @@ Underkända meningar (och varför):
   manuella åtgärder i GSC; lägg inte till fler.
 
 ## Status
+- 2026-10-22 08:10: LIVE på markishelsingborg.se (primär domän, SSL, index, canonical, sitemap-index, 404, 301 kontrollerade).
+  Hero: fotot heltäckande bakgrund med mörkt petrolfilter, text och formulär ovanpå (Alex: bilderna syntes knappt).
+  Kvar: Search Console + sitemap, GA4-mät-id, ägarfoton, markisolett-foto, DKIM för domänen.
 - 2026-10-22 ~08:00: Domänbytet gjort. A @ och www → 162.159.152.19 (Sevalla), AAAA borttagen, MX/SPF/DMARC orörda
   (ögonblicksbild i `research/dns-fore-switch-2026-10-22.md`). NOINDEX borttagen, SITE_URL satt, Pretty URLs på,
   SAJT på kontaktappen har riktig domän först. Primär domän i Sevalla gav 500 via API (Alex sätter i panelen).
@@ -99,7 +102,7 @@ Underkända meningar (och varför):
   e-post på domänen (MX).
 
 ## Före domänbytet
--
+- Klart 2026-10-22. Gamla WordPress ligger kvar hos Oderland (91.201.60.166) som reserv, ta inte bort utan Alex ok.
 
 ## Switch-dag
 - Se STANDARD.md § Switch-dag. Projektspecifikt: gamla WordPress-sajten ligger kvar som reserv tills 301-reglerna
