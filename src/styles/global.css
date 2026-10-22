@@ -321,3 +321,32 @@ p { margin: 0; }
 .guide-kropp .sektion h2 { font-size: clamp(24px, 3vw, 32px); }
 .bocklista li > span { min-width: 0; }
 .guide-kropp > *, .guide-kropp .inre, .guide-kropp .sektion { min-width: 0; }
+
+/* Författarbild i guidens byline */
+.avatar-foto { padding: 0; overflow: hidden; background: var(--sand); }
+.avatar-foto img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; }
+
+/* Författarsida */
+.person { padding-block: 24px clamp(32px, 5vw, 64px); }
+.person-huvud { display: grid; grid-template-columns: minmax(0, 300px) minmax(0, 1fr); gap: clamp(24px, 5vw, 64px); align-items: center; margin-top: 16px; }
+.person-foto img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 15%; border-radius: var(--radie-stor); background: var(--sand); }
+.person-text { display: grid; gap: 14px; max-width: var(--las); }
+.person h1 { font-size: clamp(30px, 4vw, 44px); }
+.person .ingress { font-size: 18px; }
+.person-kontakt { list-style: none; margin: 8px 0 0; padding: 16px 0 0; border-top: 1px solid var(--linje); display: grid; gap: 8px; }
+.person-kontakt li { display: grid; grid-template-columns: 90px minmax(0, 1fr); gap: 12px; }
+.person-kontakt li > span { color: var(--text-2); font-size: 15px; }
+.person-kontakt a { font-weight: 600; overflow-wrap: anywhere; }
+.person-brod { max-width: var(--las); margin-top: clamp(24px, 4vw, 40px); }
+@media (max-width: 700px) {
+  .person-huvud { grid-template-columns: minmax(0, 1fr); }
+  .person-foto { max-width: 240px; }
+}
+
+/* Ägarkort på Om oss */
+.agare { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-block: 8px 12px; }
+.agare-kort { display: grid; gap: 4px; text-decoration: none; color: var(--text); }
+.agare-kort img { width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; object-position: center 15%; border-radius: var(--radie-stor); background: var(--sand); margin-bottom: 8px; }
+.agare-namn { font: 600 17px var(--rubrik); }
+.agare-kort:hover .agare-namn { text-decoration: underline; }
+.agare-roll { font-size: 15px; color: var(--text-2); }

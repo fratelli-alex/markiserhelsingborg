@@ -4,8 +4,10 @@ import Tjanstesida from '../components/Tjanstesida.astro';
 import Guidesida from '../components/Guidesida.astro';
 import EnkelSida from '../components/EnkelSida.astro';
 import Relaterade from '../components/Relaterade.astro';
+import Personsida from '../components/Personsida.astro';
+import Bild from '../components/Bild.astro';
+import { FORFATTARE, forfattarUrl } from '../data/forfattare';
 import { SIDOR, type Sida } from '../lib/innehall';
-import { forfattare } from '../lib/schema';
 
 export function getStaticPaths() {
   return SIDOR.map(m => ({ params: { sida: m.frontmatter.url.replace(/^\/|\/$/g, '') }, props: { url: m.frontmatter.url } }));
@@ -16,7 +18,7 @@ const sida: Sida = m.frontmatter;
 const { Content } = m;
 const rubriker = m.getHeadings();
 const personNyckel = sida.typ === 'person' ? sida.url.split('/').filter(Boolean).at(-1) : undefined;
-const personGuider = personNyckel ? SIDOR.map(s => s.frontmatter).filter(s => s.forfattare === personNyckel) : [];
+const personGuider = personNyckel ? SIDOR.map(s => s.frontmatter).filter(s => s.forfattare === personNyckel).map(s => s.url) : [];
 const guider = SIDOR.filter(s => s.frontmatter.typ === 'guide').map(s => s.frontmatter.url);
 ---
 {sida.typ === 'tjanst' && <Tjanstesida sida={sida} rubriker={rubriker}><Content /></Tjanstesida>}
@@ -27,9 +29,20 @@ const guider = SIDOR.filter(s => s.frontmatter.typ === 'guide').map(s => s.front
     <Relaterade slot="efter" urler={sida.url === '/guider/' ? guider : (sida.relaterade ?? [])} rubrik={sida.url === '/guider/' ? 'Alla guider' : 'Välj solskydd'} />
   </Tjanstesida>
 )}
-{(sida.typ === 'om' || sida.typ === 'person') && (
-  <EnkelSida titel={sida.titel} seoTitel={sida.seoTitel} beskrivning={sida.beskrivning} ingress={sida.ingress} forelder={sida.forelder ? { namn: 'Om oss', url: sida.forelder } : undefined} schema={personNyckel ? [forfattare(personNyckel)] : []}>
+{sida.typ === 'person' && <Personsida sida={sida} nyckel={personNyckel!} guider={personGuider}><Content /></Personsida>}
+{sida.typ === 'om' && (
+  <EnkelSida titel={sida.titel} seoTitel={sida.seoTitel} beskrivning={sida.beskrivning} ingress={sida.ingress} forelder={sida.forelder ? { namn: 'Om oss', url: sida.forelder } : undefined}>
+    {sida.url === '/om-oss/' && (
+      <div class="agare">
+        {Object.entries(FORFATTARE).map(([nyckel, f], i) => (
+          <a class="agare-kort" href={forfattarUrl(nyckel)}>
+            {f.foto && <Bild namn={f.foto} alt={`Porträtt av ${f.namn}`} sizes="(max-width: 700px) 45vw, 340px" prioritet={i === 0} />}
+            <span class="agare-namn">{f.namn}</span>
+            <span class="agare-roll">{f.roll}</span>
+          </a>
+        ))}
+      </div>
+    )}
     <Content />
-    {personGuider.length > 0 && <><h2>Guider av {sida.titel}</h2><ul>{personGuider.map(g => <li><a href={g.url}>{g.titel}</a></li>)}</ul></>}
   </EnkelSida>
 )}

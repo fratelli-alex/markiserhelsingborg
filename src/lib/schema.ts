@@ -55,7 +55,7 @@ export function tjanst(o: { url: string; namn: string; beskrivning: string; orte
 export function forfattare(nyckel?: string) {
   const f = nyckel ? FORFATTARE[nyckel] : undefined;
   if (!f) return { '@id': ORG_ID };
-  return { '@type': 'Person', '@id': abs(forfattarUrl(nyckel!)) + '#person', name: f.namn, jobTitle: f.roll, url: abs(forfattarUrl(nyckel!)), ...(f.sameAs ? { sameAs: f.sameAs } : {}) };
+  return { '@type': 'Person', '@id': abs(forfattarUrl(nyckel!)) + '#person', name: f.namn, jobTitle: f.roll, url: abs(forfattarUrl(nyckel!)), worksFor: { '@id': ORG_ID }, ...(f.foto ? { image: abs(`/bilder/${f.foto}-640.webp`) } : {}), ...(f.epost ? { email: f.epost } : {}), ...(f.sameAs ? { sameAs: f.sameAs } : {}) };
 }
 
 export function artikel(o: { url: string; titel: string; beskrivning?: string; publicerad: Date; uppdaterad: Date; forfattare?: string; bild?: string }) {

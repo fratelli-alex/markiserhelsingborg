@@ -1,0 +1,41 @@
+---
+// Författarsida (/om-oss/<nyckel>/): porträtt, roll, kontaktvägar och personens guider som kort.
+import Bas from '../layouts/Bas.astro';
+import Bild from './Bild.astro';
+import Brodsmulor from './Brodsmulor.astro';
+import Relaterade from './Relaterade.astro';
+import Avslut from './Avslut.astro';
+import { SAJT, telLank } from '../data/sajt';
+import { ihop } from '../lib/text';
+import { brodsmulor, forfattare } from '../lib/schema';
+import { FORFATTARE } from '../data/forfattare';
+import type { Sida } from '../lib/innehall';
+interface Props { sida: Sida; nyckel: string; guider: string[] }
+const { sida, nyckel, guider } = Astro.props;
+const f = FORFATTARE[nyckel];
+const fornamn = f.namn.split(' ')[0];
+const smulor = [{ namn: 'Start', url: '/' }, { namn: 'Om oss', url: sida.forelder ?? '/om-oss/' }, { namn: sida.titel, url: sida.url }];
+---
+<Bas titel={sida.seoTitel ?? sida.titel} beskrivning={sida.beskrivning} schema={[brodsmulor(smulor), forfattare(nyckel)]}>
+  <article class="person">
+    <div class="inre">
+      <Brodsmulor smulor={smulor} />
+      <div class="person-huvud">
+        {f.foto && <Bild namn={f.foto} alt={`Porträtt av ${f.namn}`} sizes="(max-width: 700px) 60vw, 320px" prioritet class="person-foto" />}
+        <div class="person-text">
+          <p class="eyebrow">{f.roll}</p>
+          <h1>{f.namn}</h1>
+          {sida.ingress && <p class="ingress">{ihop(sida.ingress)}</p>}
+          <ul class="person-kontakt">
+            {f.epost && <li><span>E-post</span><a href={`mailto:${f.epost}`}>{f.epost}</a></li>}
+            {SAJT.telefon && <li><span>Telefon</span><a href={telLank(SAJT.telefon)}>{SAJT.telefon}</a></li>}
+            {f.linkedin && <li><span>LinkedIn</span><a href={f.linkedin} target="_blank" rel="noopener me">{fornamn} på <span class="nw">LinkedIn&nbsp;↗</span></a></li>}
+          </ul>
+        </div>
+      </div>
+      <div class="brod prosa person-brod"><slot /></div>
+    </div>
+  </article>
+  <Relaterade urler={guider} rubrik={`Guider av ${f.namn}`} />
+  <Avslut />
+</Bas>

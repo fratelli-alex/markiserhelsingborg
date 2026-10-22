@@ -23,7 +23,7 @@ fällor, status och listorna inför domänbytet. Uppdateras löpande. `git pull`
 | Bildmaterial | Markisbyrån lägger foton i Drive (mapp okänd). AI-bilder fyller luckor |
 | Google-företagsprofil | Markisbyråns profil får användas för omdömen om det inte skadar markisbyran.se (länk okänd) |
 | Sociala kanaler | okänt |
-| Författare | Mikael Lundgren och Roy Ridderberg, båda ägare av Markisbyrån. Foton och LinkedIn finns (ej mottagna) |
+| Författare | Mikael Lundgren (mikael@markisbyran.se) och Roy Ridderberg (roy@markisbyran.se), båda ägare av Markisbyrån. Porträtt och LinkedIn inlagda 2026-10-22 (`src/data/forfattare.ts`) |
 | Konkurrenter | Solflex AB, Solskyddsproffset Helsingborg AB (Helsingborg); Rullux (Lund), Markiscentrum (Båstad), Solklar (Löddeköpinge); reco.se |
 | Sökdata | Ahrefs + GSC + GA4, exporter i `data/` (2026-10-21) |
 | Mätning | Befintlig GA4-egendom "Markishelsingborg.se" behålls (mät-id G-… okänt, syns inte i sidans HTML) |
@@ -76,7 +76,10 @@ Underkända meningar (och varför):
 ## Status
 - 2026-10-22 08:10: LIVE på markishelsingborg.se (primär domän, SSL, index, canonical, sitemap-index, 404, 301 kontrollerade).
   Hero: fotot heltäckande bakgrund med mörkt petrolfilter, text och formulär ovanpå (Alex: bilderna syntes knappt).
-  Kvar: Search Console + sitemap, GA4-mät-id, ägarfoton, markisolett-foto, DKIM för domänen.
+  Kvar: GA4-mät-id, markisolett-foto, DKIM för domänen.
+- 2026-10-22 ~10:15: Formuläret har bara Intresserad av, Ort (steg 1), Namn, E-post, Telefonnummer och valfritt
+  Meddelande (steg 2), enligt Alex. Författarsidor med porträtt, mejl och LinkedIn; ägarkort på Om oss. Avslutsblocket
+  på startsidan ska hålla året runt (Alex: de säljer för alla årstider), inga säsongsord i uppmaningar.
 - 2026-10-22 ~08:00: Domänbytet gjort. A @ och www → 162.159.152.19 (Sevalla), AAAA borttagen, MX/SPF/DMARC orörda
   (ögonblicksbild i `research/dns-fore-switch-2026-10-22.md`). NOINDEX borttagen, SITE_URL satt, Pretty URLs på,
   SAJT på kontaktappen har riktig domän först. Primär domän i Sevalla gav 500 via API (Alex sätter i panelen).

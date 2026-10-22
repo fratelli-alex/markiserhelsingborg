@@ -32,7 +32,7 @@ const schema = [brodsmulor(smulor), artikel({ url: sida.url, titel: sida.titel, 
       <h1>{ihop(sida.titel)}</h1>
       {f && (
         <div class="forfattarrad">
-          <span class="avatar" aria-hidden="true">{initialer}</span>
+          {f.foto ? <Bild namn={f.foto} alt="" sizes="88px" class="avatar avatar-foto" /> : <span class="avatar" aria-hidden="true">{initialer}</span>}
           <div>
             <p class="byline"><a href={forfattarUrl(sida.forfattare!)}>{f.namn}</a>, {f.roll.charAt(0).toLowerCase() + f.roll.slice(1)}</p>
             <p class="byline-datum">Uppdaterad <time datetime={upp.toISOString().slice(0, 10)}>{datum(upp)}</time></p>
