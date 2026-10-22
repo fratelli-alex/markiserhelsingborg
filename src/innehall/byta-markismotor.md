@@ -8,6 +8,8 @@ seoTitel: Byta motor på markisen
 beskrivning: Så felsöker du en markismotor, ställer in ändlägen och byter rörmotorn i valsen. Och vad som gäller för att eftermontera motor på en vevmarkis.
 ingress: De flesta markiser med motor har en rörmotor som sitter inne i valsen. När markisen slutar gå är det inte alltid motorn som är trasig. Här är hur du felsöker, hur ändlägen fungerar och vad ett motorbyte innebär.
 kortText: Felsök markismotorn, ställ in ändlägen och byt eller eftermontera motor.
+bild: guide-motor
+bildAlt: Montör på stege vid ändan av en utfälld terrassmarkis på ett tegelhus
 produkt: Service eller reparation
 forfattare: roy-ridderberg
 publicerad: 2026-10-21

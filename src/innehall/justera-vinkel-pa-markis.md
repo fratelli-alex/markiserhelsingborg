@@ -8,6 +8,8 @@ seoTitel: Justera vinkeln på markisen
 beskrivning: Så ändrar du lutningen på en markis med vikarmar, steg för steg. Vad du ska tänka på för säkerheten och när vinkeln inte går att ställa själv.
 ingress: På de flesta markiser med vikarmar går lutningen att ändra med en justerskruv vid armens fäste. Det tar en stund och kräver två personer. Här går vi igenom hur det går till och när du ska låta bli.
 kortText: Ändra lutningen på en markis med vikarmar, steg för steg och med säkerheten först.
+bild: terrassmarkis-uteplats
+bildAlt: Utfälld terrassmarkis över en stor uteplats med loungemöbler
 produkt: Service eller reparation
 forfattare: mikael-lundgren
 publicerad: 2026-10-21

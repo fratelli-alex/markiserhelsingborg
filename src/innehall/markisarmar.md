@@ -8,6 +8,8 @@ seoTitel: Markisarmar, slitage och byte
 beskrivning: "Vikarmar och fallarmar på markisen: hur de fungerar, varför fjäderspänningen är farlig, tecken på slitage och när armarna eller hela markisen bör bytas."
 ingress: Armarna är det som håller väven sträckt och bär markisen ute i vinden. De är byggda för att hålla länge, men fjädrar och leder slits. Här är hur du ser att något håller på att ge med sig, och vad du kan göra själv.
 kortText: "Vikarmar och fallarmar: hur de fungerar, tecken på slitage och när de byts."
+bild: terrassmarkis-villa
+bildAlt: Undersidan av en utfälld terrassmarkis där vikarmarna syns mot himlen
 forfattare: mikael-lundgren
 publicerad: 2026-10-21
 forelder: /guider/

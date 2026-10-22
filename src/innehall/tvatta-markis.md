@@ -11,6 +11,8 @@ seoTitel: Så tvättar du markisen
 beskrivning: Så tvättar du en markis av akrylväv. Mjuk borste, ljummet vatten och milt medel, aldrig högtryckstvätt. Plus vad du gör åt mögelfläckar.
 ingress: En markisväv av akryl tål regn och sol, men smuts, pollen och fågelspillning sätter sig. Med en mjuk borste, ljummet vatten och lite tålamod blir den ren utan att skadas.
 kortText: Mjuk borste, ljummet vatten och milt medel. Så blir väven ren utan att skadas.
+bild: terrassmarkis-altan
+bildAlt: Utfälld mörkgrå terrassmarkis över ett bord vid altandörren
 produkt: Ny väv på befintlig markis
 fragor:
   - { fraga: "Får jag använda högtryckstvätt?", svar: "Nej. Det höga trycket kan skada vävens beläggning och sömmar, och då släpper väven igenom vatten och smuts lättare." }
