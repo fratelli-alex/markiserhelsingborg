@@ -1,7 +1,7 @@
 ---
-// Förfrågan i tre steg (hero och sidslut). Utan JavaScript visas alla fält på en gång och formuläret fungerar
-// ändå. Postar till kontakttjänsten (tjanster/kontakt) som mejlar och skickar till Slack. Extra fält
-// (produkt, bredd, manovrering) följer med i mejlet som de är.
+// Förfrågan i två steg (hero och sidslut): intresserad av och ort, sedan namn, e-post och telefon. Utan JavaScript
+// visas alla fält på en gång och formuläret fungerar ändå. Postar till kontakttjänsten (tjanster/kontakt) som mejlar
+// och skickar till Slack. Extra fält (produkt, ort) följer med i mejlet som de är.
 import { SAJT } from '../data/sajt';
 interface Props { id?: string; produkt?: string; rubrik?: string }
 const { id = 'forfragan', produkt = '', rubrik = 'Boka kostnadsfritt hembesök' } = Astro.props;
@@ -10,33 +10,23 @@ const PRODUKTER = ['Terrassmarkis', 'Fönstermarkis', 'Vertikalmarkis eller scre
 <form class="forfragan formular" id={id} method="post" action={SAJT.kontaktUrl || undefined} data-kontakt={id} data-steg="1">
   <div class="ff-huvud">
     <p class="ff-rubrik">{rubrik}</p>
-    <p class="ff-rakna" aria-live="polite"><span data-steg-nr>Steg 1 av 3</span></p>
+    <p class="ff-rakna" aria-live="polite"><span data-steg-nr>Steg 1 av 2</span></p>
   </div>
   <fieldset data-del="1">
     <legend class="sr">Vad gäller det?</legend>
-    <label>Vad är du intresserad av?
+    <label>Intresserad av
       <select name="produkt" required>
         <option value="">Välj</option>
         {PRODUKTER.map(p => <option selected={p === produkt}>{p}</option>)}
       </select>
     </label>
-    <label>Postnummer <input name="postnummer" inputmode="numeric" autocomplete="postal-code" maxlength="6" placeholder="252 21" /></label>
+    <label>Ort <input name="ort" autocomplete="address-level2" placeholder="Helsingborg" required /></label>
   </fieldset>
   <fieldset data-del="2">
-    <legend class="sr">Mer om önskemålet</legend>
-    <label>Ungefärlig bredd <span class="ff-hjalp">Vet du inte, hoppa över</span>
-      <input name="bredd" inputmode="decimal" placeholder="t.ex. 4 meter" />
-    </label>
-    <label>Manövrering
-      <select name="manovrering"><option value="">Vet inte än</option><option>Vev</option><option>Motor med fjärrkontroll</option></select>
-    </label>
-    <label>Något mer vi bör veta? <textarea name="meddelande" rows="3" placeholder="Till exempel vilket väderstreck eller om det är en putsad fasad"></textarea></label>
-  </fieldset>
-  <fieldset data-del="3">
     <legend class="sr">Dina kontaktuppgifter</legend>
     <label>Namn <input name="namn" autocomplete="name" required /></label>
-    <label>Telefon <input name="telefon" type="tel" autocomplete="tel" required /></label>
     <label>E-post <input name="epost" type="email" autocomplete="email" required /></label>
+    <label>Telefonnummer <input name="telefon" type="tel" autocomplete="tel" required /></label>
     <input type="hidden" name="formular" value={id} />
     <input type="hidden" name="sida" value={Astro.url.pathname} />
     <div class="falla" aria-hidden="true"><label>Lämna tomt <input name="webbplats" tabindex="-1" autocomplete="off" /></label></div>
