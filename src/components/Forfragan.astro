@@ -1,5 +1,5 @@
 ---
-// Förfrågan i två steg (hero och sidslut): intresserad av och ort, sedan namn, e-post och telefon. Utan JavaScript
+// Förfrågan i två steg (hero och sidslut): intresserad av och ort, sedan namn, e-post, telefon och valfritt meddelande. Utan JavaScript
 // visas alla fält på en gång och formuläret fungerar ändå. Postar till kontakttjänsten (tjanster/kontakt) som mejlar
 // och skickar till Slack. Extra fält (produkt, ort) följer med i mejlet som de är.
 import { SAJT } from '../data/sajt';
@@ -27,6 +27,7 @@ const PRODUKTER = ['Terrassmarkis', 'Fönstermarkis', 'Vertikalmarkis eller scre
     <label>Namn <input name="namn" autocomplete="name" required /></label>
     <label>E-post <input name="epost" type="email" autocomplete="email" required /></label>
     <label>Telefonnummer <input name="telefon" type="tel" autocomplete="tel" required /></label>
+    <label>Meddelande <span class="ff-hjalp">Valfritt</span> <textarea name="meddelande" rows="3"></textarea></label>
     <input type="hidden" name="formular" value={id} />
     <input type="hidden" name="sida" value={Astro.url.pathname} />
     <div class="falla" aria-hidden="true"><label>Lämna tomt <input name="webbplats" tabindex="-1" autocomplete="off" /></label></div>
