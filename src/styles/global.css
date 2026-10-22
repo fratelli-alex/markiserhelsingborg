@@ -64,7 +64,11 @@ p { margin: 0; }
 .brodsmulor ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; font-size: 14px; color: var(--text-2); }
 .brodsmulor li + li::before { content: '/'; margin: 0 8px; }
 .enkel { max-width: calc(var(--las) + 2 * var(--sida-x)); margin: 0 auto; padding: 24px var(--sida-x) 48px; display: grid; gap: 20px; grid-template-columns: minmax(0, 1fr); }
-.enkel h1 { font-size: clamp(31px, 5vw, 42px); }
+.enkel h1 { font-size: clamp(28px, 4vw, 36px); }
+/* Enkla sidor (integritetspolicy, cookies m.fl.): rubriker i brödtexten nära brödtextens storlek (Alex 2026-10-22: för stort) */
+.enkel .brod h2 { font-size: 20px; margin-top: 12px; }
+.enkel .brod h3 { font-size: 17px; }
+.enkel .ingress { font-size: 18px; }
 .ingress { font-size: 19px; color: var(--text-2); }
 .brod { display: grid; gap: 16px; }
 .brod table { border-collapse: collapse; width: 100%; }
