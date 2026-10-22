@@ -74,6 +74,10 @@ Underkända meningar (och varför):
   manuella åtgärder i GSC; lägg inte till fler.
 
 ## Status
+- 2026-10-22 ~08:00: Domänbytet gjort. A @ och www → 162.159.152.19 (Sevalla), AAAA borttagen, MX/SPF/DMARC orörda
+  (ögonblicksbild i `research/dns-fore-switch-2026-10-22.md`). NOINDEX borttagen, SITE_URL satt, Pretty URLs på,
+  SAJT på kontaktappen har riktig domän först. Primär domän i Sevalla gav 500 via API (Alex sätter i panelen).
+  Gamla sajten ligger kvar hos Oderland (91.201.60.166) som reserv.
 - 2026-10-22: Sajten byggs på Sevalla vid push (noindex). Kontakttjänsten igång med BREVO_API_KEY och SLACK_WEBHOOK;
   testförfrågan kom fram till info@markisbyran.se och Slack (Alex 06:30). Toppblocket sänkt (foto som band ovanför
   formuläret). Nio AI-bilder i `drafts/bilder/ai/` väntar på Alex val. Pretty URLs gav 500 i Sevalla, kolla före switch.
