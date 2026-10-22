@@ -28,7 +28,7 @@ fällor, status och listorna inför domänbytet. Uppdateras löpande. `git pull`
 | Sökdata | Ahrefs + GSC + GA4, exporter i `data/` (2026-10-21) |
 | Mätning | Befintlig GA4-egendom "Markishelsingborg.se" behålls (mät-id G-… okänt, syns inte i sidans HTML) |
 | Hosting | Sevalla statisk sajt "Markiser Helsingborg" (id 85d33d29-acf9-42d2-a3b6-c02e9257e6ec), tillfällig adress https://markiser-helsingborg-ac7t7.kinsta.page. Skapad via Alex Mac (Sevalla-MCP där) 2026-10-21. Bygge gav 500 tills GitHub-appen Kinsta får åtkomst till repot. Egen Brevo-nyckel |
-| Kontakttjänst | Sevalla-app https://markiser-helsingborg-kontak-o8k9n.sevalla.app (Stockholm, h1), KONTAKT_URL = …/kontakt. BREVO_API_KEY och SLACK_WEBHOOK läggs in av Alex i Sevalla |
+| Kontakttjänst | Sevalla-app https://markiser-helsingborg-kontak-o8k9n.sevalla.app (Stockholm, h1), KONTAKT_URL = …/kontakt. BREVO_API_KEY och SLACK_WEBHOOK inlagda av Alex 2026-10-22, testad end-to-end |
 | Domän och DNS | Oderland (domän och DNS). E-post på domänen okänt; MX/TXT läses av före switch-dagen |
 | GitHub | fratelli-alex/markiserhelsingborg (privat) |
 | Projektmapp | |
@@ -74,6 +74,9 @@ Underkända meningar (och varför):
   manuella åtgärder i GSC; lägg inte till fler.
 
 ## Status
+- 2026-10-22: Sajten byggs på Sevalla vid push (noindex). Kontakttjänsten igång med BREVO_API_KEY och SLACK_WEBHOOK;
+  testförfrågan kom fram till info@markisbyran.se och Slack (Alex 06:30). Toppblocket sänkt (foto som band ovanför
+  formuläret). Nio AI-bilder i `drafts/bilder/ai/` väntar på Alex val. Pretty URLs gav 500 i Sevalla, kolla före switch.
 - 2026-10-22: Alla 34 sidor följer v2 (tabell, checklista, tipsruta, CTA mitt i, källor). Slutlig 301-karta i
   `research/redirectkarta.csv`: 59 adresser med 301 (118 regler med/utan snedstreck), 46 gamla AI-inlägg och arkiv
   får 404 med flit. Väntar: Sevalla-bygge via Alex Mac, formulärtest, AI-bilder.
