@@ -74,6 +74,9 @@ Underkända meningar (och varför):
   manuella åtgärder i GSC; lägg inte till fler.
 
 ## Status
+- 2026-10-22: Alla 34 sidor följer v2 (tabell, checklista, tipsruta, CTA mitt i, källor). Slutlig 301-karta i
+  `research/redirectkarta.csv`: 59 adresser med 301 (118 regler med/utan snedstreck), 46 gamla AI-inlägg och arkiv
+  får 404 med flit. Väntar: Sevalla-bygge via Alex Mac, formulärtest, AI-bilder.
 - 2026-10-21: Godkännande 3 klart: Alex valde riktning B och godkände startsidan ("Kanon, nästa steg"). Ändringar
   efter hans kommentarer: H1 på två rader, egen SVG-karta över Helsingborg, en bakgrundston (sand bara för
   räknaren), Boka hembesök i mobilmenyn. Inspiration: redovisningsföretag.se (formulär i hero, CTA i sidhuvudet,
