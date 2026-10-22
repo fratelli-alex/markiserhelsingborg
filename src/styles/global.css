@@ -85,8 +85,8 @@ p { margin: 0; }
 .formular { display: grid; gap: 14px; }
 .formular label { display: grid; gap: 4px; font-weight: 600; }
 .formular input, .formular textarea, .formular select { font: inherit; padding: 10px 12px; border: 1px solid #8A8A94; border-radius: 8px; width: 100%; }
-.formular .samtycke { display: flex; gap: 10px; align-items: start; font-weight: 400; }
-.formular .samtycke input { width: auto; margin-top: 6px; }
+.formular .samtycke { display: flex; gap: 10px; align-items: start; font-weight: 400; font-size: 14px; line-height: 1.45; color: var(--text-2); }
+.formular .samtycke input { width: auto; margin-top: 2px; }
 .falla { position: absolute; left: -9999px; }
 
 .sidfot { background: var(--mork); color: var(--ljus-text); font-size: 15px; }
@@ -181,7 +181,9 @@ p { margin: 0; }
 .hero-hoger { display: grid; }
 /* Hero med foto: bilden är heltäckande bakgrund under ett mörkt petrolfilter, text och formulär ligger ovanpå.
    Filtret är mörkast bakom texten (vit text mot rgb(17 35 42 / .86) ≥ 4,5:1 oavsett foto). */
-.hero.med-foto { position: relative; isolation: isolate; background: var(--mork); color: var(--vit); padding-block: clamp(40px, 6vw, 88px); }
+.hero.med-foto { position: relative; isolation: isolate; background: var(--mork); color: var(--vit); padding-block: clamp(40px, 6vw, 88px); display: grid; align-items: center; }
+/* Fyller 90 % av skärmhöjden under sidhuvudet på dator (Alex 2026-10-22). Mobilen får sin naturliga höjd. */
+@media (min-width: 821px) { .hero.med-foto { min-height: calc(90svh - 72px); } }
 .hero-bakgrund { position: absolute; inset: 0; z-index: -1; }
 .hero-bakgrund img { width: 100%; height: 100%; object-fit: cover; object-position: center 40%; }
 .hero-bakgrund::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgb(17 35 42 / .88) 0%, rgb(17 35 42 / .80) 50%, rgb(17 35 42 / .45) 100%); }

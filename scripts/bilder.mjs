@@ -36,7 +36,7 @@ for (const fil of readdirSync(KALLA).filter(f => /\.(png|jpe?g)$/i.test(f)).sort
       await sharp(master).resize(b).avif({ quality: q, effort: 4 }).toFile(avif); gjorda++;
     }
     // Dator hämtar de största bredderna när bilden är heltäckande bakgrund i heron (budget 200 kB).
-    for (let q = 46; b > 1280 && q >= 30 && statSync(avif).size > 190 * 1024; q -= 4) {
+    for (let q = 46; b > 1280 && q >= 38 && statSync(avif).size > 190 * 1024; q -= 4) {
       await sharp(master).resize(b).avif({ quality: q, effort: 4 }).toFile(avif); gjorda++;
     }
     varianter.push({ bredd: b, hojd: h, avif: statSync(`${UT}/${namn}-${b}.avif`).size, webp: statSync(`${UT}/${namn}-${b}.webp`).size });
