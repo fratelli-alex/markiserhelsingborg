@@ -8,6 +8,8 @@ seoTitel: Bandlås på markisen
 beskrivning: Så fungerar bandlåset och bandrullen på en bandmanövrerad markis, vad du gör när bandet fastnat och hur ett slitet band byts, steg för steg.
 ingress: Fönstermarkiser och markisoletter manövreras ofta med ett band som du drar i inifrån. När bandet fastnar eller slits är felet oftast enkelt att hitta. Här är hur systemet fungerar och vad du kan göra själv.
 kortText: Hur bandlås och bandrulle fungerar, vanliga fel och hur bandet byts.
+bild: guide-bandlas
+bildAlt: Hand som drar i markisbandet vid bandlåset bredvid ett fönster
 produkt: Service eller reparation
 forfattare: roy-ridderberg
 publicerad: 2026-10-21

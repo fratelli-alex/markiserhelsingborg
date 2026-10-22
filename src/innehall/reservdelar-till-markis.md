@@ -8,6 +8,8 @@ seoTitel: Reservdelar till äldre markiser
 beskrivning: Vilka delar som går att byta på en äldre markis, hur du tar reda på fabrikat och mått innan du letar reservdelar och när en reparation inte lönar sig.
 ingress: En markis består av ett tiotal delar som slits i olika takt. Många går att byta, även på äldre markiser. Det svåra är oftast att veta vad markisen är för fabrikat och vilka mått delarna ska ha.
 kortText: Vilka delar som går att byta, hur du hittar fabrikat och mått, och när det inte lönar sig.
+bild: guide-reservdelar
+bildAlt: Markisband, vev, ändlock, beslag och skruvar på en arbetsbänk
 produkt: Service eller reparation
 forfattare: mikael-lundgren
 publicerad: 2026-10-21

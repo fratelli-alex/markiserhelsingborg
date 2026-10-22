@@ -8,6 +8,8 @@ seoTitel: Balkongmarkis i Helsingborg
 beskrivning: Balkongmarkiser för bostadsrätter och villor i Helsingborg. Vi mäter balkongen, går igenom infästningen och föreningens regler vid ett hembesök.
 ingress: En markis gör balkongen användbar även när solen står på som mest. I en bostadsrätt behövs oftast styrelsens tillstånd, och markisen ska passa ihop med resten av huset. Vi mäter balkongen och går igenom infästningen med dig innan något beställs.
 kortText: Skugga på balkongen, anpassad efter föreningens regler och husets fasad.
+bild: balkongmarkis-flerbostadshus
+bildAlt: Tegelhus med balkonger där en grå balkongmarkis är utfälld i eftermiddagssolen
 produkt: Balkongmarkis
 fakta:
   - { namn: Tillverkare, varde: "Hestra Markis, svensktillverkat" }

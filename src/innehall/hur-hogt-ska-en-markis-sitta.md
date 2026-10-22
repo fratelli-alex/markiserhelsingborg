@@ -11,6 +11,8 @@ seoTitel: Hur högt ska en markis sitta?
 beskrivning: Hur högt en markis ska sitta beror på utfall, vinkel och hur mycket fri höjd du vill ha under den. Så räknar du ut fästhöjden för din altan.
 ingress: Rätt höjd för en markis är ingen fast siffra. Den beror på hur långt markisen når ut, vilken vinkel den har och hur högt du vill kunna gå under den. Så här räknar du.
 kortText: Så räknar du ut fästhöjden utifrån utfall, vinkel och fri höjd.
+bild: guide-hojd
+bildAlt: Utfälld markis över en altan med matbord och en tumstock på bordet
 produkt: Terrassmarkis
 fragor:
   - { fraga: "Kan markisen sitta för högt?", svar: "Ja. Ju högre den sitter, desto mer sol kommer in under den när solen står lågt. Du får då vinkla den brantare, och då sänks framprofilen igen." }

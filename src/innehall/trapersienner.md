@@ -8,6 +8,8 @@ seoTitel: Träpersienner i Helsingborg
 beskrivning: Träpersienner i Helsingborg, måttbeställda till dina fönster. Vi hjälper dig välja kulör och se var trä passar, och mäter vid ett hembesök.
 ingress: En träpersienn ger rummet en varmare yta än aluminium, med samma möjlighet att vrida lamellerna. Vi mäter fönstren hemma hos dig och går igenom vilka rum trä passar i.
 kortText: Varmare yta än aluminium, för rum med torr luft. Måttbeställda.
+bild: trapersienn-vardagsrum
+bildAlt: Vardagsrum med träpersienner i ljus ek för ett stort fönster
 produkt: Persienner
 fakta:
   - { namn: Material, varde: "Trä, i olika kulörer" }
