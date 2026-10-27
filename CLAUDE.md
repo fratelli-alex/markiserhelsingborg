@@ -68,6 +68,10 @@ Underkända meningar (och varför):
   formulär igen sist) och barnkollen.se/kungliga-namn/ (byline med författarruta, innehållsförteckning, tabeller,
   tipsruta, relaterade kort med bild).
 
+- 2026-10-27 (Alex): Alla gamla adresser ska pekas om, även de 46 AI-inläggen och arkiven som först fick 404.
+  De pekar nu på närmaste sida (märkes- och modellistor → /terrassmarkiser/, husvagn och priser → /, kategorier →
+  /guider/, author → /om-oss/). redirectkarta.csv har 105 adresser (210 regler).
+
 ## Fällor
 - Gamla sajten har 76 massproducerade AI-inlägg, många om andra orter och andras varumärken. Inget återanvänds.
 - Fratelli-nätverket har lagt länkar med exakt ankartext "markiser Helsingborg" från orelaterade sajter. Kolla
